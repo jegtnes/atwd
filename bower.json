@@ -1,0 +1,8 @@
+{
+  "name": "foundation-libsass-template",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation",
+    "typeahead": "twitter/typeahead.js",
+    "raphael": "DmitryBaranovskiy/raphael"
+  }
+}
