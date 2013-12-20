@@ -8,7 +8,7 @@ module.exports = function(grunt) {
       },
       dist: {
         options: {
-          outputStyle: 'compressed'
+          outputStyle: 'expanded'
         },
         files: {
           'css/app.css': 'scss/app.scss'
@@ -26,6 +26,10 @@ module.exports = function(grunt) {
 
       html: {
         files: './*.html'
+      },
+
+      php: {
+        files: './*.php'
       },
 
       js: {
