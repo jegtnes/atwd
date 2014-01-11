@@ -1,16 +1,19 @@
 <pre>
 <?php
-function twoColCsvToArray($filename) {
+function twoColCsvToXml($filename) {
 	if (!file_exists($filename) || !is_readable($filename)) {
 		return false;
 	}
 
-	$header = null;
+	$rowCount = 0;
+
 	$data = array();
 	$handle = fopen($filename, 'r');
 
 	if ($handle) {
 		while ($row = fgetcsv($handle, 0, ',')) {
+
+			$rowCount++;
 
 			//assign header name
 			$name = $row[0];
@@ -18,8 +21,8 @@ function twoColCsvToArray($filename) {
 			//remove header name from data
 			array_shift($row);
 
-			//if first iteration of loop, we're on headers
-			if(!$header) {
+
+			if ($rowCount === 1) {
 				$header = $row;
 			}
 
@@ -33,6 +36,6 @@ function twoColCsvToArray($filename) {
 
 	return $data;
 }
-print_r(twoColCsvToArray('./data/dawg.csv'));
+print_r(twoColCsvToXml('./data/dawg.csv'));
 ?>
 </pre>
