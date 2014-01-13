@@ -1,5 +1,6 @@
 <pre>
 <?php
+ini_set('auto_detect_line_endings', true);
 function twoColCsvToXml($filename) {
 	if (!file_exists($filename) || !is_readable($filename)) {
 		return false;
@@ -12,22 +13,21 @@ function twoColCsvToXml($filename) {
 
 	if ($handle) {
 		while ($row = fgetcsv($handle, 0, ',')) {
-
 			$rowCount++;
 
-			//assign header name
 			$name = $row[0];
-
-			//remove header name from data
 			array_shift($row);
 
-
-			if ($rowCount === 1) {
+			if ($rowCount === 4 || $rowCount === 5) {
 				$header = $row;
 			}
 
-			else {
-				$data[$name] = array_combine($header, $row);
+			else if ($rowCount >= 7) {
+				//array_filter removes empty values in array
+				$data[$name] = array_filter(
+					array_combine($header, $row)
+				);
+
 			}
 		}
 		fclose($handle);
@@ -36,6 +36,6 @@ function twoColCsvToXml($filename) {
 
 	return $data;
 }
-print_r(twoColCsvToXml('./data/dawg.csv'));
+print_r(twoColCsvToXml('./data/data.csv'));
 ?>
 </pre>
