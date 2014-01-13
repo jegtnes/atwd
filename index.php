@@ -1,6 +1,7 @@
-<pre>
 <?php
+// needed to work around issues with OS X/Excel line endings
 ini_set('auto_detect_line_endings', true);
+
 function twoColCsvToXml($filename) {
 	if (!file_exists($filename) || !is_readable($filename)) {
 		return false;
@@ -9,33 +10,35 @@ function twoColCsvToXml($filename) {
 	$rowCount = 0;
 
 	$data = array();
-	$handle = fopen($filename, 'r');
+	$fileHandle = fopen($filename, 'r');
 
-	if ($handle) {
-		while ($row = fgetcsv($handle, 0, ',')) {
+	if ($fileHandle) {
+		while ($row = fgetcsv($fileHandle, 0, ',')) {
 			$rowCount++;
 
+			// dealing with two sets of headers here
+			// add area header to variable, and remove from line
 			$name = $row[0];
 			array_shift($row);
 
+			// where the crime headers are in the document, line 4 and 5
 			if ($rowCount === 4 || $rowCount === 5) {
 				$header = $row;
 			}
 
+			// beware! here be dragons, and data
 			else if ($rowCount >= 7) {
+
 				//array_filter removes empty values in array
 				$data[$name] = array_filter(
 					array_combine($header, $row)
 				);
-
 			}
 		}
-		fclose($handle);
+		fclose($fileHandle);
 	}
-
 
 	return $data;
 }
 print_r(twoColCsvToXml('./data/data.csv'));
 ?>
-</pre>
