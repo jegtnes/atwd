@@ -10,6 +10,8 @@ function twoColCsvToXml($filename) {
 	$rowCount = 0;
 
 	$data = array();
+
+	$xml = new SimpleXMLElement('<crimes></crimes>');
 	$fileHandle = fopen($filename, 'r');
 
 	if ($fileHandle) {
@@ -28,17 +30,28 @@ function twoColCsvToXml($filename) {
 
 			// beware! here be dragons, and data
 			else if ($rowCount >= 7) {
+				array_combine($header, $row);
 
-				//array_filter removes empty values in array
-				$data[$name] = array_filter(
-					array_combine($header, $row)
-				);
+				if ($name != '') {
+					// If we're dealing with a region (Wales is considered one)
+					// Also exclude England as there's a section called England and Wales
+					if (stristr($name, 'region') || stristr($name, 'wales')) {
+						$region = $xml->addChild($name);
+					}
+					else {
+						$areas[$name] = $xml->addChild($name);
+					}
+
+					//no useful data comes out after this
+					if ($name === 'ENGLAND AND WALES') break;
+				}
 			}
 		}
 		fclose($fileHandle);
 	}
-
-	return $data;
+	file_put_contents(__DIR__. '/data/crime_data.xml', $xml->saveXML());
+	return $xml;
 }
+
 print_r(twoColCsvToXml('./data/data.csv'));
 ?>
