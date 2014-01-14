@@ -11,7 +11,10 @@ function twoColCsvToXml($filename) {
 
 	$data = array();
 
-	$xml = new SimpleXMLElement('<crimes></crimes>');
+	$xml = new DOMDocument;
+
+	$root = $xml->createElement('crimes');
+	$root = $xml->appendChild($root);
 	$fileHandle = fopen($filename, 'r');
 
 	if ($fileHandle) {
@@ -36,10 +39,15 @@ function twoColCsvToXml($filename) {
 					// If we're dealing with a region (Wales is considered one)
 					// Also exclude England as there's a section called England and Wales
 					if (stristr($name, 'region') || stristr($name, 'wales')) {
-						$region = $xml->addChild($name);
+						$region = $xml->createElement("region");
+						$region_id = preg_replace('/ Region/', '', $name);
+						$region_id = preg_replace('/\s/', '_', $region_id);
+						$region->setAttribute('id', $region_id);
+						$root->appendChild($region);
 					}
 					else {
-						$areas[$name] = $xml->addChild($name);
+						// var_dump($name);
+						// $areas[$name] = $areaXml->appendChild("<area></area>");
 					}
 
 					//no useful data comes out after this
