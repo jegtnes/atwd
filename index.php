@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/xml');
 // needed to work around issues with OS X/Excel line endings
 ini_set('auto_detect_line_endings', true);
 
@@ -46,7 +47,6 @@ function twoColCsvToXml($filename) {
 						$root->appendChild($region);
 					}
 					else {
-						// var_dump($name);
 						// $areas[$name] = $areaXml->appendChild("<area></area>");
 					}
 
@@ -62,7 +62,7 @@ function twoColCsvToXml($filename) {
 	$xml->formatOutput = true;
 
 	file_put_contents(__DIR__. '/data/crime_data.xml', $xml->saveXML());
-	return $xml;
+	return $xml->saveXML();
 }
 
 print_r(twoColCsvToXml('./data/data.csv'));
