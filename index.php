@@ -57,6 +57,10 @@ function twoColCsvToXml($filename) {
 		}
 		fclose($fileHandle);
 	}
+
+	//indentation is pretty great
+	$xml->formatOutput = true;
+
 	file_put_contents(__DIR__. '/data/crime_data.xml', $xml->saveXML());
 	return $xml;
 }

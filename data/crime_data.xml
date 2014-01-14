@@ -1,2 +1,16 @@
 <?xml version="1.0"?>
-<crimes><region id="North_East"/><region id="North_West"/><region id="Yorkshire_and_Humber"/><region id="East_Midlands"/><region id="West_Midlands"/><region id="East_of_England"/><region id="London"/><region id="South_East"/><region id="South_West"/><region id="North_Wales"/><region id="South_Wales"/><region id="WALES"/><region id="ENGLAND_AND_WALES"/></crimes>
+<crimes>
+  <region id="North_East"/>
+  <region id="North_West"/>
+  <region id="Yorkshire_and_Humber"/>
+  <region id="East_Midlands"/>
+  <region id="West_Midlands"/>
+  <region id="East_of_England"/>
+  <region id="London"/>
+  <region id="South_East"/>
+  <region id="South_West"/>
+  <region id="North_Wales"/>
+  <region id="South_Wales"/>
+  <region id="WALES"/>
+  <region id="ENGLAND_AND_WALES"/>
+</crimes>
