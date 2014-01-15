@@ -29,29 +29,36 @@ function twoColCsvToXml($filename) {
 		while ($row = fgetcsv($fileHandle, 0, ',')) {
 			$rowCount++;
 
-			$total							= clean_value($row[1]);
-			$total_excluding_fraud			= clean_value($row[2]);
+			$total									= clean_value($row[1]);
+			$total_excluding_fraud					= clean_value($row[2]);
 
-			$violence_against_the_person	= clean_value($row[4]);
-			$homicide						= clean_value($row[5]);
-			$violence_with_injury			= clean_value($row[6]);
-			$violence_without_injury		= clean_value($row[7]);
-			$sexual_offences				= clean_value($row[8]);
+			$violence_against_the_person			= clean_value($row[4]);
+			$homicide								= clean_value($row[5]);
+			$violence_with_injury					= clean_value($row[6]);
+			$violence_without_injury				= clean_value($row[7]);
+			$sexual_offences						= clean_value($row[8]);
 
-			$robbery						= clean_value($row[9]);
-			$theft_offences					= clean_value($row[10]);
-			$burglary						= clean_value($row[11]);
-			$domestic_burglary				= clean_value($row[12]);
-			$nondomestic_burglary			= clean_value($row[13]);
-			$vehicle_offences				= clean_value($row[14]);
+			$robbery								= clean_value($row[9]);
+			$theft_offences							= clean_value($row[10]);
+			$burglary								= clean_value($row[11]);
+			$domestic_burglary						= clean_value($row[12]);
+			$nondomestic_burglary					= clean_value($row[13]);
+			$vehicle_offences						= clean_value($row[14]);
 
-			$theft_from_the_person			= clean_value($row[15]);
-			$bicycle_theft					= clean_value($row[16]);
-			$shoplifting					= clean_value($row[17]);
-			$all_other_theft_offences		= clean_value($row[18]);
-			$criminal_damage_and_arson		= clean_value($row[19]);
+			$theft_from_the_person					= clean_value($row[15]);
+			$bicycle_theft							= clean_value($row[16]);
+			$shoplifting							= clean_value($row[17]);
+			$all_other_theft_offences				= clean_value($row[18]);
+			$criminal_damage_and_arson				= clean_value($row[19]);
 
-			// dealing with two sets of headers here
+			$drug_offences							= clean_value($row[21]);
+			$possession_of_weapons_offences			= clean_value($row[22]);
+			$public_order_offences					= clean_value($row[23]);
+			$misceanellous_crrimes_against_society	= clean_value($row[24]);
+
+			$fraud									= clean_value($row[26]);
+
+			// as we're dealing with two sets of headers here
 			// add area header to variable, and remove from line
 			$name = $row[0];
 			array_shift($row);
