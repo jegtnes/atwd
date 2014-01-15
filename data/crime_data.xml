@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <crimes>
-  <region id="North_East"/>
-  <region id="North_West"/>
-  <region id="Yorkshire_and_Humber"/>
-  <region id="East_Midlands"/>
-  <region id="West_Midlands"/>
-  <region id="East_of_England"/>
+  <region id="North East"/>
+  <region id="North West"/>
+  <region id="Yorkshire And Humber"/>
+  <region id="East Midlands"/>
+  <region id="West Midlands"/>
+  <region id="East Of England"/>
   <region id="London"/>
-  <region id="South_East"/>
-  <region id="South_West"/>
-  <region id="WALES"/>
+  <region id="South East"/>
+  <region id="South West"/>
+  <region id="Wales"/>
   <national id="British Transport Police"/>
   <national id="Action Fraud"/>
 </crimes>
