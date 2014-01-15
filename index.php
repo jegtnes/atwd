@@ -75,6 +75,10 @@ function twoColCsvToXml($filename) {
 						// Remove 1 from Action Fraud 1
 						$national_id = preg_replace('/1/', '', $name);
 						$national->setAttribute('id', $national_id);
+
+						$total = preg_replace('/,/', '', $total);
+						$national->setAttribute('total', $total);
+
 						$root->appendChild($national);
 					}
 

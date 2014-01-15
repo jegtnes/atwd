@@ -63,6 +63,6 @@
     <area id="North Wales"/>
     <area id="South Wales"/>
   </region>
-  <national id="British Transport Police"/>
-  <national id="Action Fraud"/>
+  <national id="British Transport Police" total="51970"/>
+  <national id="Action Fraud" total="150389"/>
 </crimes>
