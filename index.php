@@ -37,15 +37,23 @@ function twoColCsvToXml($filename) {
 				array_combine($header, $row);
 
 				if ($name != '' && $name != 'ENGLAND AND WALES') {
+
 					// If we're dealing with a region (Wales is considered one)
-					// Also exclude England as there's a section called England and Wales
-					if (stristr($name, 'region') || $name == 'WALES') {
+					// so is 'Action Fraud1' (badly formatted) and BTP.
+					if (stristr($name, 'region')
+					|| $name == 'WALES'
+					|| $name == 'Action Fraud1'
+					|| $name == "British Transport Police") {
 						$region = $xml->createElement("region");
-						$region_id = preg_replace('/ Region/', '', $name);
+						//remove Region from name, or '1' from Action Fraud
+						$region_id = preg_replace('/( Region)|1/', '', $name);
+
+						// format things according to spec and add:
 						$region_id = preg_replace('/\s/', '_', $region_id);
 						$region->setAttribute('id', $region_id);
 						$root->appendChild($region);
 					}
+
 					else {
 						// $areas[$name] = $areaXml->appendChild("<area></area>");
 					}
