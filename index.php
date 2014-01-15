@@ -24,10 +24,31 @@ function twoColCsvToXml($filename) {
 		while ($row = fgetcsv($fileHandle, 0, ',')) {
 			$rowCount++;
 
+			$total = preg_replace('/,/', '', $row[1]);
+			$total_excluding_fraud = preg_replace('/,/', '', $row[2]);
+
+			$violence_against_the_person = preg_replace('/,/', '', $row[4]);
+			$homicide = preg_replace('/,/', '', $row[5]);
+			$violence_with_injury = preg_replace('/,/', '', $row[6]);
+			$violence_without_injury = preg_replace('/,/', '', $row[7]);
+			$sexual_offences = preg_replace('/,/', '', $row[8]);
+
+			$robbery = preg_replace('/,/', '', $row[9]);
+			$theft_offences = preg_replace('/,/', '', $row[10]);
+			$burglary = preg_replace('/,/', '', $row[11]);
+			$domestic_burglary = preg_replace('/,/', '', $row[12]);
+			$nondomestic_burglary = preg_replace('/,/', '', $row[13]);
+			$vehicle_offences = preg_replace('/,/', '', $row[14]);
+
+			$theft_from_the_person = preg_replace('/,/', '', $row[15]);
+			$bicycle_theft = preg_replace('/,/', '', $row[16]);
+			$shoplifting = preg_replace('/,/', '', $row[17]);
+			$all_other_theft_offences = preg_replace('/,/', '', $row[18]);
+			$criminal_damage_and_arson = preg_replace('/,/', '', $row[19]);
+
 			// dealing with two sets of headers here
 			// add area header to variable, and remove from line
 			$name = $row[0];
-			$total = preg_replace('/,/', '', $row[1]);
 			array_shift($row);
 
 			// where the crime headers are in the document, line 4 and 5
