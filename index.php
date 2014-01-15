@@ -88,6 +88,11 @@ function twoColCsvToXml($filename) {
 
 						$region = $root->appendChild($region);
 
+						foreach($crimes as $crime_name => $crime_value) {
+							$element = $xml->createElement("recorded");
+							$element->setAttribute($crime_name, $crime_value);
+							$region->appendChild($element);
+						}
 
 						/* areas are defined to come before their respective regions
 						 * this works on the assumption of this

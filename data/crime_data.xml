@@ -1,11 +1,53 @@
 <?xml version="1.0"?>
 <crimes>
   <region id="North East" total="138982">
+    <recorded violence_against_the_person="19843"/>
+    <recorded homicide="26"/>
+    <recorded violence_with_injury="12165"/>
+    <recorded violence_without_injury="7652"/>
+    <recorded sexual_offences="1837"/>
+    <recorded robbery="832"/>
+    <recorded theft_offences="69326"/>
+    <recorded burglary="17058"/>
+    <recorded domestic_burglary="6761"/>
+    <recorded nondomestic_burglary="10297"/>
+    <recorded vehicle_offences="12789"/>
+    <recorded theft_from_the_person="1597"/>
+    <recorded bicycle_theft="3502"/>
+    <recorded shoplifting="16679"/>
+    <recorded all_other_theft_offences="17701"/>
+    <recorded criminal_damage_and_arson="28879"/>
+    <recorded drug_offences="8127"/>
+    <recorded possession_of_weapons_offences="1118"/>
+    <recorded public_order_offences="5364"/>
+    <recorded misceanellous_crrimes_against_society="1985"/>
+    <recorded fraud="1671"/>
     <area id="Cleveland" total="39522"/>
     <area id="Durham" total="29974"/>
     <area id="Northumbria" total="69486"/>
   </region>
   <region id="North West" total="444423">
+    <recorded violence_against_the_person="73154"/>
+    <recorded homicide="73"/>
+    <recorded violence_with_injury="38703"/>
+    <recorded violence_without_injury="34378"/>
+    <recorded sexual_offences="7267"/>
+    <recorded robbery="6126"/>
+    <recorded theft_offences="222487"/>
+    <recorded burglary="60974"/>
+    <recorded domestic_burglary="29661"/>
+    <recorded nondomestic_burglary="31313"/>
+    <recorded vehicle_offences="45172"/>
+    <recorded theft_from_the_person="10023"/>
+    <recorded bicycle_theft="10570"/>
+    <recorded shoplifting="40394"/>
+    <recorded all_other_theft_offences="55354"/>
+    <recorded criminal_damage_and_arson="77633"/>
+    <recorded drug_offences="27490"/>
+    <recorded possession_of_weapons_offences="2643"/>
+    <recorded public_order_offences="15329"/>
+    <recorded misceanellous_crrimes_against_society="4722"/>
+    <recorded fraud="7572"/>
     <area id="Cheshire" total="57908"/>
     <area id="Cumbria" total="23286"/>
     <area id="Greater Manchester" total="178857"/>
@@ -13,12 +55,54 @@
     <area id="Merseyside" total="90945"/>
   </region>
   <region id="Yorkshire And Humber" total="356370">
+    <recorded violence_against_the_person="49400"/>
+    <recorded homicide="44"/>
+    <recorded violence_with_injury="29409"/>
+    <recorded violence_without_injury="19947"/>
+    <recorded sexual_offences="5472"/>
+    <recorded robbery="3540"/>
+    <recorded theft_offences="198989"/>
+    <recorded burglary="57702"/>
+    <recorded domestic_burglary="26626"/>
+    <recorded nondomestic_burglary="31076"/>
+    <recorded vehicle_offences="41539"/>
+    <recorded theft_from_the_person="7856"/>
+    <recorded bicycle_theft="7068"/>
+    <recorded shoplifting="34298"/>
+    <recorded all_other_theft_offences="50526"/>
+    <recorded criminal_damage_and_arson="59185"/>
+    <recorded drug_offences="15520"/>
+    <recorded possession_of_weapons_offences="1649"/>
+    <recorded public_order_offences="10546"/>
+    <recorded misceanellous_crrimes_against_society="4408"/>
+    <recorded fraud="7661"/>
     <area id="Humberside" total="64707"/>
     <area id="North Yorkshire" total="34801"/>
     <area id="South Yorkshire" total="93116"/>
     <area id="West Yorkshire" total="163746"/>
   </region>
   <region id="East Midlands" total="261294">
+    <recorded violence_against_the_person="46405"/>
+    <recorded homicide="39"/>
+    <recorded violence_with_injury="23768"/>
+    <recorded violence_without_injury="22598"/>
+    <recorded sexual_offences="4221"/>
+    <recorded robbery="3018"/>
+    <recorded theft_offences="136146"/>
+    <recorded burglary="34891"/>
+    <recorded domestic_burglary="16040"/>
+    <recorded nondomestic_burglary="18851"/>
+    <recorded vehicle_offences="27487"/>
+    <recorded theft_from_the_person="5608"/>
+    <recorded bicycle_theft="7685"/>
+    <recorded shoplifting="26882"/>
+    <recorded all_other_theft_offences="33593"/>
+    <recorded criminal_damage_and_arson="42939"/>
+    <recorded drug_offences="12027"/>
+    <recorded possession_of_weapons_offences="1543"/>
+    <recorded public_order_offences="7628"/>
+    <recorded misceanellous_crrimes_against_society="3202"/>
+    <recorded fraud="4165"/>
     <area id="Derbyshire" total="51749"/>
     <area id="Leicestershire" total="58472"/>
     <area id="Lincolnshire" total="37023"/>
@@ -26,12 +110,54 @@
     <area id="Nottinghamshire" total="68777"/>
   </region>
   <region id="West Midlands" total="318640">
+    <recorded violence_against_the_person="59126"/>
+    <recorded homicide="63"/>
+    <recorded violence_with_injury="34005"/>
+    <recorded violence_without_injury="25058"/>
+    <recorded sexual_offences="5666"/>
+    <recorded robbery="6481"/>
+    <recorded theft_offences="158116"/>
+    <recorded burglary="42709"/>
+    <recorded domestic_burglary="20520"/>
+    <recorded nondomestic_burglary="22189"/>
+    <recorded vehicle_offences="37927"/>
+    <recorded theft_from_the_person="5033"/>
+    <recorded bicycle_theft="5978"/>
+    <recorded shoplifting="27957"/>
+    <recorded all_other_theft_offences="38512"/>
+    <recorded criminal_damage_and_arson="49208"/>
+    <recorded drug_offences="16248"/>
+    <recorded possession_of_weapons_offences="2003"/>
+    <recorded public_order_offences="10231"/>
+    <recorded misceanellous_crrimes_against_society="4274"/>
+    <recorded fraud="7287"/>
     <area id="Staffordshire" total="58897"/>
     <area id="Warwickshire" total="29223"/>
     <area id="West Mercia" total="59209"/>
     <area id="West Midlands" total="171311"/>
   </region>
   <region id="East Of England" total="309296">
+    <recorded violence_against_the_person="53027"/>
+    <recorded homicide="59"/>
+    <recorded violence_with_injury="26443"/>
+    <recorded violence_without_injury="26525"/>
+    <recorded sexual_offences="4855"/>
+    <recorded robbery="2948"/>
+    <recorded theft_offences="159330"/>
+    <recorded burglary="39031"/>
+    <recorded domestic_burglary="19487"/>
+    <recorded nondomestic_burglary="19544"/>
+    <recorded vehicle_offences="33852"/>
+    <recorded theft_from_the_person="5380"/>
+    <recorded bicycle_theft="10416"/>
+    <recorded shoplifting="29896"/>
+    <recorded all_other_theft_offences="40755"/>
+    <recorded criminal_damage_and_arson="48347"/>
+    <recorded drug_offences="17697"/>
+    <recorded possession_of_weapons_offences="2051"/>
+    <recorded public_order_offences="11102"/>
+    <recorded misceanellous_crrimes_against_society="3949"/>
+    <recorded fraud="5990"/>
     <area id="Bedfordshire" total="35453"/>
     <area id="Cambridgeshire" total="45091"/>
     <area id="Essex" total="99741"/>
@@ -40,10 +166,52 @@
     <area id="Suffolk" total="39147"/>
   </region>
   <region id="London" total="750185">
+    <recorded violence_against_the_person="123722"/>
+    <recorded homicide="99"/>
+    <recorded violence_with_injury="56794"/>
+    <recorded violence_without_injury="66829"/>
+    <recorded sexual_offences="9955"/>
+    <recorded robbery="32762"/>
+    <recorded theft_offences="409859"/>
+    <recorded burglary="91083"/>
+    <recorded domestic_burglary="59145"/>
+    <recorded nondomestic_burglary="31938"/>
+    <recorded vehicle_offences="92445"/>
+    <recorded theft_from_the_person="49257"/>
+    <recorded bicycle_theft="20486"/>
+    <recorded shoplifting="37502"/>
+    <recorded all_other_theft_offences="119086"/>
+    <recorded criminal_damage_and_arson="57544"/>
+    <recorded drug_offences="51263"/>
+    <recorded possession_of_weapons_offences="3773"/>
+    <recorded public_order_offences="26630"/>
+    <recorded misceanellous_crrimes_against_society="7891"/>
+    <recorded fraud="26786"/>
     <area id="London, City of" total="5552"/>
     <area id="Metropolitan Police" total="744633"/>
   </region>
   <region id="South East" total="480596">
+    <recorded violence_against_the_person="84094"/>
+    <recorded homicide="57"/>
+    <recorded violence_with_injury="39659"/>
+    <recorded violence_without_injury="44378"/>
+    <recorded sexual_offences="7667"/>
+    <recorded robbery="3716"/>
+    <recorded theft_offences="246029"/>
+    <recorded burglary="57785"/>
+    <recorded domestic_burglary="24358"/>
+    <recorded nondomestic_burglary="33427"/>
+    <recorded vehicle_offences="46885"/>
+    <recorded theft_from_the_person="9225"/>
+    <recorded bicycle_theft="15109"/>
+    <recorded shoplifting="47747"/>
+    <recorded all_other_theft_offences="69278"/>
+    <recorded criminal_damage_and_arson="76872"/>
+    <recorded drug_offences="25875"/>
+    <recorded possession_of_weapons_offences="2472"/>
+    <recorded public_order_offences="16407"/>
+    <recorded misceanellous_crrimes_against_society="6196"/>
+    <recorded fraud="11268"/>
     <area id="Hampshire" total="106100"/>
     <area id="Kent" total="100924"/>
     <area id="Surrey" total="52334"/>
@@ -51,6 +219,27 @@
     <area id="Thames Valley" total="133260"/>
   </region>
   <region id="South West" total="284930">
+    <recorded violence_against_the_person="52119"/>
+    <recorded homicide="38"/>
+    <recorded violence_with_injury="28398"/>
+    <recorded violence_without_injury="23683"/>
+    <recorded sexual_offences="5295"/>
+    <recorded robbery="1703"/>
+    <recorded theft_offences="138909"/>
+    <recorded burglary="33386"/>
+    <recorded domestic_burglary="13513"/>
+    <recorded nondomestic_burglary="19873"/>
+    <recorded vehicle_offences="26747"/>
+    <recorded theft_from_the_person="4155"/>
+    <recorded bicycle_theft="7690"/>
+    <recorded shoplifting="28138"/>
+    <recorded all_other_theft_offences="38793"/>
+    <recorded criminal_damage_and_arson="48709"/>
+    <recorded drug_offences="16002"/>
+    <recorded possession_of_weapons_offences="1350"/>
+    <recorded public_order_offences="12938"/>
+    <recorded misceanellous_crrimes_against_society="3192"/>
+    <recorded fraud="4713"/>
     <area id="Avon and Somerset" total="97049"/>
     <area id="Devon and Cornwall" total="84866"/>
     <area id="Dorset" total="39402"/>
@@ -58,6 +247,27 @@
     <area id="Wiltshire" total="33363"/>
   </region>
   <region id="Wales" total="173614">
+    <recorded violence_against_the_person="31232"/>
+    <recorded homicide="31"/>
+    <recorded violence_with_injury="18187"/>
+    <recorded violence_without_injury="13014"/>
+    <recorded sexual_offences="2936"/>
+    <recorded robbery="733"/>
+    <recorded theft_offences="81179"/>
+    <recorded burglary="19760"/>
+    <recorded domestic_burglary="7789"/>
+    <recorded nondomestic_burglary="11971"/>
+    <recorded vehicle_offences="17354"/>
+    <recorded theft_from_the_person="2468"/>
+    <recorded bicycle_theft="2962"/>
+    <recorded shoplifting="16306"/>
+    <recorded all_other_theft_offences="22329"/>
+    <recorded criminal_damage_and_arson="31200"/>
+    <recorded drug_offences="12763"/>
+    <recorded possession_of_weapons_offences="955"/>
+    <recorded public_order_offences="8182"/>
+    <recorded misceanellous_crrimes_against_society="2001"/>
+    <recorded fraud="2433"/>
     <area id="Dyfed-Powys" total="18903"/>
     <area id="Gwent" total="34595"/>
     <area id="North Wales" total="36584"/>
