@@ -1,68 +1,67 @@
 <?xml version="1.0"?>
 <crimes>
   <region id="North East">
-    <area/>
-    <area/>
-    <area/>
+    <area id="Cleveland"/>
+    <area id="Durham"/>
+    <area id="Northumbria"/>
   </region>
   <region id="North West">
-    <area/>
-    <area/>
-    <area/>
-    <area/>
-    <area/>
+    <area id="Cheshire"/>
+    <area id="Cumbria"/>
+    <area id="Greater Manchester"/>
+    <area id="Lancashire"/>
+    <area id="Merseyside"/>
   </region>
   <region id="Yorkshire And Humber">
-    <area/>
-    <area/>
-    <area/>
-    <area/>
+    <area id="Humberside"/>
+    <area id="North Yorkshire"/>
+    <area id="South Yorkshire"/>
+    <area id="West Yorkshire"/>
   </region>
   <region id="East Midlands">
-    <area/>
-    <area/>
-    <area/>
-    <area/>
-    <area/>
+    <area id="Derbyshire"/>
+    <area id="Leicestershire"/>
+    <area id="Lincolnshire"/>
+    <area id="Northamptonshire"/>
+    <area id="Nottinghamshire"/>
   </region>
   <region id="West Midlands">
-    <area/>
-    <area/>
-    <area/>
-    <area/>
+    <area id="Staffordshire"/>
+    <area id="Warwickshire"/>
+    <area id="West Mercia"/>
+    <area id="West Midlands"/>
   </region>
   <region id="East Of England">
-    <area/>
-    <area/>
-    <area/>
-    <area/>
-    <area/>
-    <area/>
+    <area id="Bedfordshire"/>
+    <area id="Cambridgeshire"/>
+    <area id="Essex"/>
+    <area id="Hertfordshire"/>
+    <area id="Norfolk"/>
+    <area id="Suffolk"/>
   </region>
   <region id="London">
-    <area/>
-    <area/>
+    <area id="London, City of"/>
+    <area id="Metropolitan Police"/>
   </region>
   <region id="South East">
-    <area/>
-    <area/>
-    <area/>
-    <area/>
-    <area/>
+    <area id="Hampshire"/>
+    <area id="Kent"/>
+    <area id="Surrey"/>
+    <area id="Sussex"/>
+    <area id="Thames Valley"/>
   </region>
   <region id="South West">
-    <area/>
-    <area/>
-    <area/>
-    <area/>
-    <area/>
+    <area id="Avon and Somerset"/>
+    <area id="Devon and Cornwall"/>
+    <area id="Dorset"/>
+    <area id="Gloucestershire"/>
+    <area id="Wiltshire"/>
   </region>
   <region id="Wales">
-    <area/>
-    <area/>
-    <area/>
-    <area/>
-    <area/>
+    <area id="Dyfed-Powys"/>
+    <area id="Gwent"/>
+    <area id="North Wales"/>
+    <area id="South Wales"/>
   </region>
   <national id="British Transport Police"/>
   <national id="Action Fraud"/>

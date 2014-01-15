@@ -73,8 +73,10 @@ function twoColCsvToXml($filename) {
 						$root->appendChild($national);
 					}
 
-					else {
+					// Will cover all areas. Needs to exclude England as that gets added
+					else if ($name != 'ENGLAND') {
 						$areas[$name] = $xml->createElement("area");
+						$areas[$name]->setAttribute('id', $name);
 					}
 
 					//no useful data comes out after this
