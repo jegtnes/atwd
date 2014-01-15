@@ -40,10 +40,7 @@ function twoColCsvToXml($filename) {
 
 					// If we're dealing with a region (Wales is considered one)
 					// so is 'Action Fraud1' (badly formatted) and BTP.
-					if (stristr($name, 'region')
-					|| $name == 'WALES'
-					|| $name == 'Action Fraud1'
-					|| $name == "British Transport Police") {
+					if (stristr($name, 'region') || $name == 'WALES') {
 						$region = $xml->createElement("region");
 						//remove Region from name, or '1' from Action Fraud
 						$region_id = preg_replace('/( Region)|1/', '', $name);
@@ -53,6 +50,15 @@ function twoColCsvToXml($filename) {
 						$region->setAttribute('id', $region_id);
 						$root->appendChild($region);
 					}
+
+					else if (preg_match('/^(Action Fraud1|British Transport Police)$/', $name)) {
+						$national = $xml->createElement("national");
+						$national_id = preg_replace('/(\s)/', '_', $name);
+						$national_id = preg_replace('/1/', '', $name);
+						$national->setAttribute('id', $national_id);
+						$root->appendChild($national);
+					}
+
 
 					else {
 						// $areas[$name] = $areaXml->appendChild("<area></area>");
