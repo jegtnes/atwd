@@ -86,6 +86,9 @@ function twoColCsvToXml($filename) {
 					else if ($name != 'ENGLAND') {
 						$areas[$name] = $xml->createElement("area");
 						$areas[$name]->setAttribute('id', $name);
+
+						$total = preg_replace('/,/', '', $total);
+						$areas[$name]->setAttribute('total', $total);
 					}
 
 					//no useful data comes out after this

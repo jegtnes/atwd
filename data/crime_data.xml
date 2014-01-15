@@ -1,67 +1,67 @@
 <?xml version="1.0"?>
 <crimes>
   <region id="North East" total="138982">
-    <area id="Cleveland"/>
-    <area id="Durham"/>
-    <area id="Northumbria"/>
+    <area id="Cleveland" total="39522"/>
+    <area id="Durham" total="29974"/>
+    <area id="Northumbria" total="69486"/>
   </region>
   <region id="North West" total="444423">
-    <area id="Cheshire"/>
-    <area id="Cumbria"/>
-    <area id="Greater Manchester"/>
-    <area id="Lancashire"/>
-    <area id="Merseyside"/>
+    <area id="Cheshire" total="57908"/>
+    <area id="Cumbria" total="23286"/>
+    <area id="Greater Manchester" total="178857"/>
+    <area id="Lancashire" total="93427"/>
+    <area id="Merseyside" total="90945"/>
   </region>
   <region id="Yorkshire And Humber" total="356370">
-    <area id="Humberside"/>
-    <area id="North Yorkshire"/>
-    <area id="South Yorkshire"/>
-    <area id="West Yorkshire"/>
+    <area id="Humberside" total="64707"/>
+    <area id="North Yorkshire" total="34801"/>
+    <area id="South Yorkshire" total="93116"/>
+    <area id="West Yorkshire" total="163746"/>
   </region>
   <region id="East Midlands" total="261294">
-    <area id="Derbyshire"/>
-    <area id="Leicestershire"/>
-    <area id="Lincolnshire"/>
-    <area id="Northamptonshire"/>
-    <area id="Nottinghamshire"/>
+    <area id="Derbyshire" total="51749"/>
+    <area id="Leicestershire" total="58472"/>
+    <area id="Lincolnshire" total="37023"/>
+    <area id="Northamptonshire" total="45273"/>
+    <area id="Nottinghamshire" total="68777"/>
   </region>
   <region id="West Midlands" total="318640">
-    <area id="Staffordshire"/>
-    <area id="Warwickshire"/>
-    <area id="West Mercia"/>
-    <area id="West Midlands"/>
+    <area id="Staffordshire" total="58897"/>
+    <area id="Warwickshire" total="29223"/>
+    <area id="West Mercia" total="59209"/>
+    <area id="West Midlands" total="171311"/>
   </region>
   <region id="East Of England" total="309296">
-    <area id="Bedfordshire"/>
-    <area id="Cambridgeshire"/>
-    <area id="Essex"/>
-    <area id="Hertfordshire"/>
-    <area id="Norfolk"/>
-    <area id="Suffolk"/>
+    <area id="Bedfordshire" total="35453"/>
+    <area id="Cambridgeshire" total="45091"/>
+    <area id="Essex" total="99741"/>
+    <area id="Hertfordshire" total="51868"/>
+    <area id="Norfolk" total="37996"/>
+    <area id="Suffolk" total="39147"/>
   </region>
   <region id="London" total="750185">
-    <area id="London, City of"/>
-    <area id="Metropolitan Police"/>
+    <area id="London, City of" total="5552"/>
+    <area id="Metropolitan Police" total="744633"/>
   </region>
   <region id="South East" total="480596">
-    <area id="Hampshire"/>
-    <area id="Kent"/>
-    <area id="Surrey"/>
-    <area id="Sussex"/>
-    <area id="Thames Valley"/>
+    <area id="Hampshire" total="106100"/>
+    <area id="Kent" total="100924"/>
+    <area id="Surrey" total="52334"/>
+    <area id="Sussex" total="87978"/>
+    <area id="Thames Valley" total="133260"/>
   </region>
   <region id="South West" total="284930">
-    <area id="Avon and Somerset"/>
-    <area id="Devon and Cornwall"/>
-    <area id="Dorset"/>
-    <area id="Gloucestershire"/>
-    <area id="Wiltshire"/>
+    <area id="Avon and Somerset" total="97049"/>
+    <area id="Devon and Cornwall" total="84866"/>
+    <area id="Dorset" total="39402"/>
+    <area id="Gloucestershire" total="30250"/>
+    <area id="Wiltshire" total="33363"/>
   </region>
   <region id="Wales" total="173614">
-    <area id="Dyfed-Powys"/>
-    <area id="Gwent"/>
-    <area id="North Wales"/>
-    <area id="South Wales"/>
+    <area id="Dyfed-Powys" total="18903"/>
+    <area id="Gwent" total="34595"/>
+    <area id="North Wales" total="36584"/>
+    <area id="South Wales" total="83532"/>
   </region>
   <national id="British Transport Police" total="51970"/>
   <national id="Action Fraud" total="150389"/>
