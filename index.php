@@ -27,6 +27,7 @@ function twoColCsvToXml($filename) {
 			// dealing with two sets of headers here
 			// add area header to variable, and remove from line
 			$name = $row[0];
+			$total = $row[1];
 			array_shift($row);
 
 			// where the crime headers are in the document, line 4 and 5
@@ -48,7 +49,9 @@ function twoColCsvToXml($filename) {
 						$region_id = preg_replace('/( Region)|1/', '', ucwords(strtolower($name)));
 
 						// format things according to spec and add:
+						$total = preg_replace('/,/', '', $total);
 						$region->setAttribute('id', $region_id);
+						$region->setAttribute('total', $total);
 						$region = $root->appendChild($region);
 
 

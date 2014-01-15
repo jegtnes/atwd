@@ -1,37 +1,37 @@
 <?xml version="1.0"?>
 <crimes>
-  <region id="North East">
+  <region id="North East" total="138982">
     <area id="Cleveland"/>
     <area id="Durham"/>
     <area id="Northumbria"/>
   </region>
-  <region id="North West">
+  <region id="North West" total="444423">
     <area id="Cheshire"/>
     <area id="Cumbria"/>
     <area id="Greater Manchester"/>
     <area id="Lancashire"/>
     <area id="Merseyside"/>
   </region>
-  <region id="Yorkshire And Humber">
+  <region id="Yorkshire And Humber" total="356370">
     <area id="Humberside"/>
     <area id="North Yorkshire"/>
     <area id="South Yorkshire"/>
     <area id="West Yorkshire"/>
   </region>
-  <region id="East Midlands">
+  <region id="East Midlands" total="261294">
     <area id="Derbyshire"/>
     <area id="Leicestershire"/>
     <area id="Lincolnshire"/>
     <area id="Northamptonshire"/>
     <area id="Nottinghamshire"/>
   </region>
-  <region id="West Midlands">
+  <region id="West Midlands" total="318640">
     <area id="Staffordshire"/>
     <area id="Warwickshire"/>
     <area id="West Mercia"/>
     <area id="West Midlands"/>
   </region>
-  <region id="East Of England">
+  <region id="East Of England" total="309296">
     <area id="Bedfordshire"/>
     <area id="Cambridgeshire"/>
     <area id="Essex"/>
@@ -39,25 +39,25 @@
     <area id="Norfolk"/>
     <area id="Suffolk"/>
   </region>
-  <region id="London">
+  <region id="London" total="750185">
     <area id="London, City of"/>
     <area id="Metropolitan Police"/>
   </region>
-  <region id="South East">
+  <region id="South East" total="480596">
     <area id="Hampshire"/>
     <area id="Kent"/>
     <area id="Surrey"/>
     <area id="Sussex"/>
     <area id="Thames Valley"/>
   </region>
-  <region id="South West">
+  <region id="South West" total="284930">
     <area id="Avon and Somerset"/>
     <area id="Devon and Cornwall"/>
     <area id="Dorset"/>
     <area id="Gloucestershire"/>
     <area id="Wiltshire"/>
   </region>
-  <region id="Wales">
+  <region id="Wales" total="173614">
     <area id="Dyfed-Powys"/>
     <area id="Gwent"/>
     <area id="North Wales"/>
