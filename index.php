@@ -50,9 +50,11 @@ function twoColCsvToXml($filename) {
 						$root->appendChild($region);
 					}
 
+					// dealing with Nationals
 					else if (preg_match('/^(Action Fraud1|British Transport Police)$/', $name)) {
 						$national = $xml->createElement("national");
-						$national_id = preg_replace('/(\s)/', '_', $name);
+
+						// Remove 1 from Action Fraud 1
 						$national_id = preg_replace('/1/', '', $name);
 						$national->setAttribute('id', $national_id);
 						$root->appendChild($national);
