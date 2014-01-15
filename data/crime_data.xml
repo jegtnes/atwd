@@ -273,6 +273,50 @@
     <area id="North Wales" total="36584"/>
     <area id="South Wales" total="83532"/>
   </region>
-  <national id="British Transport Police" total="51970"/>
-  <national id="Action Fraud" total="150389"/>
+  <national id="British Transport Police" total="51970">
+    <recorded violence_against_the_person="6151"/>
+    <recorded homicide="3"/>
+    <recorded violence_with_injury="2093"/>
+    <recorded violence_without_injury="4055"/>
+    <recorded sexual_offences="641"/>
+    <recorded robbery="505"/>
+    <recorded theft_offences="28102"/>
+    <recorded burglary="529"/>
+    <recorded domestic_burglary="2"/>
+    <recorded nondomestic_burglary="527"/>
+    <recorded vehicle_offences="1526"/>
+    <recorded theft_from_the_person="9116"/>
+    <recorded bicycle_theft="5093"/>
+    <recorded shoplifting="1853"/>
+    <recorded all_other_theft_offences="9985"/>
+    <recorded criminal_damage_and_arson="4761"/>
+    <recorded drug_offences="3614"/>
+    <recorded possession_of_weapons_offences="363"/>
+    <recorded public_order_offences="6521"/>
+    <recorded misceanellous_crrimes_against_society="912"/>
+    <recorded fraud="400"/>
+  </national>
+  <national id="Action Fraud" total="150389">
+    <recorded violence_against_the_person="0"/>
+    <recorded homicide="0"/>
+    <recorded violence_with_injury="0"/>
+    <recorded violence_without_injury="0"/>
+    <recorded sexual_offences="0"/>
+    <recorded robbery="0"/>
+    <recorded theft_offences="0"/>
+    <recorded burglary="0"/>
+    <recorded domestic_burglary="0"/>
+    <recorded nondomestic_burglary="0"/>
+    <recorded vehicle_offences="0"/>
+    <recorded theft_from_the_person="0"/>
+    <recorded bicycle_theft="0"/>
+    <recorded shoplifting="0"/>
+    <recorded all_other_theft_offences="0"/>
+    <recorded criminal_damage_and_arson="0"/>
+    <recorded drug_offences="0"/>
+    <recorded possession_of_weapons_offences="0"/>
+    <recorded public_order_offences="0"/>
+    <recorded misceanellous_crrimes_against_society="0"/>
+    <recorded fraud="150389"/>
+  </national>
 </crimes>

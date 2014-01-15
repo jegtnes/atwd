@@ -115,6 +115,12 @@ function twoColCsvToXml($filename) {
 
 						$national->setAttribute('total', $total);
 
+						foreach($crimes as $crime_name => $crime_value) {
+							$element = $xml->createElement("recorded");
+							$element->setAttribute($crime_name, $crime_value);
+							$national->appendChild($element);
+						}
+
 						$root->appendChild($national);
 					}
 
