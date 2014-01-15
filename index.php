@@ -36,10 +36,10 @@ function twoColCsvToXml($filename) {
 			else if ($rowCount >= 7) {
 				array_combine($header, $row);
 
-				if ($name != '') {
+				if ($name != '' && $name != 'ENGLAND AND WALES') {
 					// If we're dealing with a region (Wales is considered one)
 					// Also exclude England as there's a section called England and Wales
-					if (stristr($name, 'region') || stristr($name, 'wales')) {
+					if (stristr($name, 'region') || $name == 'WALES') {
 						$region = $xml->createElement("region");
 						$region_id = preg_replace('/ Region/', '', $name);
 						$region_id = preg_replace('/\s/', '_', $region_id);
