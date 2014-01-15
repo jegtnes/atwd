@@ -49,9 +49,11 @@ function twoColCsvToXml($filename) {
 						$region_id = preg_replace('/( Region)|1/', '', ucwords(strtolower($name)));
 
 						// format things according to spec and add:
-						$total = preg_replace('/,/', '', $total);
 						$region->setAttribute('id', $region_id);
+
+						$total = preg_replace('/,/', '', $total);
 						$region->setAttribute('total', $total);
+
 						$region = $root->appendChild($region);
 
 
