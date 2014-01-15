@@ -14,6 +14,8 @@ function twoColCsvToXml($filename) {
 
 	$xml = new DOMDocument;
 
+	$areas = [];
+
 	$root = $xml->createElement('crimes');
 	$root = $xml->appendChild($root);
 	$fileHandle = fopen($filename, 'r');
@@ -47,7 +49,18 @@ function twoColCsvToXml($filename) {
 
 						// format things according to spec and add:
 						$region->setAttribute('id', $region_id);
-						$root->appendChild($region);
+						$region = $root->appendChild($region);
+
+
+						/* areas are defined to come before their respective regions
+						 * this works on the assumption of this
+						 * once we reach a region, add children to the region
+						 * and unset the areas, to let areas from the
+						 * next region be allocated to the array */
+						foreach ($areas as $area) {
+							$region->appendChild($area);
+						}
+						unset($areas);
 					}
 
 					// dealing with Nationals
@@ -61,7 +74,7 @@ function twoColCsvToXml($filename) {
 					}
 
 					else {
-						// $areas[$name] = $areaXml->appendChild("<area></area>");
+						$areas[$name] = $xml->createElement("area");
 					}
 
 					//no useful data comes out after this
