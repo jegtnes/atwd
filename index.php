@@ -3,6 +3,11 @@ header('Content-Type: text/xml');
 // needed to work around issues with OS X/Excel line endings
 ini_set('auto_detect_line_endings', true);
 
+// Cleans up the unclean CSV values, removing the comma
+function clean_value($val) {
+	return preg_replace('/,/', '', $val);
+}
+
 function twoColCsvToXml($filename) {
 	if (!file_exists($filename) || !is_readable($filename)) {
 		return false;
@@ -24,27 +29,27 @@ function twoColCsvToXml($filename) {
 		while ($row = fgetcsv($fileHandle, 0, ',')) {
 			$rowCount++;
 
-			$total = preg_replace('/,/', '', $row[1]);
-			$total_excluding_fraud = preg_replace('/,/', '', $row[2]);
+			$total							= clean_value($row[1]);
+			$total_excluding_fraud			= clean_value($row[2]);
 
-			$violence_against_the_person = preg_replace('/,/', '', $row[4]);
-			$homicide = preg_replace('/,/', '', $row[5]);
-			$violence_with_injury = preg_replace('/,/', '', $row[6]);
-			$violence_without_injury = preg_replace('/,/', '', $row[7]);
-			$sexual_offences = preg_replace('/,/', '', $row[8]);
+			$violence_against_the_person	= clean_value($row[4]);
+			$homicide						= clean_value($row[5]);
+			$violence_with_injury			= clean_value($row[6]);
+			$violence_without_injury		= clean_value($row[7]);
+			$sexual_offences				= clean_value($row[8]);
 
-			$robbery = preg_replace('/,/', '', $row[9]);
-			$theft_offences = preg_replace('/,/', '', $row[10]);
-			$burglary = preg_replace('/,/', '', $row[11]);
-			$domestic_burglary = preg_replace('/,/', '', $row[12]);
-			$nondomestic_burglary = preg_replace('/,/', '', $row[13]);
-			$vehicle_offences = preg_replace('/,/', '', $row[14]);
+			$robbery						= clean_value($row[9]);
+			$theft_offences					= clean_value($row[10]);
+			$burglary						= clean_value($row[11]);
+			$domestic_burglary				= clean_value($row[12]);
+			$nondomestic_burglary			= clean_value($row[13]);
+			$vehicle_offences				= clean_value($row[14]);
 
-			$theft_from_the_person = preg_replace('/,/', '', $row[15]);
-			$bicycle_theft = preg_replace('/,/', '', $row[16]);
-			$shoplifting = preg_replace('/,/', '', $row[17]);
-			$all_other_theft_offences = preg_replace('/,/', '', $row[18]);
-			$criminal_damage_and_arson = preg_replace('/,/', '', $row[19]);
+			$theft_from_the_person			= clean_value($row[15]);
+			$bicycle_theft					= clean_value($row[16]);
+			$shoplifting					= clean_value($row[17]);
+			$all_other_theft_offences		= clean_value($row[18]);
+			$criminal_damage_and_arson		= clean_value($row[19]);
 
 			// dealing with two sets of headers here
 			// add area header to variable, and remove from line
