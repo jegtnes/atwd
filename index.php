@@ -130,6 +130,12 @@ function twoColCsvToXml($filename) {
 						$areas[$name]->setAttribute('id', $name);
 
 						$areas[$name]->setAttribute('total', $total);
+
+						foreach($crimes as $crime_name => $crime_value) {
+							$element = $xml->createElement("recorded");
+							$element->setAttribute($crime_name, $crime_value);
+							$areas[$name]->appendChild($element);
+						}
 					}
 
 					//no useful data comes out after this
