@@ -132,7 +132,6 @@ function twoColCsvToXml($filename) {
 					else if ($name != 'ENGLAND') {
 						$areas[$name] = $xml->createElement("area");
 						$areas[$name]->setAttribute('id', $name);
-
 						$areas[$name]->setAttribute('total', $total);
 
 						foreach($crimes as $crime_name => $crime_value) {
@@ -153,7 +152,8 @@ function twoColCsvToXml($filename) {
 							}
 							else {
 								$element = $xml->createElement("recorded");
-								$element->setAttribute($crime_name, $crime_value);
+								$element->setAttribute("name", $crime_name);
+								$element->setAttribute("total", $crime_value);
 							}
 							$areas[$name]->appendChild($element);
 						}
