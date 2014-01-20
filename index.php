@@ -17,7 +17,7 @@ function twoColCsvToXml($filename) {
 
 	$data = array();
 
-	$xml = new DOMDocument;
+	$xml = new DOMDocument();
 
 	$areas = [];
 
@@ -90,11 +90,52 @@ function twoColCsvToXml($filename) {
 						$region = $root->appendChild($region);
 
 						foreach($crimes as $crime_name => $crime_value) {
-							if (!is_array($crime_value)) {
-								$element = $xml->createElement("recorded");
-								$element->setAttribute($crime_name, $crime_value);
-								$region->appendChild($element);
+
+							// If the crime is in a category marked by a total, it'll be in a subarray
+							if (is_array($crime_value)) {
+								$element = $xml->createElement("category");
+
+								// The problem here is with adding the third level of category onto the second. Seems like it's ignored currently
+
+								foreach($crime_value as $subcat => $subcat_value) {
+									if ($subcat === 'total') {
+										$element->setAttribute("name", $crime_name);
+										$element->setAttribute($subcat, $subcat_value);
+									}
+									else {
+										if (is_array($subcat_value)) {
+											$elementTwo = $xml->createElement("category");
+											foreach($subcat_value as $subcat_subcat => $subcat_subcat_value) {
+												if ($subcat_subcat === "total") {
+													$elementTwo->setAttribute("name", $subcat);
+													$elementTwo->setAttribute($subcat_subcat, $subcat_subcat_value);
+												}
+												else {
+													$subelement = $xml->createElement("recorded");
+													$subelement->setAttribute("name", $subcat_subcat);
+													$subelement->setAttribute("total", $subcat_subcat_value);
+													$elementTwo->appendChild($subelement);
+												}
+											}
+											$element->appendChild($elementTwo);
+										}
+
+										else {
+											$subelement = $xml->createElement("recorded");
+											$subelement->setAttribute("name", $subcat);
+											$subelement->setAttribute("total", $subcat_value);
+											$element->appendChild($subelement);
+										}
+									}
+								}
 							}
+							// If not, proceed with single elements as normal
+							else {
+								$element = $xml->createElement("recorded");
+								$element->setAttribute("name", $crime_name);
+								$element->setAttribute("total", $crime_value);
+							}
+							$region->appendChild($element);
 						}
 
 						/* areas are defined to come before their respective regions
@@ -118,13 +159,55 @@ function twoColCsvToXml($filename) {
 
 						$national->setAttribute('total', $total);
 
-						foreach($crimes as $crime_name => $crime_value) {
-							if (!is_array($crime_value)) {
-								$element = $xml->createElement("recorded");
-								$element->setAttribute($crime_name, $crime_value);
+							foreach($crimes as $crime_name => $crime_value) {
+
+								// If the crime is in a category marked by a total, it'll be in a subarray
+								if (is_array($crime_value)) {
+									$element = $xml->createElement("category");
+
+									// The problem here is with adding the third level of category onto the second. Seems like it's ignored currently
+
+									foreach($crime_value as $subcat => $subcat_value) {
+										if ($subcat === 'total') {
+											$element->setAttribute("name", $crime_name);
+											$element->setAttribute($subcat, $subcat_value);
+										}
+										else {
+											if (is_array($subcat_value)) {
+												$elementTwo = $xml->createElement("category");
+												foreach($subcat_value as $subcat_subcat => $subcat_subcat_value) {
+													if ($subcat_subcat === "total") {
+														$elementTwo->setAttribute("name", $subcat);
+														$elementTwo->setAttribute($subcat_subcat, $subcat_subcat_value);
+													}
+													else {
+														$subelement = $xml->createElement("recorded");
+														$subelement->setAttribute("name", $subcat_subcat);
+														$subelement->setAttribute("total", $subcat_subcat_value);
+														$elementTwo->appendChild($subelement);
+													}
+												}
+												$element->appendChild($elementTwo);
+											}
+
+											else {
+												$subelement = $xml->createElement("recorded");
+												$subelement->setAttribute("name", $subcat);
+												$subelement->setAttribute("total", $subcat_value);
+												$element->appendChild($subelement);
+											}
+										}
+									}
+								}
+								// If not, proceed with single elements as normal
+								else {
+									$element = $xml->createElement("recorded");
+									$element->setAttribute("name", $crime_name);
+									$element->setAttribute("total", $crime_value);
+								}
 								$national->appendChild($element);
 							}
-						}
+
 
 						$root->appendChild($national);
 					}
