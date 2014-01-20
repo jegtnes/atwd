@@ -224,14 +224,15 @@ function twoColCsvToXml($filename) {
 							if (is_array($crime_value)) {
 								$element = $xml->createElement("category");
 
-								// The problem here is with adding the third level of category onto the second. Seems like it's ignored currently
-
 								foreach($crime_value as $subcat => $subcat_value) {
 									if ($subcat === 'total') {
 										$element->setAttribute("name", $crime_name);
 										$element->setAttribute($subcat, $subcat_value);
 									}
 									else {
+										// if we've got an array inside an array
+										// arrayception
+										// this is just for burglary inside theft offences
 										if (is_array($subcat_value)) {
 											$elementTwo = $xml->createElement("category");
 											foreach($subcat_value as $subcat_subcat => $subcat_subcat_value) {
@@ -246,6 +247,8 @@ function twoColCsvToXml($filename) {
 													$elementTwo->appendChild($subelement);
 												}
 											}
+
+											// add the above to the above category
 											$element->appendChild($elementTwo);
 										}
 
