@@ -29,34 +29,33 @@ function twoColCsvToXml($filename) {
 		while ($row = fgetcsv($fileHandle, 0, ',')) {
 			$rowCount++;
 
-			$total												= clean_value($row[1]);
-			$total_excluding_fraud								= clean_value($row[2]);
+			$total																= clean_value($row[1]);
+			$total_excluding_fraud												= clean_value($row[2]);
 
-			$crimes['violence_against_the_person']['total']= clean_value($row[4]);
-			$crimes['violence_against_the_person']['homicide'] 	= clean_value($row[5]);
-			$crimes['violence_against_the_person']['violence_with_injury']	= clean_value($row[6]);
+			$crimes['violence_against_the_person']['total']						= clean_value($row[4]);
+			$crimes['violence_against_the_person']['homicide']					= clean_value($row[5]);
+			$crimes['violence_against_the_person']['violence_with_injury']		= clean_value($row[6]);
 			$crimes['violence_against_the_person']['violence_without_injury']	= clean_value($row[7]);
-			$crimes['sexual_offences']							= clean_value($row[8]);
 
-			$crimes['robbery']									= clean_value($row[9]);
-			$crimes['theft_offences']							= clean_value($row[10]);
-			$crimes['burglary']									= clean_value($row[11]);
-			$crimes['domestic_burglary']						= clean_value($row[12]);
-			$crimes['nondomestic_burglary']						= clean_value($row[13]);
-			$crimes['vehicle_offences']							= clean_value($row[14]);
+			$crimes['sexual_offences']											= clean_value($row[8]);
+			$crimes['robbery']													= clean_value($row[9]);
 
-			$crimes['theft_from_the_person']					= clean_value($row[15]);
-			$crimes['bicycle_theft']							= clean_value($row[16]);
-			$crimes['shoplifting']								= clean_value($row[17]);
-			$crimes['all_other_theft_offences']					= clean_value($row[18]);
-			$crimes['criminal_damage_and_arson']				= clean_value($row[19]);
+			$crimes['theft_offences']['total']									= clean_value($row[10]);
+			$crimes['theft_offences']['burglary']								= clean_value($row[11]);
+			$crimes['theft_offences']['domestic_burglary']						= clean_value($row[12]);
+			$crimes['theft_offences']['nondomestic_burglary']					= clean_value($row[13]);
+			$crimes['theft_offences']['vehicle_offences']						= clean_value($row[14]);
+			$crimes['theft_offences']['theft_from_the_person']					= clean_value($row[15]);
+			$crimes['theft_offences']['bicycle_theft']							= clean_value($row[16]);
+			$crimes['theft_offences']['shoplifting']							= clean_value($row[17]);
+			$crimes['theft_offences']['all_other_theft_offences']				= clean_value($row[18]);
 
-			$crimes['drug_offences']							= clean_value($row[21]);
-			$crimes['possession_of_weapons_offences']			= clean_value($row[22]);
-			$crimes['public_order_offences']					= clean_value($row[23]);
-			$crimes['misceanellous_crrimes_against_society']	= clean_value($row[24]);
-
-			$crimes['fraud']									= clean_value($row[26]);
+			$crimes['criminal_damage_and_arson']								= clean_value($row[19]);
+			$crimes['drug_offences']											= clean_value($row[21]);
+			$crimes['possession_of_weapons_offences']							= clean_value($row[22]);
+			$crimes['public_order_offences']									= clean_value($row[23]);
+			$crimes['misceanellous_crimes_against_society']						= clean_value($row[24]);
+			$crimes['fraud']													= clean_value($row[26]);
 
 			// as we're dealing with two sets of headers here
 			// add area header to variable, and remove from line

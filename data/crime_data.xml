@@ -3,15 +3,6 @@
   <region id="North East" total="138982">
     <recorded sexual_offences="1837"/>
     <recorded robbery="832"/>
-    <recorded theft_offences="69326"/>
-    <recorded burglary="17058"/>
-    <recorded domestic_burglary="6761"/>
-    <recorded nondomestic_burglary="10297"/>
-    <recorded vehicle_offences="12789"/>
-    <recorded theft_from_the_person="1597"/>
-    <recorded bicycle_theft="3502"/>
-    <recorded shoplifting="16679"/>
-    <recorded all_other_theft_offences="17701"/>
     <recorded criminal_damage_and_arson="28879"/>
     <recorded drug_offences="8127"/>
     <recorded possession_of_weapons_offences="1118"/>
@@ -26,15 +17,16 @@
       </category>
       <recorded name="sexual_offences" total="563"/>
       <recorded name="robbery" total="259"/>
-      <recorded name="theft_offences" total="19811"/>
-      <recorded name="burglary" total="4561"/>
-      <recorded name="domestic_burglary" total="2054"/>
-      <recorded name="nondomestic_burglary" total="2507"/>
-      <recorded name="vehicle_offences" total="3329"/>
-      <recorded name="theft_from_the_person" total="372"/>
-      <recorded name="bicycle_theft" total="994"/>
-      <recorded name="shoplifting" total="5174"/>
-      <recorded name="all_other_theft_offences" total="5381"/>
+      <category name="theft_offences" total="19811">
+        <recorded name="burglary" total="4561"/>
+        <recorded name="domestic_burglary" total="2054"/>
+        <recorded name="nondomestic_burglary" total="2507"/>
+        <recorded name="vehicle_offences" total="3329"/>
+        <recorded name="theft_from_the_person" total="372"/>
+        <recorded name="bicycle_theft" total="994"/>
+        <recorded name="shoplifting" total="5174"/>
+        <recorded name="all_other_theft_offences" total="5381"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="7934"/>
       <recorded name="drug_offences" total="2116"/>
       <recorded name="possession_of_weapons_offences" total="267"/>
@@ -50,15 +42,16 @@
       </category>
       <recorded name="sexual_offences" total="360"/>
       <recorded name="robbery" total="108"/>
-      <recorded name="theft_offences" total="15009"/>
-      <recorded name="burglary" total="3983"/>
-      <recorded name="domestic_burglary" total="1385"/>
-      <recorded name="nondomestic_burglary" total="2598"/>
-      <recorded name="vehicle_offences" total="3355"/>
-      <recorded name="theft_from_the_person" total="149"/>
-      <recorded name="bicycle_theft" total="595"/>
-      <recorded name="shoplifting" total="2827"/>
-      <recorded name="all_other_theft_offences" total="4100"/>
+      <category name="theft_offences" total="15009">
+        <recorded name="burglary" total="3983"/>
+        <recorded name="domestic_burglary" total="1385"/>
+        <recorded name="nondomestic_burglary" total="2598"/>
+        <recorded name="vehicle_offences" total="3355"/>
+        <recorded name="theft_from_the_person" total="149"/>
+        <recorded name="bicycle_theft" total="595"/>
+        <recorded name="shoplifting" total="2827"/>
+        <recorded name="all_other_theft_offences" total="4100"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="6752"/>
       <recorded name="drug_offences" total="1281"/>
       <recorded name="possession_of_weapons_offences" total="218"/>
@@ -74,15 +67,16 @@
       </category>
       <recorded name="sexual_offences" total="914"/>
       <recorded name="robbery" total="465"/>
-      <recorded name="theft_offences" total="34506"/>
-      <recorded name="burglary" total="8514"/>
-      <recorded name="domestic_burglary" total="3322"/>
-      <recorded name="nondomestic_burglary" total="5192"/>
-      <recorded name="vehicle_offences" total="6105"/>
-      <recorded name="theft_from_the_person" total="1076"/>
-      <recorded name="bicycle_theft" total="1913"/>
-      <recorded name="shoplifting" total="8678"/>
-      <recorded name="all_other_theft_offences" total="8220"/>
+      <category name="theft_offences" total="34506">
+        <recorded name="burglary" total="8514"/>
+        <recorded name="domestic_burglary" total="3322"/>
+        <recorded name="nondomestic_burglary" total="5192"/>
+        <recorded name="vehicle_offences" total="6105"/>
+        <recorded name="theft_from_the_person" total="1076"/>
+        <recorded name="bicycle_theft" total="1913"/>
+        <recorded name="shoplifting" total="8678"/>
+        <recorded name="all_other_theft_offences" total="8220"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="14193"/>
       <recorded name="drug_offences" total="4730"/>
       <recorded name="possession_of_weapons_offences" total="633"/>
@@ -94,15 +88,6 @@
   <region id="North West" total="444423">
     <recorded sexual_offences="7267"/>
     <recorded robbery="6126"/>
-    <recorded theft_offences="222487"/>
-    <recorded burglary="60974"/>
-    <recorded domestic_burglary="29661"/>
-    <recorded nondomestic_burglary="31313"/>
-    <recorded vehicle_offences="45172"/>
-    <recorded theft_from_the_person="10023"/>
-    <recorded bicycle_theft="10570"/>
-    <recorded shoplifting="40394"/>
-    <recorded all_other_theft_offences="55354"/>
     <recorded criminal_damage_and_arson="77633"/>
     <recorded drug_offences="27490"/>
     <recorded possession_of_weapons_offences="2643"/>
@@ -117,15 +102,16 @@
       </category>
       <recorded name="sexual_offences" total="880"/>
       <recorded name="robbery" total="321"/>
-      <recorded name="theft_offences" total="28840"/>
-      <recorded name="burglary" total="6884"/>
-      <recorded name="domestic_burglary" total="2895"/>
-      <recorded name="nondomestic_burglary" total="3989"/>
-      <recorded name="vehicle_offences" total="5706"/>
-      <recorded name="theft_from_the_person" total="954"/>
-      <recorded name="bicycle_theft" total="1793"/>
-      <recorded name="shoplifting" total="6580"/>
-      <recorded name="all_other_theft_offences" total="6923"/>
+      <category name="theft_offences" total="28840">
+        <recorded name="burglary" total="6884"/>
+        <recorded name="domestic_burglary" total="2895"/>
+        <recorded name="nondomestic_burglary" total="3989"/>
+        <recorded name="vehicle_offences" total="5706"/>
+        <recorded name="theft_from_the_person" total="954"/>
+        <recorded name="bicycle_theft" total="1793"/>
+        <recorded name="shoplifting" total="6580"/>
+        <recorded name="all_other_theft_offences" total="6923"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="9976"/>
       <recorded name="drug_offences" total="2825"/>
       <recorded name="possession_of_weapons_offences" total="260"/>
@@ -141,15 +127,16 @@
       </category>
       <recorded name="sexual_offences" total="371"/>
       <recorded name="robbery" total="58"/>
-      <recorded name="theft_offences" total="9784"/>
-      <recorded name="burglary" total="2297"/>
-      <recorded name="domestic_burglary" total="678"/>
-      <recorded name="nondomestic_burglary" total="1619"/>
-      <recorded name="vehicle_offences" total="1571"/>
-      <recorded name="theft_from_the_person" total="137"/>
-      <recorded name="bicycle_theft" total="432"/>
-      <recorded name="shoplifting" total="2459"/>
-      <recorded name="all_other_theft_offences" total="2888"/>
+      <category name="theft_offences" total="9784">
+        <recorded name="burglary" total="2297"/>
+        <recorded name="domestic_burglary" total="678"/>
+        <recorded name="nondomestic_burglary" total="1619"/>
+        <recorded name="vehicle_offences" total="1571"/>
+        <recorded name="theft_from_the_person" total="137"/>
+        <recorded name="bicycle_theft" total="432"/>
+        <recorded name="shoplifting" total="2459"/>
+        <recorded name="all_other_theft_offences" total="2888"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="5290"/>
       <recorded name="drug_offences" total="1531"/>
       <recorded name="possession_of_weapons_offences" total="143"/>
@@ -165,15 +152,16 @@
       </category>
       <recorded name="sexual_offences" total="2940"/>
       <recorded name="robbery" total="3898"/>
-      <recorded name="theft_offences" total="94336"/>
-      <recorded name="burglary" total="28363"/>
-      <recorded name="domestic_burglary" total="15348"/>
-      <recorded name="nondomestic_burglary" total="13015"/>
-      <recorded name="vehicle_offences" total="20700"/>
-      <recorded name="theft_from_the_person" total="5456"/>
-      <recorded name="bicycle_theft" total="4518"/>
-      <recorded name="shoplifting" total="13889"/>
-      <recorded name="all_other_theft_offences" total="21410"/>
+      <category name="theft_offences" total="94336">
+        <recorded name="burglary" total="28363"/>
+        <recorded name="domestic_burglary" total="15348"/>
+        <recorded name="nondomestic_burglary" total="13015"/>
+        <recorded name="vehicle_offences" total="20700"/>
+        <recorded name="theft_from_the_person" total="5456"/>
+        <recorded name="bicycle_theft" total="4518"/>
+        <recorded name="shoplifting" total="13889"/>
+        <recorded name="all_other_theft_offences" total="21410"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="28765"/>
       <recorded name="drug_offences" total="9004"/>
       <recorded name="possession_of_weapons_offences" total="1063"/>
@@ -189,15 +177,16 @@
       </category>
       <recorded name="sexual_offences" total="1738"/>
       <recorded name="robbery" total="626"/>
-      <recorded name="theft_offences" total="46045"/>
-      <recorded name="burglary" total="11856"/>
-      <recorded name="domestic_burglary" total="4321"/>
-      <recorded name="nondomestic_burglary" total="7535"/>
-      <recorded name="vehicle_offences" total="8527"/>
-      <recorded name="theft_from_the_person" total="958"/>
-      <recorded name="bicycle_theft" total="2135"/>
-      <recorded name="shoplifting" total="8286"/>
-      <recorded name="all_other_theft_offences" total="14283"/>
+      <category name="theft_offences" total="46045">
+        <recorded name="burglary" total="11856"/>
+        <recorded name="domestic_burglary" total="4321"/>
+        <recorded name="nondomestic_burglary" total="7535"/>
+        <recorded name="vehicle_offences" total="8527"/>
+        <recorded name="theft_from_the_person" total="958"/>
+        <recorded name="bicycle_theft" total="2135"/>
+        <recorded name="shoplifting" total="8286"/>
+        <recorded name="all_other_theft_offences" total="14283"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="16589"/>
       <recorded name="drug_offences" total="3961"/>
       <recorded name="possession_of_weapons_offences" total="514"/>
@@ -213,15 +202,16 @@
       </category>
       <recorded name="sexual_offences" total="1338"/>
       <recorded name="robbery" total="1223"/>
-      <recorded name="theft_offences" total="43482"/>
-      <recorded name="burglary" total="11574"/>
-      <recorded name="domestic_burglary" total="6419"/>
-      <recorded name="nondomestic_burglary" total="5155"/>
-      <recorded name="vehicle_offences" total="8668"/>
-      <recorded name="theft_from_the_person" total="2518"/>
-      <recorded name="bicycle_theft" total="1692"/>
-      <recorded name="shoplifting" total="9180"/>
-      <recorded name="all_other_theft_offences" total="9850"/>
+      <category name="theft_offences" total="43482">
+        <recorded name="burglary" total="11574"/>
+        <recorded name="domestic_burglary" total="6419"/>
+        <recorded name="nondomestic_burglary" total="5155"/>
+        <recorded name="vehicle_offences" total="8668"/>
+        <recorded name="theft_from_the_person" total="2518"/>
+        <recorded name="bicycle_theft" total="1692"/>
+        <recorded name="shoplifting" total="9180"/>
+        <recorded name="all_other_theft_offences" total="9850"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="17013"/>
       <recorded name="drug_offences" total="10169"/>
       <recorded name="possession_of_weapons_offences" total="663"/>
@@ -233,15 +223,6 @@
   <region id="Yorkshire And Humber" total="356370">
     <recorded sexual_offences="5472"/>
     <recorded robbery="3540"/>
-    <recorded theft_offences="198989"/>
-    <recorded burglary="57702"/>
-    <recorded domestic_burglary="26626"/>
-    <recorded nondomestic_burglary="31076"/>
-    <recorded vehicle_offences="41539"/>
-    <recorded theft_from_the_person="7856"/>
-    <recorded bicycle_theft="7068"/>
-    <recorded shoplifting="34298"/>
-    <recorded all_other_theft_offences="50526"/>
     <recorded criminal_damage_and_arson="59185"/>
     <recorded drug_offences="15520"/>
     <recorded possession_of_weapons_offences="1649"/>
@@ -256,15 +237,16 @@
       </category>
       <recorded name="sexual_offences" total="1219"/>
       <recorded name="robbery" total="479"/>
-      <recorded name="theft_offences" total="33016"/>
-      <recorded name="burglary" total="10120"/>
-      <recorded name="domestic_burglary" total="3832"/>
-      <recorded name="nondomestic_burglary" total="6288"/>
-      <recorded name="vehicle_offences" total="4834"/>
-      <recorded name="theft_from_the_person" total="581"/>
-      <recorded name="bicycle_theft" total="2332"/>
-      <recorded name="shoplifting" total="6844"/>
-      <recorded name="all_other_theft_offences" total="8305"/>
+      <category name="theft_offences" total="33016">
+        <recorded name="burglary" total="10120"/>
+        <recorded name="domestic_burglary" total="3832"/>
+        <recorded name="nondomestic_burglary" total="6288"/>
+        <recorded name="vehicle_offences" total="4834"/>
+        <recorded name="theft_from_the_person" total="581"/>
+        <recorded name="bicycle_theft" total="2332"/>
+        <recorded name="shoplifting" total="6844"/>
+        <recorded name="all_other_theft_offences" total="8305"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="11020"/>
       <recorded name="drug_offences" total="2459"/>
       <recorded name="possession_of_weapons_offences" total="277"/>
@@ -280,15 +262,16 @@
       </category>
       <recorded name="sexual_offences" total="666"/>
       <recorded name="robbery" total="123"/>
-      <recorded name="theft_offences" total="17605"/>
-      <recorded name="burglary" total="4313"/>
-      <recorded name="domestic_burglary" total="1619"/>
-      <recorded name="nondomestic_burglary" total="2694"/>
-      <recorded name="vehicle_offences" total="2689"/>
-      <recorded name="theft_from_the_person" total="477"/>
-      <recorded name="bicycle_theft" total="1179"/>
-      <recorded name="shoplifting" total="3722"/>
-      <recorded name="all_other_theft_offences" total="5225"/>
+      <category name="theft_offences" total="17605">
+        <recorded name="burglary" total="4313"/>
+        <recorded name="domestic_burglary" total="1619"/>
+        <recorded name="nondomestic_burglary" total="2694"/>
+        <recorded name="vehicle_offences" total="2689"/>
+        <recorded name="theft_from_the_person" total="477"/>
+        <recorded name="bicycle_theft" total="1179"/>
+        <recorded name="shoplifting" total="3722"/>
+        <recorded name="all_other_theft_offences" total="5225"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="5867"/>
       <recorded name="drug_offences" total="1862"/>
       <recorded name="possession_of_weapons_offences" total="178"/>
@@ -304,15 +287,16 @@
       </category>
       <recorded name="sexual_offences" total="903"/>
       <recorded name="robbery" total="964"/>
-      <recorded name="theft_offences" total="54647"/>
-      <recorded name="burglary" total="16661"/>
-      <recorded name="domestic_burglary" total="8206"/>
-      <recorded name="nondomestic_burglary" total="8455"/>
-      <recorded name="vehicle_offences" total="12439"/>
-      <recorded name="theft_from_the_person" total="1805"/>
-      <recorded name="bicycle_theft" total="1448"/>
-      <recorded name="shoplifting" total="9680"/>
-      <recorded name="all_other_theft_offences" total="12614"/>
+      <category name="theft_offences" total="54647">
+        <recorded name="burglary" total="16661"/>
+        <recorded name="domestic_burglary" total="8206"/>
+        <recorded name="nondomestic_burglary" total="8455"/>
+        <recorded name="vehicle_offences" total="12439"/>
+        <recorded name="theft_from_the_person" total="1805"/>
+        <recorded name="bicycle_theft" total="1448"/>
+        <recorded name="shoplifting" total="9680"/>
+        <recorded name="all_other_theft_offences" total="12614"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="16644"/>
       <recorded name="drug_offences" total="4401"/>
       <recorded name="possession_of_weapons_offences" total="505"/>
@@ -328,15 +312,16 @@
       </category>
       <recorded name="sexual_offences" total="2684"/>
       <recorded name="robbery" total="1974"/>
-      <recorded name="theft_offences" total="93721"/>
-      <recorded name="burglary" total="26608"/>
-      <recorded name="domestic_burglary" total="12969"/>
-      <recorded name="nondomestic_burglary" total="13639"/>
-      <recorded name="vehicle_offences" total="21577"/>
-      <recorded name="theft_from_the_person" total="4993"/>
-      <recorded name="bicycle_theft" total="2109"/>
-      <recorded name="shoplifting" total="14052"/>
-      <recorded name="all_other_theft_offences" total="24382"/>
+      <category name="theft_offences" total="93721">
+        <recorded name="burglary" total="26608"/>
+        <recorded name="domestic_burglary" total="12969"/>
+        <recorded name="nondomestic_burglary" total="13639"/>
+        <recorded name="vehicle_offences" total="21577"/>
+        <recorded name="theft_from_the_person" total="4993"/>
+        <recorded name="bicycle_theft" total="2109"/>
+        <recorded name="shoplifting" total="14052"/>
+        <recorded name="all_other_theft_offences" total="24382"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="25654"/>
       <recorded name="drug_offences" total="6798"/>
       <recorded name="possession_of_weapons_offences" total="689"/>
@@ -348,15 +333,6 @@
   <region id="East Midlands" total="261294">
     <recorded sexual_offences="4221"/>
     <recorded robbery="3018"/>
-    <recorded theft_offences="136146"/>
-    <recorded burglary="34891"/>
-    <recorded domestic_burglary="16040"/>
-    <recorded nondomestic_burglary="18851"/>
-    <recorded vehicle_offences="27487"/>
-    <recorded theft_from_the_person="5608"/>
-    <recorded bicycle_theft="7685"/>
-    <recorded shoplifting="26882"/>
-    <recorded all_other_theft_offences="33593"/>
     <recorded criminal_damage_and_arson="42939"/>
     <recorded drug_offences="12027"/>
     <recorded possession_of_weapons_offences="1543"/>
@@ -371,15 +347,16 @@
       </category>
       <recorded name="sexual_offences" total="840"/>
       <recorded name="robbery" total="540"/>
-      <recorded name="theft_offences" total="26478"/>
-      <recorded name="burglary" total="7279"/>
-      <recorded name="domestic_burglary" total="2868"/>
-      <recorded name="nondomestic_burglary" total="4411"/>
-      <recorded name="vehicle_offences" total="5420"/>
-      <recorded name="theft_from_the_person" total="673"/>
-      <recorded name="bicycle_theft" total="1199"/>
-      <recorded name="shoplifting" total="5090"/>
-      <recorded name="all_other_theft_offences" total="6817"/>
+      <category name="theft_offences" total="26478">
+        <recorded name="burglary" total="7279"/>
+        <recorded name="domestic_burglary" total="2868"/>
+        <recorded name="nondomestic_burglary" total="4411"/>
+        <recorded name="vehicle_offences" total="5420"/>
+        <recorded name="theft_from_the_person" total="673"/>
+        <recorded name="bicycle_theft" total="1199"/>
+        <recorded name="shoplifting" total="5090"/>
+        <recorded name="all_other_theft_offences" total="6817"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="8855"/>
       <recorded name="drug_offences" total="2651"/>
       <recorded name="possession_of_weapons_offences" total="277"/>
@@ -395,15 +372,16 @@
       </category>
       <recorded name="sexual_offences" total="1024"/>
       <recorded name="robbery" total="705"/>
-      <recorded name="theft_offences" total="30428"/>
-      <recorded name="burglary" total="7161"/>
-      <recorded name="domestic_burglary" total="3743"/>
-      <recorded name="nondomestic_burglary" total="3418"/>
-      <recorded name="vehicle_offences" total="6516"/>
-      <recorded name="theft_from_the_person" total="1388"/>
-      <recorded name="bicycle_theft" total="2167"/>
-      <recorded name="shoplifting" total="5541"/>
-      <recorded name="all_other_theft_offences" total="7655"/>
+      <category name="theft_offences" total="30428">
+        <recorded name="burglary" total="7161"/>
+        <recorded name="domestic_burglary" total="3743"/>
+        <recorded name="nondomestic_burglary" total="3418"/>
+        <recorded name="vehicle_offences" total="6516"/>
+        <recorded name="theft_from_the_person" total="1388"/>
+        <recorded name="bicycle_theft" total="2167"/>
+        <recorded name="shoplifting" total="5541"/>
+        <recorded name="all_other_theft_offences" total="7655"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="9430"/>
       <recorded name="drug_offences" total="2223"/>
       <recorded name="possession_of_weapons_offences" total="297"/>
@@ -419,15 +397,16 @@
       </category>
       <recorded name="sexual_offences" total="579"/>
       <recorded name="robbery" total="172"/>
-      <recorded name="theft_offences" total="20428"/>
-      <recorded name="burglary" total="5386"/>
-      <recorded name="domestic_burglary" total="1932"/>
-      <recorded name="nondomestic_burglary" total="3454"/>
-      <recorded name="vehicle_offences" total="3316"/>
-      <recorded name="theft_from_the_person" total="400"/>
-      <recorded name="bicycle_theft" total="1466"/>
-      <recorded name="shoplifting" total="4645"/>
-      <recorded name="all_other_theft_offences" total="5215"/>
+      <category name="theft_offences" total="20428">
+        <recorded name="burglary" total="5386"/>
+        <recorded name="domestic_burglary" total="1932"/>
+        <recorded name="nondomestic_burglary" total="3454"/>
+        <recorded name="vehicle_offences" total="3316"/>
+        <recorded name="theft_from_the_person" total="400"/>
+        <recorded name="bicycle_theft" total="1466"/>
+        <recorded name="shoplifting" total="4645"/>
+        <recorded name="all_other_theft_offences" total="5215"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="6026"/>
       <recorded name="drug_offences" total="1541"/>
       <recorded name="possession_of_weapons_offences" total="250"/>
@@ -443,15 +422,16 @@
       </category>
       <recorded name="sexual_offences" total="758"/>
       <recorded name="robbery" total="596"/>
-      <recorded name="theft_offences" total="23626"/>
-      <recorded name="burglary" total="6459"/>
-      <recorded name="domestic_burglary" total="3144"/>
-      <recorded name="nondomestic_burglary" total="3315"/>
-      <recorded name="vehicle_offences" total="5342"/>
-      <recorded name="theft_from_the_person" total="1167"/>
-      <recorded name="bicycle_theft" total="898"/>
-      <recorded name="shoplifting" total="4468"/>
-      <recorded name="all_other_theft_offences" total="5292"/>
+      <category name="theft_offences" total="23626">
+        <recorded name="burglary" total="6459"/>
+        <recorded name="domestic_burglary" total="3144"/>
+        <recorded name="nondomestic_burglary" total="3315"/>
+        <recorded name="vehicle_offences" total="5342"/>
+        <recorded name="theft_from_the_person" total="1167"/>
+        <recorded name="bicycle_theft" total="898"/>
+        <recorded name="shoplifting" total="4468"/>
+        <recorded name="all_other_theft_offences" total="5292"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="7966"/>
       <recorded name="drug_offences" total="1798"/>
       <recorded name="possession_of_weapons_offences" total="247"/>
@@ -467,15 +447,16 @@
       </category>
       <recorded name="sexual_offences" total="1020"/>
       <recorded name="robbery" total="1005"/>
-      <recorded name="theft_offences" total="35186"/>
-      <recorded name="burglary" total="8606"/>
-      <recorded name="domestic_burglary" total="4353"/>
-      <recorded name="nondomestic_burglary" total="4253"/>
-      <recorded name="vehicle_offences" total="6893"/>
-      <recorded name="theft_from_the_person" total="1980"/>
-      <recorded name="bicycle_theft" total="1955"/>
-      <recorded name="shoplifting" total="7138"/>
-      <recorded name="all_other_theft_offences" total="8614"/>
+      <category name="theft_offences" total="35186">
+        <recorded name="burglary" total="8606"/>
+        <recorded name="domestic_burglary" total="4353"/>
+        <recorded name="nondomestic_burglary" total="4253"/>
+        <recorded name="vehicle_offences" total="6893"/>
+        <recorded name="theft_from_the_person" total="1980"/>
+        <recorded name="bicycle_theft" total="1955"/>
+        <recorded name="shoplifting" total="7138"/>
+        <recorded name="all_other_theft_offences" total="8614"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="10662"/>
       <recorded name="drug_offences" total="3814"/>
       <recorded name="possession_of_weapons_offences" total="472"/>
@@ -487,15 +468,6 @@
   <region id="West Midlands" total="318640">
     <recorded sexual_offences="5666"/>
     <recorded robbery="6481"/>
-    <recorded theft_offences="158116"/>
-    <recorded burglary="42709"/>
-    <recorded domestic_burglary="20520"/>
-    <recorded nondomestic_burglary="22189"/>
-    <recorded vehicle_offences="37927"/>
-    <recorded theft_from_the_person="5033"/>
-    <recorded bicycle_theft="5978"/>
-    <recorded shoplifting="27957"/>
-    <recorded all_other_theft_offences="38512"/>
     <recorded criminal_damage_and_arson="49208"/>
     <recorded drug_offences="16248"/>
     <recorded possession_of_weapons_offences="2003"/>
@@ -510,15 +482,16 @@
       </category>
       <recorded name="sexual_offences" total="1171"/>
       <recorded name="robbery" total="485"/>
-      <recorded name="theft_offences" total="25557"/>
-      <recorded name="burglary" total="6634"/>
-      <recorded name="domestic_burglary" total="2712"/>
-      <recorded name="nondomestic_burglary" total="3922"/>
-      <recorded name="vehicle_offences" total="4741"/>
-      <recorded name="theft_from_the_person" total="486"/>
-      <recorded name="bicycle_theft" total="894"/>
-      <recorded name="shoplifting" total="5148"/>
-      <recorded name="all_other_theft_offences" total="7654"/>
+      <category name="theft_offences" total="25557">
+        <recorded name="burglary" total="6634"/>
+        <recorded name="domestic_burglary" total="2712"/>
+        <recorded name="nondomestic_burglary" total="3922"/>
+        <recorded name="vehicle_offences" total="4741"/>
+        <recorded name="theft_from_the_person" total="486"/>
+        <recorded name="bicycle_theft" total="894"/>
+        <recorded name="shoplifting" total="5148"/>
+        <recorded name="all_other_theft_offences" total="7654"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="10410"/>
       <recorded name="drug_offences" total="3549"/>
       <recorded name="possession_of_weapons_offences" total="320"/>
@@ -534,15 +507,16 @@
       </category>
       <recorded name="sexual_offences" total="481"/>
       <recorded name="robbery" total="253"/>
-      <recorded name="theft_offences" total="16745"/>
-      <recorded name="burglary" total="4290"/>
-      <recorded name="domestic_burglary" total="1855"/>
-      <recorded name="nondomestic_burglary" total="2435"/>
-      <recorded name="vehicle_offences" total="4185"/>
-      <recorded name="theft_from_the_person" total="290"/>
-      <recorded name="bicycle_theft" total="722"/>
-      <recorded name="shoplifting" total="2211"/>
-      <recorded name="all_other_theft_offences" total="5047"/>
+      <category name="theft_offences" total="16745">
+        <recorded name="burglary" total="4290"/>
+        <recorded name="domestic_burglary" total="1855"/>
+        <recorded name="nondomestic_burglary" total="2435"/>
+        <recorded name="vehicle_offences" total="4185"/>
+        <recorded name="theft_from_the_person" total="290"/>
+        <recorded name="bicycle_theft" total="722"/>
+        <recorded name="shoplifting" total="2211"/>
+        <recorded name="all_other_theft_offences" total="5047"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="4500"/>
       <recorded name="drug_offences" total="1427"/>
       <recorded name="possession_of_weapons_offences" total="126"/>
@@ -558,15 +532,16 @@
       </category>
       <recorded name="sexual_offences" total="1228"/>
       <recorded name="robbery" total="379"/>
-      <recorded name="theft_offences" total="29572"/>
-      <recorded name="burglary" total="7536"/>
-      <recorded name="domestic_burglary" total="2588"/>
-      <recorded name="nondomestic_burglary" total="4948"/>
-      <recorded name="vehicle_offences" total="5908"/>
-      <recorded name="theft_from_the_person" total="568"/>
-      <recorded name="bicycle_theft" total="1336"/>
-      <recorded name="shoplifting" total="5895"/>
-      <recorded name="all_other_theft_offences" total="8329"/>
+      <category name="theft_offences" total="29572">
+        <recorded name="burglary" total="7536"/>
+        <recorded name="domestic_burglary" total="2588"/>
+        <recorded name="nondomestic_burglary" total="4948"/>
+        <recorded name="vehicle_offences" total="5908"/>
+        <recorded name="theft_from_the_person" total="568"/>
+        <recorded name="bicycle_theft" total="1336"/>
+        <recorded name="shoplifting" total="5895"/>
+        <recorded name="all_other_theft_offences" total="8329"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="9413"/>
       <recorded name="drug_offences" total="3140"/>
       <recorded name="possession_of_weapons_offences" total="335"/>
@@ -582,15 +557,16 @@
       </category>
       <recorded name="sexual_offences" total="2786"/>
       <recorded name="robbery" total="5364"/>
-      <recorded name="theft_offences" total="86242"/>
-      <recorded name="burglary" total="24249"/>
-      <recorded name="domestic_burglary" total="13365"/>
-      <recorded name="nondomestic_burglary" total="10884"/>
-      <recorded name="vehicle_offences" total="23093"/>
-      <recorded name="theft_from_the_person" total="3689"/>
-      <recorded name="bicycle_theft" total="3026"/>
-      <recorded name="shoplifting" total="14703"/>
-      <recorded name="all_other_theft_offences" total="17482"/>
+      <category name="theft_offences" total="86242">
+        <recorded name="burglary" total="24249"/>
+        <recorded name="domestic_burglary" total="13365"/>
+        <recorded name="nondomestic_burglary" total="10884"/>
+        <recorded name="vehicle_offences" total="23093"/>
+        <recorded name="theft_from_the_person" total="3689"/>
+        <recorded name="bicycle_theft" total="3026"/>
+        <recorded name="shoplifting" total="14703"/>
+        <recorded name="all_other_theft_offences" total="17482"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="24885"/>
       <recorded name="drug_offences" total="8132"/>
       <recorded name="possession_of_weapons_offences" total="1222"/>
@@ -602,15 +578,6 @@
   <region id="East Of England" total="309296">
     <recorded sexual_offences="4855"/>
     <recorded robbery="2948"/>
-    <recorded theft_offences="159330"/>
-    <recorded burglary="39031"/>
-    <recorded domestic_burglary="19487"/>
-    <recorded nondomestic_burglary="19544"/>
-    <recorded vehicle_offences="33852"/>
-    <recorded theft_from_the_person="5380"/>
-    <recorded bicycle_theft="10416"/>
-    <recorded shoplifting="29896"/>
-    <recorded all_other_theft_offences="40755"/>
     <recorded criminal_damage_and_arson="48347"/>
     <recorded drug_offences="17697"/>
     <recorded possession_of_weapons_offences="2051"/>
@@ -625,15 +592,16 @@
       </category>
       <recorded name="sexual_offences" total="481"/>
       <recorded name="robbery" total="615"/>
-      <recorded name="theft_offences" total="18693"/>
-      <recorded name="burglary" total="4960"/>
-      <recorded name="domestic_burglary" total="2885"/>
-      <recorded name="nondomestic_burglary" total="2075"/>
-      <recorded name="vehicle_offences" total="4510"/>
-      <recorded name="theft_from_the_person" total="561"/>
-      <recorded name="bicycle_theft" total="983"/>
-      <recorded name="shoplifting" total="3198"/>
-      <recorded name="all_other_theft_offences" total="4481"/>
+      <category name="theft_offences" total="18693">
+        <recorded name="burglary" total="4960"/>
+        <recorded name="domestic_burglary" total="2885"/>
+        <recorded name="nondomestic_burglary" total="2075"/>
+        <recorded name="vehicle_offences" total="4510"/>
+        <recorded name="theft_from_the_person" total="561"/>
+        <recorded name="bicycle_theft" total="983"/>
+        <recorded name="shoplifting" total="3198"/>
+        <recorded name="all_other_theft_offences" total="4481"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="5746"/>
       <recorded name="drug_offences" total="1542"/>
       <recorded name="possession_of_weapons_offences" total="264"/>
@@ -649,15 +617,16 @@
       </category>
       <recorded name="sexual_offences" total="672"/>
       <recorded name="robbery" total="332"/>
-      <recorded name="theft_offences" total="25537"/>
-      <recorded name="burglary" total="5501"/>
-      <recorded name="domestic_burglary" total="2573"/>
-      <recorded name="nondomestic_burglary" total="2928"/>
-      <recorded name="vehicle_offences" total="4483"/>
-      <recorded name="theft_from_the_person" total="985"/>
-      <recorded name="bicycle_theft" total="3611"/>
-      <recorded name="shoplifting" total="4442"/>
-      <recorded name="all_other_theft_offences" total="6515"/>
+      <category name="theft_offences" total="25537">
+        <recorded name="burglary" total="5501"/>
+        <recorded name="domestic_burglary" total="2573"/>
+        <recorded name="nondomestic_burglary" total="2928"/>
+        <recorded name="vehicle_offences" total="4483"/>
+        <recorded name="theft_from_the_person" total="985"/>
+        <recorded name="bicycle_theft" total="3611"/>
+        <recorded name="shoplifting" total="4442"/>
+        <recorded name="all_other_theft_offences" total="6515"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="6406"/>
       <recorded name="drug_offences" total="2874"/>
       <recorded name="possession_of_weapons_offences" total="217"/>
@@ -673,15 +642,16 @@
       </category>
       <recorded name="sexual_offences" total="1527"/>
       <recorded name="robbery" total="1172"/>
-      <recorded name="theft_offences" total="53708"/>
-      <recorded name="burglary" total="14367"/>
-      <recorded name="domestic_burglary" total="7874"/>
-      <recorded name="nondomestic_burglary" total="6493"/>
-      <recorded name="vehicle_offences" total="12856"/>
-      <recorded name="theft_from_the_person" total="1699"/>
-      <recorded name="bicycle_theft" total="2248"/>
-      <recorded name="shoplifting" total="9274"/>
-      <recorded name="all_other_theft_offences" total="13264"/>
+      <category name="theft_offences" total="53708">
+        <recorded name="burglary" total="14367"/>
+        <recorded name="domestic_burglary" total="7874"/>
+        <recorded name="nondomestic_burglary" total="6493"/>
+        <recorded name="vehicle_offences" total="12856"/>
+        <recorded name="theft_from_the_person" total="1699"/>
+        <recorded name="bicycle_theft" total="2248"/>
+        <recorded name="shoplifting" total="9274"/>
+        <recorded name="all_other_theft_offences" total="13264"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="14309"/>
       <recorded name="drug_offences" total="4122"/>
       <recorded name="possession_of_weapons_offences" total="832"/>
@@ -697,15 +667,16 @@
       </category>
       <recorded name="sexual_offences" total="691"/>
       <recorded name="robbery" total="439"/>
-      <recorded name="theft_offences" total="25608"/>
-      <recorded name="burglary" total="5648"/>
-      <recorded name="domestic_burglary" total="2900"/>
-      <recorded name="nondomestic_burglary" total="2748"/>
-      <recorded name="vehicle_offences" total="5537"/>
-      <recorded name="theft_from_the_person" total="1336"/>
-      <recorded name="bicycle_theft" total="1174"/>
-      <recorded name="shoplifting" total="5409"/>
-      <recorded name="all_other_theft_offences" total="6504"/>
+      <category name="theft_offences" total="25608">
+        <recorded name="burglary" total="5648"/>
+        <recorded name="domestic_burglary" total="2900"/>
+        <recorded name="nondomestic_burglary" total="2748"/>
+        <recorded name="vehicle_offences" total="5537"/>
+        <recorded name="theft_from_the_person" total="1336"/>
+        <recorded name="bicycle_theft" total="1174"/>
+        <recorded name="shoplifting" total="5409"/>
+        <recorded name="all_other_theft_offences" total="6504"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="8054"/>
       <recorded name="drug_offences" total="4785"/>
       <recorded name="possession_of_weapons_offences" total="293"/>
@@ -721,15 +692,16 @@
       </category>
       <recorded name="sexual_offences" total="776"/>
       <recorded name="robbery" total="164"/>
-      <recorded name="theft_offences" total="17058"/>
-      <recorded name="burglary" total="3779"/>
-      <recorded name="domestic_burglary" total="1383"/>
-      <recorded name="nondomestic_burglary" total="2396"/>
-      <recorded name="vehicle_offences" total="2774"/>
-      <recorded name="theft_from_the_person" total="376"/>
-      <recorded name="bicycle_theft" total="1241"/>
-      <recorded name="shoplifting" total="3852"/>
-      <recorded name="all_other_theft_offences" total="5036"/>
+      <category name="theft_offences" total="17058">
+        <recorded name="burglary" total="3779"/>
+        <recorded name="domestic_burglary" total="1383"/>
+        <recorded name="nondomestic_burglary" total="2396"/>
+        <recorded name="vehicle_offences" total="2774"/>
+        <recorded name="theft_from_the_person" total="376"/>
+        <recorded name="bicycle_theft" total="1241"/>
+        <recorded name="shoplifting" total="3852"/>
+        <recorded name="all_other_theft_offences" total="5036"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="6988"/>
       <recorded name="drug_offences" total="2413"/>
       <recorded name="possession_of_weapons_offences" total="212"/>
@@ -745,15 +717,16 @@
       </category>
       <recorded name="sexual_offences" total="708"/>
       <recorded name="robbery" total="226"/>
-      <recorded name="theft_offences" total="18726"/>
-      <recorded name="burglary" total="4776"/>
-      <recorded name="domestic_burglary" total="1872"/>
-      <recorded name="nondomestic_burglary" total="2904"/>
-      <recorded name="vehicle_offences" total="3692"/>
-      <recorded name="theft_from_the_person" total="423"/>
-      <recorded name="bicycle_theft" total="1159"/>
-      <recorded name="shoplifting" total="3721"/>
-      <recorded name="all_other_theft_offences" total="4955"/>
+      <category name="theft_offences" total="18726">
+        <recorded name="burglary" total="4776"/>
+        <recorded name="domestic_burglary" total="1872"/>
+        <recorded name="nondomestic_burglary" total="2904"/>
+        <recorded name="vehicle_offences" total="3692"/>
+        <recorded name="theft_from_the_person" total="423"/>
+        <recorded name="bicycle_theft" total="1159"/>
+        <recorded name="shoplifting" total="3721"/>
+        <recorded name="all_other_theft_offences" total="4955"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="6844"/>
       <recorded name="drug_offences" total="1961"/>
       <recorded name="possession_of_weapons_offences" total="233"/>
@@ -765,15 +738,6 @@
   <region id="London" total="750185">
     <recorded sexual_offences="9955"/>
     <recorded robbery="32762"/>
-    <recorded theft_offences="409859"/>
-    <recorded burglary="91083"/>
-    <recorded domestic_burglary="59145"/>
-    <recorded nondomestic_burglary="31938"/>
-    <recorded vehicle_offences="92445"/>
-    <recorded theft_from_the_person="49257"/>
-    <recorded bicycle_theft="20486"/>
-    <recorded shoplifting="37502"/>
-    <recorded all_other_theft_offences="119086"/>
     <recorded criminal_damage_and_arson="57544"/>
     <recorded drug_offences="51263"/>
     <recorded possession_of_weapons_offences="3773"/>
@@ -788,15 +752,16 @@
       </category>
       <recorded name="sexual_offences" total="50"/>
       <recorded name="robbery" total="48"/>
-      <recorded name="theft_offences" total="3761"/>
-      <recorded name="burglary" total="341"/>
-      <recorded name="domestic_burglary" total="34"/>
-      <recorded name="nondomestic_burglary" total="307"/>
-      <recorded name="vehicle_offences" total="188"/>
-      <recorded name="theft_from_the_person" total="353"/>
-      <recorded name="bicycle_theft" total="326"/>
-      <recorded name="shoplifting" total="584"/>
-      <recorded name="all_other_theft_offences" total="1969"/>
+      <category name="theft_offences" total="3761">
+        <recorded name="burglary" total="341"/>
+        <recorded name="domestic_burglary" total="34"/>
+        <recorded name="nondomestic_burglary" total="307"/>
+        <recorded name="vehicle_offences" total="188"/>
+        <recorded name="theft_from_the_person" total="353"/>
+        <recorded name="bicycle_theft" total="326"/>
+        <recorded name="shoplifting" total="584"/>
+        <recorded name="all_other_theft_offences" total="1969"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="237"/>
       <recorded name="drug_offences" total="488"/>
       <recorded name="possession_of_weapons_offences" total="22"/>
@@ -812,15 +777,16 @@
       </category>
       <recorded name="sexual_offences" total="9905"/>
       <recorded name="robbery" total="32714"/>
-      <recorded name="theft_offences" total="406098"/>
-      <recorded name="burglary" total="90742"/>
-      <recorded name="domestic_burglary" total="59111"/>
-      <recorded name="nondomestic_burglary" total="31631"/>
-      <recorded name="vehicle_offences" total="92257"/>
-      <recorded name="theft_from_the_person" total="48904"/>
-      <recorded name="bicycle_theft" total="20160"/>
-      <recorded name="shoplifting" total="36918"/>
-      <recorded name="all_other_theft_offences" total="117117"/>
+      <category name="theft_offences" total="406098">
+        <recorded name="burglary" total="90742"/>
+        <recorded name="domestic_burglary" total="59111"/>
+        <recorded name="nondomestic_burglary" total="31631"/>
+        <recorded name="vehicle_offences" total="92257"/>
+        <recorded name="theft_from_the_person" total="48904"/>
+        <recorded name="bicycle_theft" total="20160"/>
+        <recorded name="shoplifting" total="36918"/>
+        <recorded name="all_other_theft_offences" total="117117"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="57307"/>
       <recorded name="drug_offences" total="50775"/>
       <recorded name="possession_of_weapons_offences" total="3751"/>
@@ -832,15 +798,6 @@
   <region id="South East" total="480596">
     <recorded sexual_offences="7667"/>
     <recorded robbery="3716"/>
-    <recorded theft_offences="246029"/>
-    <recorded burglary="57785"/>
-    <recorded domestic_burglary="24358"/>
-    <recorded nondomestic_burglary="33427"/>
-    <recorded vehicle_offences="46885"/>
-    <recorded theft_from_the_person="9225"/>
-    <recorded bicycle_theft="15109"/>
-    <recorded shoplifting="47747"/>
-    <recorded all_other_theft_offences="69278"/>
     <recorded criminal_damage_and_arson="76872"/>
     <recorded drug_offences="25875"/>
     <recorded possession_of_weapons_offences="2472"/>
@@ -855,15 +812,16 @@
       </category>
       <recorded name="sexual_offences" total="1740"/>
       <recorded name="robbery" total="694"/>
-      <recorded name="theft_offences" total="49495"/>
-      <recorded name="burglary" total="10811"/>
-      <recorded name="domestic_burglary" total="3753"/>
-      <recorded name="nondomestic_burglary" total="7058"/>
-      <recorded name="vehicle_offences" total="8133"/>
-      <recorded name="theft_from_the_person" total="1769"/>
-      <recorded name="bicycle_theft" total="3794"/>
-      <recorded name="shoplifting" total="11017"/>
-      <recorded name="all_other_theft_offences" total="13971"/>
+      <category name="theft_offences" total="49495">
+        <recorded name="burglary" total="10811"/>
+        <recorded name="domestic_burglary" total="3753"/>
+        <recorded name="nondomestic_burglary" total="7058"/>
+        <recorded name="vehicle_offences" total="8133"/>
+        <recorded name="theft_from_the_person" total="1769"/>
+        <recorded name="bicycle_theft" total="3794"/>
+        <recorded name="shoplifting" total="11017"/>
+        <recorded name="all_other_theft_offences" total="13971"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="18004"/>
       <recorded name="drug_offences" total="6582"/>
       <recorded name="possession_of_weapons_offences" total="524"/>
@@ -879,15 +837,16 @@
       </category>
       <recorded name="sexual_offences" total="1588"/>
       <recorded name="robbery" total="951"/>
-      <recorded name="theft_offences" total="51287"/>
-      <recorded name="burglary" total="13977"/>
-      <recorded name="domestic_burglary" total="6557"/>
-      <recorded name="nondomestic_burglary" total="7420"/>
-      <recorded name="vehicle_offences" total="10535"/>
-      <recorded name="theft_from_the_person" total="848"/>
-      <recorded name="bicycle_theft" total="1651"/>
-      <recorded name="shoplifting" total="10441"/>
-      <recorded name="all_other_theft_offences" total="13835"/>
+      <category name="theft_offences" total="51287">
+        <recorded name="burglary" total="13977"/>
+        <recorded name="domestic_burglary" total="6557"/>
+        <recorded name="nondomestic_burglary" total="7420"/>
+        <recorded name="vehicle_offences" total="10535"/>
+        <recorded name="theft_from_the_person" total="848"/>
+        <recorded name="bicycle_theft" total="1651"/>
+        <recorded name="shoplifting" total="10441"/>
+        <recorded name="all_other_theft_offences" total="13835"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="17803"/>
       <recorded name="drug_offences" total="4167"/>
       <recorded name="possession_of_weapons_offences" total="428"/>
@@ -903,15 +862,16 @@
       </category>
       <recorded name="sexual_offences" total="587"/>
       <recorded name="robbery" total="239"/>
-      <recorded name="theft_offences" total="25520"/>
-      <recorded name="burglary" total="7481"/>
-      <recorded name="domestic_burglary" total="3397"/>
-      <recorded name="nondomestic_burglary" total="4084"/>
-      <recorded name="vehicle_offences" total="5130"/>
-      <recorded name="theft_from_the_person" total="395"/>
-      <recorded name="bicycle_theft" total="1344"/>
-      <recorded name="shoplifting" total="4033"/>
-      <recorded name="all_other_theft_offences" total="7137"/>
+      <category name="theft_offences" total="25520">
+        <recorded name="burglary" total="7481"/>
+        <recorded name="domestic_burglary" total="3397"/>
+        <recorded name="nondomestic_burglary" total="4084"/>
+        <recorded name="vehicle_offences" total="5130"/>
+        <recorded name="theft_from_the_person" total="395"/>
+        <recorded name="bicycle_theft" total="1344"/>
+        <recorded name="shoplifting" total="4033"/>
+        <recorded name="all_other_theft_offences" total="7137"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="9109"/>
       <recorded name="drug_offences" total="3706"/>
       <recorded name="possession_of_weapons_offences" total="270"/>
@@ -927,15 +887,16 @@
       </category>
       <recorded name="sexual_offences" total="1593"/>
       <recorded name="robbery" total="648"/>
-      <recorded name="theft_offences" total="46180"/>
-      <recorded name="burglary" total="9607"/>
-      <recorded name="domestic_burglary" total="3846"/>
-      <recorded name="nondomestic_burglary" total="5761"/>
-      <recorded name="vehicle_offences" total="8231"/>
-      <recorded name="theft_from_the_person" total="3199"/>
-      <recorded name="bicycle_theft" total="2669"/>
-      <recorded name="shoplifting" total="8351"/>
-      <recorded name="all_other_theft_offences" total="14123"/>
+      <category name="theft_offences" total="46180">
+        <recorded name="burglary" total="9607"/>
+        <recorded name="domestic_burglary" total="3846"/>
+        <recorded name="nondomestic_burglary" total="5761"/>
+        <recorded name="vehicle_offences" total="8231"/>
+        <recorded name="theft_from_the_person" total="3199"/>
+        <recorded name="bicycle_theft" total="2669"/>
+        <recorded name="shoplifting" total="8351"/>
+        <recorded name="all_other_theft_offences" total="14123"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="14015"/>
       <recorded name="drug_offences" total="4467"/>
       <recorded name="possession_of_weapons_offences" total="519"/>
@@ -951,15 +912,16 @@
       </category>
       <recorded name="sexual_offences" total="2159"/>
       <recorded name="robbery" total="1184"/>
-      <recorded name="theft_offences" total="73547"/>
-      <recorded name="burglary" total="15909"/>
-      <recorded name="domestic_burglary" total="6805"/>
-      <recorded name="nondomestic_burglary" total="9104"/>
-      <recorded name="vehicle_offences" total="14856"/>
-      <recorded name="theft_from_the_person" total="3014"/>
-      <recorded name="bicycle_theft" total="5651"/>
-      <recorded name="shoplifting" total="13905"/>
-      <recorded name="all_other_theft_offences" total="20212"/>
+      <category name="theft_offences" total="73547">
+        <recorded name="burglary" total="15909"/>
+        <recorded name="domestic_burglary" total="6805"/>
+        <recorded name="nondomestic_burglary" total="9104"/>
+        <recorded name="vehicle_offences" total="14856"/>
+        <recorded name="theft_from_the_person" total="3014"/>
+        <recorded name="bicycle_theft" total="5651"/>
+        <recorded name="shoplifting" total="13905"/>
+        <recorded name="all_other_theft_offences" total="20212"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="17941"/>
       <recorded name="drug_offences" total="6953"/>
       <recorded name="possession_of_weapons_offences" total="731"/>
@@ -971,15 +933,6 @@
   <region id="South West" total="284930">
     <recorded sexual_offences="5295"/>
     <recorded robbery="1703"/>
-    <recorded theft_offences="138909"/>
-    <recorded burglary="33386"/>
-    <recorded domestic_burglary="13513"/>
-    <recorded nondomestic_burglary="19873"/>
-    <recorded vehicle_offences="26747"/>
-    <recorded theft_from_the_person="4155"/>
-    <recorded bicycle_theft="7690"/>
-    <recorded shoplifting="28138"/>
-    <recorded all_other_theft_offences="38793"/>
     <recorded criminal_damage_and_arson="48709"/>
     <recorded drug_offences="16002"/>
     <recorded possession_of_weapons_offences="1350"/>
@@ -994,15 +947,16 @@
       </category>
       <recorded name="sexual_offences" total="1534"/>
       <recorded name="robbery" total="767"/>
-      <recorded name="theft_offences" total="48160"/>
-      <recorded name="burglary" total="11231"/>
-      <recorded name="domestic_burglary" total="4889"/>
-      <recorded name="nondomestic_burglary" total="6342"/>
-      <recorded name="vehicle_offences" total="9239"/>
-      <recorded name="theft_from_the_person" total="1626"/>
-      <recorded name="bicycle_theft" total="2812"/>
-      <recorded name="shoplifting" total="10636"/>
-      <recorded name="all_other_theft_offences" total="12616"/>
+      <category name="theft_offences" total="48160">
+        <recorded name="burglary" total="11231"/>
+        <recorded name="domestic_burglary" total="4889"/>
+        <recorded name="nondomestic_burglary" total="6342"/>
+        <recorded name="vehicle_offences" total="9239"/>
+        <recorded name="theft_from_the_person" total="1626"/>
+        <recorded name="bicycle_theft" total="2812"/>
+        <recorded name="shoplifting" total="10636"/>
+        <recorded name="all_other_theft_offences" total="12616"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="15725"/>
       <recorded name="drug_offences" total="6726"/>
       <recorded name="possession_of_weapons_offences" total="499"/>
@@ -1018,15 +972,16 @@
       </category>
       <recorded name="sexual_offences" total="2009"/>
       <recorded name="robbery" total="378"/>
-      <recorded name="theft_offences" total="35192"/>
-      <recorded name="burglary" total="8030"/>
-      <recorded name="domestic_burglary" total="3334"/>
-      <recorded name="nondomestic_burglary" total="4696"/>
-      <recorded name="vehicle_offences" total="6139"/>
-      <recorded name="theft_from_the_person" total="1128"/>
-      <recorded name="bicycle_theft" total="1286"/>
-      <recorded name="shoplifting" total="7311"/>
-      <recorded name="all_other_theft_offences" total="11298"/>
+      <category name="theft_offences" total="35192">
+        <recorded name="burglary" total="8030"/>
+        <recorded name="domestic_burglary" total="3334"/>
+        <recorded name="nondomestic_burglary" total="4696"/>
+        <recorded name="vehicle_offences" total="6139"/>
+        <recorded name="theft_from_the_person" total="1128"/>
+        <recorded name="bicycle_theft" total="1286"/>
+        <recorded name="shoplifting" total="7311"/>
+        <recorded name="all_other_theft_offences" total="11298"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="15025"/>
       <recorded name="drug_offences" total="4509"/>
       <recorded name="possession_of_weapons_offences" total="416"/>
@@ -1042,15 +997,16 @@
       </category>
       <recorded name="sexual_offences" total="586"/>
       <recorded name="robbery" total="198"/>
-      <recorded name="theft_offences" total="22027"/>
-      <recorded name="burglary" total="5093"/>
-      <recorded name="domestic_burglary" total="1833"/>
-      <recorded name="nondomestic_burglary" total="3260"/>
-      <recorded name="vehicle_offences" total="4960"/>
-      <recorded name="theft_from_the_person" total="633"/>
-      <recorded name="bicycle_theft" total="1735"/>
-      <recorded name="shoplifting" total="3722"/>
-      <recorded name="all_other_theft_offences" total="5884"/>
+      <category name="theft_offences" total="22027">
+        <recorded name="burglary" total="5093"/>
+        <recorded name="domestic_burglary" total="1833"/>
+        <recorded name="nondomestic_burglary" total="3260"/>
+        <recorded name="vehicle_offences" total="4960"/>
+        <recorded name="theft_from_the_person" total="633"/>
+        <recorded name="bicycle_theft" total="1735"/>
+        <recorded name="shoplifting" total="3722"/>
+        <recorded name="all_other_theft_offences" total="5884"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="7111"/>
       <recorded name="drug_offences" total="1497"/>
       <recorded name="possession_of_weapons_offences" total="165"/>
@@ -1066,15 +1022,16 @@
       </category>
       <recorded name="sexual_offences" total="522"/>
       <recorded name="robbery" total="231"/>
-      <recorded name="theft_offences" total="16754"/>
-      <recorded name="burglary" total="4701"/>
-      <recorded name="domestic_burglary" total="2192"/>
-      <recorded name="nondomestic_burglary" total="2509"/>
-      <recorded name="vehicle_offences" total="3061"/>
-      <recorded name="theft_from_the_person" total="366"/>
-      <recorded name="bicycle_theft" total="1102"/>
-      <recorded name="shoplifting" total="3261"/>
-      <recorded name="all_other_theft_offences" total="4263"/>
+      <category name="theft_offences" total="16754">
+        <recorded name="burglary" total="4701"/>
+        <recorded name="domestic_burglary" total="2192"/>
+        <recorded name="nondomestic_burglary" total="2509"/>
+        <recorded name="vehicle_offences" total="3061"/>
+        <recorded name="theft_from_the_person" total="366"/>
+        <recorded name="bicycle_theft" total="1102"/>
+        <recorded name="shoplifting" total="3261"/>
+        <recorded name="all_other_theft_offences" total="4263"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="4854"/>
       <recorded name="drug_offences" total="1646"/>
       <recorded name="possession_of_weapons_offences" total="134"/>
@@ -1090,15 +1047,16 @@
       </category>
       <recorded name="sexual_offences" total="644"/>
       <recorded name="robbery" total="129"/>
-      <recorded name="theft_offences" total="16776"/>
-      <recorded name="burglary" total="4331"/>
-      <recorded name="domestic_burglary" total="1265"/>
-      <recorded name="nondomestic_burglary" total="3066"/>
-      <recorded name="vehicle_offences" total="3348"/>
-      <recorded name="theft_from_the_person" total="402"/>
-      <recorded name="bicycle_theft" total="755"/>
-      <recorded name="shoplifting" total="3208"/>
-      <recorded name="all_other_theft_offences" total="4732"/>
+      <category name="theft_offences" total="16776">
+        <recorded name="burglary" total="4331"/>
+        <recorded name="domestic_burglary" total="1265"/>
+        <recorded name="nondomestic_burglary" total="3066"/>
+        <recorded name="vehicle_offences" total="3348"/>
+        <recorded name="theft_from_the_person" total="402"/>
+        <recorded name="bicycle_theft" total="755"/>
+        <recorded name="shoplifting" total="3208"/>
+        <recorded name="all_other_theft_offences" total="4732"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="5994"/>
       <recorded name="drug_offences" total="1624"/>
       <recorded name="possession_of_weapons_offences" total="136"/>
@@ -1110,15 +1068,6 @@
   <region id="Wales" total="173614">
     <recorded sexual_offences="2936"/>
     <recorded robbery="733"/>
-    <recorded theft_offences="81179"/>
-    <recorded burglary="19760"/>
-    <recorded domestic_burglary="7789"/>
-    <recorded nondomestic_burglary="11971"/>
-    <recorded vehicle_offences="17354"/>
-    <recorded theft_from_the_person="2468"/>
-    <recorded bicycle_theft="2962"/>
-    <recorded shoplifting="16306"/>
-    <recorded all_other_theft_offences="22329"/>
     <recorded criminal_damage_and_arson="31200"/>
     <recorded drug_offences="12763"/>
     <recorded possession_of_weapons_offences="955"/>
@@ -1133,15 +1082,16 @@
       </category>
       <recorded name="sexual_offences" total="376"/>
       <recorded name="robbery" total="24"/>
-      <recorded name="theft_offences" total="6376"/>
-      <recorded name="burglary" total="1349"/>
-      <recorded name="domestic_burglary" total="444"/>
-      <recorded name="nondomestic_burglary" total="905"/>
-      <recorded name="vehicle_offences" total="996"/>
-      <recorded name="theft_from_the_person" total="60"/>
-      <recorded name="bicycle_theft" total="174"/>
-      <recorded name="shoplifting" total="1573"/>
-      <recorded name="all_other_theft_offences" total="2224"/>
+      <category name="theft_offences" total="6376">
+        <recorded name="burglary" total="1349"/>
+        <recorded name="domestic_burglary" total="444"/>
+        <recorded name="nondomestic_burglary" total="905"/>
+        <recorded name="vehicle_offences" total="996"/>
+        <recorded name="theft_from_the_person" total="60"/>
+        <recorded name="bicycle_theft" total="174"/>
+        <recorded name="shoplifting" total="1573"/>
+        <recorded name="all_other_theft_offences" total="2224"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="3326"/>
       <recorded name="drug_offences" total="3464"/>
       <recorded name="possession_of_weapons_offences" total="146"/>
@@ -1157,15 +1107,16 @@
       </category>
       <recorded name="sexual_offences" total="504"/>
       <recorded name="robbery" total="178"/>
-      <recorded name="theft_offences" total="16711"/>
-      <recorded name="burglary" total="4646"/>
-      <recorded name="domestic_burglary" total="1775"/>
-      <recorded name="nondomestic_burglary" total="2871"/>
-      <recorded name="vehicle_offences" total="3654"/>
-      <recorded name="theft_from_the_person" total="155"/>
-      <recorded name="bicycle_theft" total="440"/>
-      <recorded name="shoplifting" total="3310"/>
-      <recorded name="all_other_theft_offences" total="4506"/>
+      <category name="theft_offences" total="16711">
+        <recorded name="burglary" total="4646"/>
+        <recorded name="domestic_burglary" total="1775"/>
+        <recorded name="nondomestic_burglary" total="2871"/>
+        <recorded name="vehicle_offences" total="3654"/>
+        <recorded name="theft_from_the_person" total="155"/>
+        <recorded name="bicycle_theft" total="440"/>
+        <recorded name="shoplifting" total="3310"/>
+        <recorded name="all_other_theft_offences" total="4506"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="6374"/>
       <recorded name="drug_offences" total="2319"/>
       <recorded name="possession_of_weapons_offences" total="176"/>
@@ -1181,15 +1132,16 @@
       </category>
       <recorded name="sexual_offences" total="858"/>
       <recorded name="robbery" total="135"/>
-      <recorded name="theft_offences" total="16033"/>
-      <recorded name="burglary" total="4635"/>
-      <recorded name="domestic_burglary" total="1614"/>
-      <recorded name="nondomestic_burglary" total="3021"/>
-      <recorded name="vehicle_offences" total="2496"/>
-      <recorded name="theft_from_the_person" total="197"/>
-      <recorded name="bicycle_theft" total="597"/>
-      <recorded name="shoplifting" total="3566"/>
-      <recorded name="all_other_theft_offences" total="4542"/>
+      <category name="theft_offences" total="16033">
+        <recorded name="burglary" total="4635"/>
+        <recorded name="domestic_burglary" total="1614"/>
+        <recorded name="nondomestic_burglary" total="3021"/>
+        <recorded name="vehicle_offences" total="2496"/>
+        <recorded name="theft_from_the_person" total="197"/>
+        <recorded name="bicycle_theft" total="597"/>
+        <recorded name="shoplifting" total="3566"/>
+        <recorded name="all_other_theft_offences" total="4542"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="7229"/>
       <recorded name="drug_offences" total="1717"/>
       <recorded name="possession_of_weapons_offences" total="170"/>
@@ -1205,15 +1157,16 @@
       </category>
       <recorded name="sexual_offences" total="1198"/>
       <recorded name="robbery" total="396"/>
-      <recorded name="theft_offences" total="42059"/>
-      <recorded name="burglary" total="9130"/>
-      <recorded name="domestic_burglary" total="3956"/>
-      <recorded name="nondomestic_burglary" total="5174"/>
-      <recorded name="vehicle_offences" total="10208"/>
-      <recorded name="theft_from_the_person" total="2056"/>
-      <recorded name="bicycle_theft" total="1751"/>
-      <recorded name="shoplifting" total="7857"/>
-      <recorded name="all_other_theft_offences" total="11057"/>
+      <category name="theft_offences" total="42059">
+        <recorded name="burglary" total="9130"/>
+        <recorded name="domestic_burglary" total="3956"/>
+        <recorded name="nondomestic_burglary" total="5174"/>
+        <recorded name="vehicle_offences" total="10208"/>
+        <recorded name="theft_from_the_person" total="2056"/>
+        <recorded name="bicycle_theft" total="1751"/>
+        <recorded name="shoplifting" total="7857"/>
+        <recorded name="all_other_theft_offences" total="11057"/>
+      </category>
       <recorded name="criminal_damage_and_arson" total="14271"/>
       <recorded name="drug_offences" total="5263"/>
       <recorded name="possession_of_weapons_offences" total="463"/>
@@ -1225,15 +1178,6 @@
   <national id="British Transport Police" total="51970">
     <recorded sexual_offences="641"/>
     <recorded robbery="505"/>
-    <recorded theft_offences="28102"/>
-    <recorded burglary="529"/>
-    <recorded domestic_burglary="2"/>
-    <recorded nondomestic_burglary="527"/>
-    <recorded vehicle_offences="1526"/>
-    <recorded theft_from_the_person="9116"/>
-    <recorded bicycle_theft="5093"/>
-    <recorded shoplifting="1853"/>
-    <recorded all_other_theft_offences="9985"/>
     <recorded criminal_damage_and_arson="4761"/>
     <recorded drug_offences="3614"/>
     <recorded possession_of_weapons_offences="363"/>
@@ -1244,15 +1188,6 @@
   <national id="Action Fraud" total="150389">
     <recorded sexual_offences="0"/>
     <recorded robbery="0"/>
-    <recorded theft_offences="0"/>
-    <recorded burglary="0"/>
-    <recorded domestic_burglary="0"/>
-    <recorded nondomestic_burglary="0"/>
-    <recorded vehicle_offences="0"/>
-    <recorded theft_from_the_person="0"/>
-    <recorded bicycle_theft="0"/>
-    <recorded shoplifting="0"/>
-    <recorded all_other_theft_offences="0"/>
     <recorded criminal_damage_and_arson="0"/>
     <recorded drug_offences="0"/>
     <recorded possession_of_weapons_offences="0"/>
