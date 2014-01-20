@@ -17,7 +17,7 @@ function twoColCsvToXml($filename) {
 
 	$data = array();
 
-	$xml = new DOMDocument();
+	$xml = new DOMDocument('1.0', 'utf-8');
 
 	$areas = [];
 
