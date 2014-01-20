@@ -135,6 +135,8 @@ function twoColCsvToXml($filename) {
 						$areas[$name]->setAttribute('total', $total);
 
 						foreach($crimes as $crime_name => $crime_value) {
+
+							// If the crime is in a category marked by a total, it'll be in a subarray
 							if (is_array($crime_value)) {
 								$element = $xml->createElement("category");
 
@@ -145,11 +147,13 @@ function twoColCsvToXml($filename) {
 									}
 									else {
 										$subelement = $xml->createElement("recorded");
-										$subelement->setAttribute($subcat, $subcat_value);
+										$subelement->setAttribute("name", $subcat);
+										$subelement->setAttribute("total", $subcat_value);
 										$element->appendChild($subelement);
 									}
 								}
 							}
+							// If not, proceed with single elements as normal
 							else {
 								$element = $xml->createElement("recorded");
 								$element->setAttribute("name", $crime_name);
