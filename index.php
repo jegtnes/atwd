@@ -137,13 +137,17 @@ function twoColCsvToXml($filename) {
 
 						foreach($crimes as $crime_name => $crime_value) {
 							if (is_array($crime_value)) {
-								$iterations = 0;
 								$element = $xml->createElement("category");
-								$subcategory = $crime_name;
+
 								foreach($crime_value as $subcat => $subcat_value) {
 									if ($subcat === 'total') {
-										$element->setAttribute("name", $subcategory);
+										$element->setAttribute("name", $crime_name);
 										$element->setAttribute($subcat, $subcat_value);
+									}
+									else {
+										$subelement = $xml->createElement("recorded");
+										$subelement->setAttribute($subcat, $subcat_value);
+										$element->appendChild($subelement);
 									}
 								}
 							}
