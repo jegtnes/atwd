@@ -32,10 +32,10 @@ function twoColCsvToXml($filename) {
 			$total												= clean_value($row[1]);
 			$total_excluding_fraud								= clean_value($row[2]);
 
-			$crimes['violence_against_the_person']				= clean_value($row[4]);
-			$crimes['homicide']									= clean_value($row[5]);
-			$crimes['violence_with_injury']						= clean_value($row[6]);
-			$crimes['violence_without_injury']					= clean_value($row[7]);
+			$crimes['violence_against_the_person']['total']= clean_value($row[4]);
+			$crimes['violence_against_the_person']['homicide'] 	= clean_value($row[5]);
+			$crimes['violence_against_the_person']['violence_with_injury']	= clean_value($row[6]);
+			$crimes['violence_against_the_person']['violence_without_injury']	= clean_value($row[7]);
 			$crimes['sexual_offences']							= clean_value($row[8]);
 
 			$crimes['robbery']									= clean_value($row[9]);
@@ -89,9 +89,11 @@ function twoColCsvToXml($filename) {
 						$region = $root->appendChild($region);
 
 						foreach($crimes as $crime_name => $crime_value) {
-							$element = $xml->createElement("recorded");
-							$element->setAttribute($crime_name, $crime_value);
-							$region->appendChild($element);
+							if (!is_array($crime_value)) {
+								$element = $xml->createElement("recorded");
+								$element->setAttribute($crime_name, $crime_value);
+								$region->appendChild($element);
+							}
 						}
 
 						/* areas are defined to come before their respective regions
@@ -116,9 +118,11 @@ function twoColCsvToXml($filename) {
 						$national->setAttribute('total', $total);
 
 						foreach($crimes as $crime_name => $crime_value) {
-							$element = $xml->createElement("recorded");
-							$element->setAttribute($crime_name, $crime_value);
-							$national->appendChild($element);
+							if (!is_array($crime_value)) {
+								$element = $xml->createElement("recorded");
+								$element->setAttribute($crime_name, $crime_value);
+								$national->appendChild($element);
+							}
 						}
 
 						$root->appendChild($national);
@@ -132,8 +136,21 @@ function twoColCsvToXml($filename) {
 						$areas[$name]->setAttribute('total', $total);
 
 						foreach($crimes as $crime_name => $crime_value) {
-							$element = $xml->createElement("recorded");
-							$element->setAttribute($crime_name, $crime_value);
+							if (is_array($crime_value)) {
+								$iterations = 0;
+								$element = $xml->createElement("category");
+								$subcategory = $crime_name;
+								foreach($crime_value as $subcat => $subcat_value) {
+									if ($subcat === 'total') {
+										$element->setAttribute("name", $subcategory);
+										$element->setAttribute($subcat, $subcat_value);
+									}
+								}
+							}
+							else {
+								$element = $xml->createElement("recorded");
+								$element->setAttribute($crime_name, $crime_value);
+							}
 							$areas[$name]->appendChild($element);
 						}
 					}

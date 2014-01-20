@@ -1,10 +1,6 @@
 <?xml version="1.0"?>
 <crimes>
   <region id="North East" total="138982">
-    <recorded violence_against_the_person="19843"/>
-    <recorded homicide="26"/>
-    <recorded violence_with_injury="12165"/>
-    <recorded violence_without_injury="7652"/>
     <recorded sexual_offences="1837"/>
     <recorded robbery="832"/>
     <recorded theft_offences="69326"/>
@@ -23,10 +19,7 @@
     <recorded misceanellous_crrimes_against_society="1985"/>
     <recorded fraud="1671"/>
     <area id="Cleveland" total="39522">
-      <recorded violence_against_the_person="6370"/>
-      <recorded homicide="3"/>
-      <recorded violence_with_injury="3737"/>
-      <recorded violence_without_injury="2630"/>
+      <category name="violence_against_the_person" total="6370"/>
       <recorded sexual_offences="563"/>
       <recorded robbery="259"/>
       <recorded theft_offences="19811"/>
@@ -46,10 +39,7 @@
       <recorded fraud="455"/>
     </area>
     <area id="Durham" total="29974">
-      <recorded violence_against_the_person="4287"/>
-      <recorded homicide="6"/>
-      <recorded violence_with_injury="2420"/>
-      <recorded violence_without_injury="1861"/>
+      <category name="violence_against_the_person" total="4287"/>
       <recorded sexual_offences="360"/>
       <recorded robbery="108"/>
       <recorded theft_offences="15009"/>
@@ -69,10 +59,7 @@
       <recorded fraud="305"/>
     </area>
     <area id="Northumbria" total="69486">
-      <recorded violence_against_the_person="9186"/>
-      <recorded homicide="17"/>
-      <recorded violence_with_injury="6008"/>
-      <recorded violence_without_injury="3161"/>
+      <category name="violence_against_the_person" total="9186"/>
       <recorded sexual_offences="914"/>
       <recorded robbery="465"/>
       <recorded theft_offences="34506"/>
@@ -93,10 +80,6 @@
     </area>
   </region>
   <region id="North West" total="444423">
-    <recorded violence_against_the_person="73154"/>
-    <recorded homicide="73"/>
-    <recorded violence_with_injury="38703"/>
-    <recorded violence_without_injury="34378"/>
     <recorded sexual_offences="7267"/>
     <recorded robbery="6126"/>
     <recorded theft_offences="222487"/>
@@ -115,10 +98,7 @@
     <recorded misceanellous_crrimes_against_society="4722"/>
     <recorded fraud="7572"/>
     <area id="Cheshire" total="57908">
-      <recorded violence_against_the_person="10882"/>
-      <recorded homicide="5"/>
-      <recorded violence_with_injury="4889"/>
-      <recorded violence_without_injury="5988"/>
+      <category name="violence_against_the_person" total="10882"/>
       <recorded sexual_offences="880"/>
       <recorded robbery="321"/>
       <recorded theft_offences="28840"/>
@@ -138,10 +118,7 @@
       <recorded fraud="1223"/>
     </area>
     <area id="Cumbria" total="23286">
-      <recorded violence_against_the_person="4454"/>
-      <recorded homicide="6"/>
-      <recorded violence_with_injury="2331"/>
-      <recorded violence_without_injury="2117"/>
+      <category name="violence_against_the_person" total="4454"/>
       <recorded sexual_offences="371"/>
       <recorded robbery="58"/>
       <recorded theft_offences="9784"/>
@@ -161,10 +138,7 @@
       <recorded fraud="316"/>
     </area>
     <area id="Greater Manchester" total="178857">
-      <recorded violence_against_the_person="27933"/>
-      <recorded homicide="36"/>
-      <recorded violence_with_injury="14293"/>
-      <recorded violence_without_injury="13604"/>
+      <category name="violence_against_the_person" total="27933"/>
       <recorded sexual_offences="2940"/>
       <recorded robbery="3898"/>
       <recorded theft_offences="94336"/>
@@ -184,10 +158,7 @@
       <recorded fraud="2581"/>
     </area>
     <area id="Lancashire" total="93427">
-      <recorded violence_against_the_person="18562"/>
-      <recorded homicide="14"/>
-      <recorded violence_with_injury="10654"/>
-      <recorded violence_without_injury="7894"/>
+      <category name="violence_against_the_person" total="18562"/>
       <recorded sexual_offences="1738"/>
       <recorded robbery="626"/>
       <recorded theft_offences="46045"/>
@@ -207,10 +178,7 @@
       <recorded fraud="1823"/>
     </area>
     <area id="Merseyside" total="90945">
-      <recorded violence_against_the_person="11323"/>
-      <recorded homicide="12"/>
-      <recorded violence_with_injury="6536"/>
-      <recorded violence_without_injury="4775"/>
+      <category name="violence_against_the_person" total="11323"/>
       <recorded sexual_offences="1338"/>
       <recorded robbery="1223"/>
       <recorded theft_offences="43482"/>
@@ -231,10 +199,6 @@
     </area>
   </region>
   <region id="Yorkshire And Humber" total="356370">
-    <recorded violence_against_the_person="49400"/>
-    <recorded homicide="44"/>
-    <recorded violence_with_injury="29409"/>
-    <recorded violence_without_injury="19947"/>
     <recorded sexual_offences="5472"/>
     <recorded robbery="3540"/>
     <recorded theft_offences="198989"/>
@@ -253,10 +217,7 @@
     <recorded misceanellous_crrimes_against_society="4408"/>
     <recorded fraud="7661"/>
     <area id="Humberside" total="64707">
-      <recorded violence_against_the_person="11461"/>
-      <recorded homicide="6"/>
-      <recorded violence_with_injury="6811"/>
-      <recorded violence_without_injury="4644"/>
+      <category name="violence_against_the_person" total="11461"/>
       <recorded sexual_offences="1219"/>
       <recorded robbery="479"/>
       <recorded theft_offences="33016"/>
@@ -276,10 +237,7 @@
       <recorded fraud="1215"/>
     </area>
     <area id="North Yorkshire" total="34801">
-      <recorded violence_against_the_person="6009"/>
-      <recorded homicide="5"/>
-      <recorded violence_with_injury="3548"/>
-      <recorded violence_without_injury="2456"/>
+      <category name="violence_against_the_person" total="6009"/>
       <recorded sexual_offences="666"/>
       <recorded robbery="123"/>
       <recorded theft_offences="17605"/>
@@ -299,10 +257,7 @@
       <recorded fraud="900"/>
     </area>
     <area id="South Yorkshire" total="93116">
-      <recorded violence_against_the_person="10450"/>
-      <recorded homicide="18"/>
-      <recorded violence_with_injury="7313"/>
-      <recorded violence_without_injury="3119"/>
+      <category name="violence_against_the_person" total="10450"/>
       <recorded sexual_offences="903"/>
       <recorded robbery="964"/>
       <recorded theft_offences="54647"/>
@@ -322,10 +277,7 @@
       <recorded fraud="1679"/>
     </area>
     <area id="West Yorkshire" total="163746">
-      <recorded violence_against_the_person="21480"/>
-      <recorded homicide="15"/>
-      <recorded violence_with_injury="11737"/>
-      <recorded violence_without_injury="9728"/>
+      <category name="violence_against_the_person" total="21480"/>
       <recorded sexual_offences="2684"/>
       <recorded robbery="1974"/>
       <recorded theft_offences="93721"/>
@@ -346,10 +298,6 @@
     </area>
   </region>
   <region id="East Midlands" total="261294">
-    <recorded violence_against_the_person="46405"/>
-    <recorded homicide="39"/>
-    <recorded violence_with_injury="23768"/>
-    <recorded violence_without_injury="22598"/>
     <recorded sexual_offences="4221"/>
     <recorded robbery="3018"/>
     <recorded theft_offences="136146"/>
@@ -368,10 +316,7 @@
     <recorded misceanellous_crrimes_against_society="3202"/>
     <recorded fraud="4165"/>
     <area id="Derbyshire" total="51749">
-      <recorded violence_against_the_person="9529"/>
-      <recorded homicide="3"/>
-      <recorded violence_with_injury="5220"/>
-      <recorded violence_without_injury="4306"/>
+      <category name="violence_against_the_person" total="9529"/>
       <recorded sexual_offences="840"/>
       <recorded robbery="540"/>
       <recorded theft_offences="26478"/>
@@ -391,10 +336,7 @@
       <recorded fraud="779"/>
     </area>
     <area id="Leicestershire" total="58472">
-      <recorded violence_against_the_person="10157"/>
-      <recorded homicide="10"/>
-      <recorded violence_with_injury="4442"/>
-      <recorded violence_without_injury="5705"/>
+      <category name="violence_against_the_person" total="10157"/>
       <recorded sexual_offences="1024"/>
       <recorded robbery="705"/>
       <recorded theft_offences="30428"/>
@@ -414,10 +356,7 @@
       <recorded fraud="1120"/>
     </area>
     <area id="Lincolnshire" total="37023">
-      <recorded violence_against_the_person="5620"/>
-      <recorded homicide="6"/>
-      <recorded violence_with_injury="2999"/>
-      <recorded violence_without_injury="2615"/>
+      <category name="violence_against_the_person" total="5620"/>
       <recorded sexual_offences="579"/>
       <recorded robbery="172"/>
       <recorded theft_offences="20428"/>
@@ -437,10 +376,7 @@
       <recorded fraud="496"/>
     </area>
     <area id="Northamptonshire" total="45273">
-      <recorded violence_against_the_person="7882"/>
-      <recorded homicide="6"/>
-      <recorded violence_with_injury="4001"/>
-      <recorded violence_without_injury="3875"/>
+      <category name="violence_against_the_person" total="7882"/>
       <recorded sexual_offences="758"/>
       <recorded robbery="596"/>
       <recorded theft_offences="23626"/>
@@ -460,10 +396,7 @@
       <recorded fraud="943"/>
     </area>
     <area id="Nottinghamshire" total="68777">
-      <recorded violence_against_the_person="13217"/>
-      <recorded homicide="14"/>
-      <recorded violence_with_injury="7106"/>
-      <recorded violence_without_injury="6097"/>
+      <category name="violence_against_the_person" total="13217"/>
       <recorded sexual_offences="1020"/>
       <recorded robbery="1005"/>
       <recorded theft_offences="35186"/>
@@ -484,10 +417,6 @@
     </area>
   </region>
   <region id="West Midlands" total="318640">
-    <recorded violence_against_the_person="59126"/>
-    <recorded homicide="63"/>
-    <recorded violence_with_injury="34005"/>
-    <recorded violence_without_injury="25058"/>
     <recorded sexual_offences="5666"/>
     <recorded robbery="6481"/>
     <recorded theft_offences="158116"/>
@@ -506,10 +435,7 @@
     <recorded misceanellous_crrimes_against_society="4274"/>
     <recorded fraud="7287"/>
     <area id="Staffordshire" total="58897">
-      <recorded violence_against_the_person="13299"/>
-      <recorded homicide="4"/>
-      <recorded violence_with_injury="6982"/>
-      <recorded violence_without_injury="6313"/>
+      <category name="violence_against_the_person" total="13299"/>
       <recorded sexual_offences="1171"/>
       <recorded robbery="485"/>
       <recorded theft_offences="25557"/>
@@ -529,10 +455,7 @@
       <recorded fraud="1404"/>
     </area>
     <area id="Warwickshire" total="29223">
-      <recorded violence_against_the_person="4178"/>
-      <recorded homicide="1"/>
-      <recorded violence_with_injury="2600"/>
-      <recorded violence_without_injury="1577"/>
+      <category name="violence_against_the_person" total="4178"/>
       <recorded sexual_offences="481"/>
       <recorded robbery="253"/>
       <recorded theft_offences="16745"/>
@@ -552,10 +475,7 @@
       <recorded fraud="472"/>
     </area>
     <area id="West Mercia" total="59209">
-      <recorded violence_against_the_person="11262"/>
-      <recorded homicide="16"/>
-      <recorded violence_with_injury="6336"/>
-      <recorded violence_without_injury="4910"/>
+      <category name="violence_against_the_person" total="11262"/>
       <recorded sexual_offences="1228"/>
       <recorded robbery="379"/>
       <recorded theft_offences="29572"/>
@@ -575,10 +495,7 @@
       <recorded fraud="970"/>
     </area>
     <area id="West Midlands" total="171311">
-      <recorded violence_against_the_person="30387"/>
-      <recorded homicide="42"/>
-      <recorded violence_with_injury="18087"/>
-      <recorded violence_without_injury="12258"/>
+      <category name="violence_against_the_person" total="30387"/>
       <recorded sexual_offences="2786"/>
       <recorded robbery="5364"/>
       <recorded theft_offences="86242"/>
@@ -599,10 +516,6 @@
     </area>
   </region>
   <region id="East Of England" total="309296">
-    <recorded violence_against_the_person="53027"/>
-    <recorded homicide="59"/>
-    <recorded violence_with_injury="26443"/>
-    <recorded violence_without_injury="26525"/>
     <recorded sexual_offences="4855"/>
     <recorded robbery="2948"/>
     <recorded theft_offences="159330"/>
@@ -621,10 +534,7 @@
     <recorded misceanellous_crrimes_against_society="3949"/>
     <recorded fraud="5990"/>
     <area id="Bedfordshire" total="35453">
-      <recorded violence_against_the_person="5977"/>
-      <recorded homicide="7"/>
-      <recorded violence_with_injury="3103"/>
-      <recorded violence_without_injury="2867"/>
+      <category name="violence_against_the_person" total="5977"/>
       <recorded sexual_offences="481"/>
       <recorded robbery="615"/>
       <recorded theft_offences="18693"/>
@@ -644,10 +554,7 @@
       <recorded fraud="516"/>
     </area>
     <area id="Cambridgeshire" total="45091">
-      <recorded violence_against_the_person="6170"/>
-      <recorded homicide="9"/>
-      <recorded violence_with_injury="2873"/>
-      <recorded violence_without_injury="3288"/>
+      <category name="violence_against_the_person" total="6170"/>
       <recorded sexual_offences="672"/>
       <recorded robbery="332"/>
       <recorded theft_offences="25537"/>
@@ -667,10 +574,7 @@
       <recorded fraud="1096"/>
     </area>
     <area id="Essex" total="99741">
-      <recorded violence_against_the_person="17915"/>
-      <recorded homicide="20"/>
-      <recorded violence_with_injury="8829"/>
-      <recorded violence_without_injury="9066"/>
+      <category name="violence_against_the_person" total="17915"/>
       <recorded sexual_offences="1527"/>
       <recorded robbery="1172"/>
       <recorded theft_offences="53708"/>
@@ -690,10 +594,7 @@
       <recorded fraud="1825"/>
     </area>
     <area id="Hertfordshire" total="51868">
-      <recorded violence_against_the_person="7822"/>
-      <recorded homicide="10"/>
-      <recorded violence_with_injury="4080"/>
-      <recorded violence_without_injury="3732"/>
+      <category name="violence_against_the_person" total="7822"/>
       <recorded sexual_offences="691"/>
       <recorded robbery="439"/>
       <recorded theft_offences="25608"/>
@@ -713,10 +614,7 @@
       <recorded fraud="1326"/>
     </area>
     <area id="Norfolk" total="37996">
-      <recorded violence_against_the_person="8034"/>
-      <recorded homicide="5"/>
-      <recorded violence_with_injury="3875"/>
-      <recorded violence_without_injury="4154"/>
+      <category name="violence_against_the_person" total="8034"/>
       <recorded sexual_offences="776"/>
       <recorded robbery="164"/>
       <recorded theft_offences="17058"/>
@@ -736,10 +634,7 @@
       <recorded fraud="503"/>
     </area>
     <area id="Suffolk" total="39147">
-      <recorded violence_against_the_person="7109"/>
-      <recorded homicide="8"/>
-      <recorded violence_with_injury="3683"/>
-      <recorded violence_without_injury="3418"/>
+      <category name="violence_against_the_person" total="7109"/>
       <recorded sexual_offences="708"/>
       <recorded robbery="226"/>
       <recorded theft_offences="18726"/>
@@ -760,10 +655,6 @@
     </area>
   </region>
   <region id="London" total="750185">
-    <recorded violence_against_the_person="123722"/>
-    <recorded homicide="99"/>
-    <recorded violence_with_injury="56794"/>
-    <recorded violence_without_injury="66829"/>
     <recorded sexual_offences="9955"/>
     <recorded robbery="32762"/>
     <recorded theft_offences="409859"/>
@@ -782,10 +673,7 @@
     <recorded misceanellous_crrimes_against_society="7891"/>
     <recorded fraud="26786"/>
     <area id="London, City of" total="5552">
-      <recorded violence_against_the_person="534"/>
-      <recorded homicide="0"/>
-      <recorded violence_with_injury="298"/>
-      <recorded violence_without_injury="236"/>
+      <category name="violence_against_the_person" total="534"/>
       <recorded sexual_offences="50"/>
       <recorded robbery="48"/>
       <recorded theft_offences="3761"/>
@@ -805,10 +693,7 @@
       <recorded fraud="30"/>
     </area>
     <area id="Metropolitan Police" total="744633">
-      <recorded violence_against_the_person="123188"/>
-      <recorded homicide="99"/>
-      <recorded violence_with_injury="56496"/>
-      <recorded violence_without_injury="66593"/>
+      <category name="violence_against_the_person" total="123188"/>
       <recorded sexual_offences="9905"/>
       <recorded robbery="32714"/>
       <recorded theft_offences="406098"/>
@@ -829,10 +714,6 @@
     </area>
   </region>
   <region id="South East" total="480596">
-    <recorded violence_against_the_person="84094"/>
-    <recorded homicide="57"/>
-    <recorded violence_with_injury="39659"/>
-    <recorded violence_without_injury="44378"/>
     <recorded sexual_offences="7667"/>
     <recorded robbery="3716"/>
     <recorded theft_offences="246029"/>
@@ -851,10 +732,7 @@
     <recorded misceanellous_crrimes_against_society="6196"/>
     <recorded fraud="11268"/>
     <area id="Hampshire" total="106100">
-      <recorded violence_against_the_person="21314"/>
-      <recorded homicide="11"/>
-      <recorded violence_with_injury="10879"/>
-      <recorded violence_without_injury="10424"/>
+      <category name="violence_against_the_person" total="21314"/>
       <recorded sexual_offences="1740"/>
       <recorded robbery="694"/>
       <recorded theft_offences="49495"/>
@@ -874,10 +752,7 @@
       <recorded fraud="2123"/>
     </area>
     <area id="Kent" total="100924">
-      <recorded violence_against_the_person="19692"/>
-      <recorded homicide="10"/>
-      <recorded violence_with_injury="10393"/>
-      <recorded violence_without_injury="9289"/>
+      <category name="violence_against_the_person" total="19692"/>
       <recorded sexual_offences="1588"/>
       <recorded robbery="951"/>
       <recorded theft_offences="51287"/>
@@ -897,10 +772,7 @@
       <recorded fraud="1495"/>
     </area>
     <area id="Surrey" total="52334">
-      <recorded violence_against_the_person="8644"/>
-      <recorded homicide="4"/>
-      <recorded violence_with_injury="2977"/>
-      <recorded violence_without_injury="5663"/>
+      <category name="violence_against_the_person" total="8644"/>
       <recorded sexual_offences="587"/>
       <recorded robbery="239"/>
       <recorded theft_offences="25520"/>
@@ -920,10 +792,7 @@
       <recorded fraud="1555"/>
     </area>
     <area id="Sussex" total="87978">
-      <recorded violence_against_the_person="14870"/>
-      <recorded homicide="12"/>
-      <recorded violence_with_injury="6985"/>
-      <recorded violence_without_injury="7873"/>
+      <category name="violence_against_the_person" total="14870"/>
       <recorded sexual_offences="1593"/>
       <recorded robbery="648"/>
       <recorded theft_offences="46180"/>
@@ -943,10 +812,7 @@
       <recorded fraud="1860"/>
     </area>
     <area id="Thames Valley" total="133260">
-      <recorded violence_against_the_person="19574"/>
-      <recorded homicide="20"/>
-      <recorded violence_with_injury="8425"/>
-      <recorded violence_without_injury="11129"/>
+      <category name="violence_against_the_person" total="19574"/>
       <recorded sexual_offences="2159"/>
       <recorded robbery="1184"/>
       <recorded theft_offences="73547"/>
@@ -967,10 +833,6 @@
     </area>
   </region>
   <region id="South West" total="284930">
-    <recorded violence_against_the_person="52119"/>
-    <recorded homicide="38"/>
-    <recorded violence_with_injury="28398"/>
-    <recorded violence_without_injury="23683"/>
     <recorded sexual_offences="5295"/>
     <recorded robbery="1703"/>
     <recorded theft_offences="138909"/>
@@ -989,10 +851,7 @@
     <recorded misceanellous_crrimes_against_society="3192"/>
     <recorded fraud="4713"/>
     <area id="Avon and Somerset" total="97049">
-      <recorded violence_against_the_person="15895"/>
-      <recorded homicide="13"/>
-      <recorded violence_with_injury="8124"/>
-      <recorded violence_without_injury="7758"/>
+      <category name="violence_against_the_person" total="15895"/>
       <recorded sexual_offences="1534"/>
       <recorded robbery="767"/>
       <recorded theft_offences="48160"/>
@@ -1012,10 +871,7 @@
       <recorded fraud="1521"/>
     </area>
     <area id="Devon and Cornwall" total="84866">
-      <recorded violence_against_the_person="19670"/>
-      <recorded homicide="10"/>
-      <recorded violence_with_injury="10680"/>
-      <recorded violence_without_injury="8980"/>
+      <category name="violence_against_the_person" total="19670"/>
       <recorded sexual_offences="2009"/>
       <recorded robbery="378"/>
       <recorded theft_offences="35192"/>
@@ -1035,10 +891,7 @@
       <recorded fraud="1322"/>
     </area>
     <area id="Dorset" total="39402">
-      <recorded violence_against_the_person="6050"/>
-      <recorded homicide="5"/>
-      <recorded violence_with_injury="3574"/>
-      <recorded violence_without_injury="2471"/>
+      <category name="violence_against_the_person" total="6050"/>
       <recorded sexual_offences="586"/>
       <recorded robbery="198"/>
       <recorded theft_offences="22027"/>
@@ -1058,10 +911,7 @@
       <recorded fraud="439"/>
     </area>
     <area id="Gloucestershire" total="30250">
-      <recorded violence_against_the_person="4360"/>
-      <recorded homicide="1"/>
-      <recorded violence_with_injury="2599"/>
-      <recorded violence_without_injury="1760"/>
+      <category name="violence_against_the_person" total="4360"/>
       <recorded sexual_offences="522"/>
       <recorded robbery="231"/>
       <recorded theft_offences="16754"/>
@@ -1081,10 +931,7 @@
       <recorded fraud="655"/>
     </area>
     <area id="Wiltshire" total="33363">
-      <recorded violence_against_the_person="6144"/>
-      <recorded homicide="9"/>
-      <recorded violence_with_injury="3421"/>
-      <recorded violence_without_injury="2714"/>
+      <category name="violence_against_the_person" total="6144"/>
       <recorded sexual_offences="644"/>
       <recorded robbery="129"/>
       <recorded theft_offences="16776"/>
@@ -1105,10 +952,6 @@
     </area>
   </region>
   <region id="Wales" total="173614">
-    <recorded violence_against_the_person="31232"/>
-    <recorded homicide="31"/>
-    <recorded violence_with_injury="18187"/>
-    <recorded violence_without_injury="13014"/>
     <recorded sexual_offences="2936"/>
     <recorded robbery="733"/>
     <recorded theft_offences="81179"/>
@@ -1127,10 +970,7 @@
     <recorded misceanellous_crrimes_against_society="2001"/>
     <recorded fraud="2433"/>
     <area id="Dyfed-Powys" total="18903">
-      <recorded violence_against_the_person="3401"/>
-      <recorded homicide="5"/>
-      <recorded violence_with_injury="2068"/>
-      <recorded violence_without_injury="1328"/>
+      <category name="violence_against_the_person" total="3401"/>
       <recorded sexual_offences="376"/>
       <recorded robbery="24"/>
       <recorded theft_offences="6376"/>
@@ -1150,10 +990,7 @@
       <recorded fraud="371"/>
     </area>
     <area id="Gwent" total="34595">
-      <recorded violence_against_the_person="6301"/>
-      <recorded homicide="5"/>
-      <recorded violence_with_injury="3480"/>
-      <recorded violence_without_injury="2816"/>
+      <category name="violence_against_the_person" total="6301"/>
       <recorded sexual_offences="504"/>
       <recorded robbery="178"/>
       <recorded theft_offences="16711"/>
@@ -1173,10 +1010,7 @@
       <recorded fraud="267"/>
     </area>
     <area id="North Wales" total="36584">
-      <recorded violence_against_the_person="7924"/>
-      <recorded homicide="11"/>
-      <recorded violence_with_injury="4076"/>
-      <recorded violence_without_injury="3837"/>
+      <category name="violence_against_the_person" total="7924"/>
       <recorded sexual_offences="858"/>
       <recorded robbery="135"/>
       <recorded theft_offences="16033"/>
@@ -1196,10 +1030,7 @@
       <recorded fraud="352"/>
     </area>
     <area id="South Wales" total="83532">
-      <recorded violence_against_the_person="13606"/>
-      <recorded homicide="10"/>
-      <recorded violence_with_injury="8563"/>
-      <recorded violence_without_injury="5033"/>
+      <category name="violence_against_the_person" total="13606"/>
       <recorded sexual_offences="1198"/>
       <recorded robbery="396"/>
       <recorded theft_offences="42059"/>
@@ -1220,10 +1051,6 @@
     </area>
   </region>
   <national id="British Transport Police" total="51970">
-    <recorded violence_against_the_person="6151"/>
-    <recorded homicide="3"/>
-    <recorded violence_with_injury="2093"/>
-    <recorded violence_without_injury="4055"/>
     <recorded sexual_offences="641"/>
     <recorded robbery="505"/>
     <recorded theft_offences="28102"/>
@@ -1243,10 +1070,6 @@
     <recorded fraud="400"/>
   </national>
   <national id="Action Fraud" total="150389">
-    <recorded violence_against_the_person="0"/>
-    <recorded homicide="0"/>
-    <recorded violence_with_injury="0"/>
-    <recorded violence_without_injury="0"/>
     <recorded sexual_offences="0"/>
     <recorded robbery="0"/>
     <recorded theft_offences="0"/>
