@@ -29,33 +29,35 @@ function twoColCsvToXml($filename) {
 		while ($row = fgetcsv($fileHandle, 0, ',')) {
 			$rowCount++;
 
-			$total																= clean_value($row[1]);
-			$total_excluding_fraud												= clean_value($row[2]);
+			$total                                                            = clean_value($row[1]);
+			$total_excluding_fraud                                            = clean_value($row[2]);
 
-			$crimes['violence_against_the_person']['total']						= clean_value($row[4]);
-			$crimes['violence_against_the_person']['homicide']					= clean_value($row[5]);
-			$crimes['violence_against_the_person']['violence_with_injury']		= clean_value($row[6]);
-			$crimes['violence_against_the_person']['violence_without_injury']	= clean_value($row[7]);
+			$crimes['violence_against_the_person']['total']                   = clean_value($row[4]);
+			$crimes['violence_against_the_person']['homicide']                = clean_value($row[5]);
+			$crimes['violence_against_the_person']['violence_with_injury']    = clean_value($row[6]);
+			$crimes['violence_against_the_person']['violence_without_injury'] = clean_value($row[7]);
 
-			$crimes['sexual_offences']											= clean_value($row[8]);
-			$crimes['robbery']													= clean_value($row[9]);
+			$crimes['sexual_offences']                                        = clean_value($row[8]);
+			$crimes['robbery']                                                = clean_value($row[9]);
 
-			$crimes['theft_offences']['total']									= clean_value($row[10]);
-			$crimes['theft_offences']['burglary']								= clean_value($row[11]);
-			$crimes['theft_offences']['domestic_burglary']						= clean_value($row[12]);
-			$crimes['theft_offences']['nondomestic_burglary']					= clean_value($row[13]);
-			$crimes['theft_offences']['vehicle_offences']						= clean_value($row[14]);
-			$crimes['theft_offences']['theft_from_the_person']					= clean_value($row[15]);
-			$crimes['theft_offences']['bicycle_theft']							= clean_value($row[16]);
-			$crimes['theft_offences']['shoplifting']							= clean_value($row[17]);
-			$crimes['theft_offences']['all_other_theft_offences']				= clean_value($row[18]);
+			$crimes['theft_offences']['total']                                = clean_value($row[10]);
 
-			$crimes['criminal_damage_and_arson']								= clean_value($row[19]);
-			$crimes['drug_offences']											= clean_value($row[21]);
-			$crimes['possession_of_weapons_offences']							= clean_value($row[22]);
-			$crimes['public_order_offences']									= clean_value($row[23]);
-			$crimes['misceanellous_crimes_against_society']						= clean_value($row[24]);
-			$crimes['fraud']													= clean_value($row[26]);
+			$crimes['theft_offences']['burglary']['total']                    = clean_value($row[11]);
+			$crimes['theft_offences']['burglary']['domestic_burglary']        = clean_value($row[12]);
+			$crimes['theft_offences']['burglary']['nondomestic_burglary']     = clean_value($row[13]);
+
+			$crimes['theft_offences']['vehicle_offences']                     = clean_value($row[14]);
+			$crimes['theft_offences']['theft_from_the_person']                = clean_value($row[15]);
+			$crimes['theft_offences']['bicycle_theft']                        = clean_value($row[16]);
+			$crimes['theft_offences']['shoplifting']                          = clean_value($row[17]);
+			$crimes['theft_offences']['all_other_theft_offences']             = clean_value($row[18]);
+
+			$crimes['criminal_damage_and_arson']                              = clean_value($row[19]);
+			$crimes['drug_offences']                                          = clean_value($row[21]);
+			$crimes['possession_of_weapons_offences']                         = clean_value($row[22]);
+			$crimes['public_order_offences']                                  = clean_value($row[23]);
+			$crimes['misceanellous_crimes_against_society']                   = clean_value($row[24]);
+			$crimes['fraud']                                                  = clean_value($row[26]);
 
 			// as we're dealing with two sets of headers here
 			// add area header to variable, and remove from line
@@ -139,16 +141,37 @@ function twoColCsvToXml($filename) {
 							if (is_array($crime_value)) {
 								$element = $xml->createElement("category");
 
+								// The problem here is with adding the third level of category onto the second. Seems like it's ignored currently
+
 								foreach($crime_value as $subcat => $subcat_value) {
 									if ($subcat === 'total') {
 										$element->setAttribute("name", $crime_name);
 										$element->setAttribute($subcat, $subcat_value);
 									}
 									else {
-										$subelement = $xml->createElement("recorded");
-										$subelement->setAttribute("name", $subcat);
-										$subelement->setAttribute("total", $subcat_value);
-										$element->appendChild($subelement);
+										if (is_array($subcat_value)) {
+											$elementTwo = $xml->createElement("category");
+											foreach($subcat_value as $subcat_subcat => $subcat_subcat_value) {
+												if ($subcat_subcat === "total") {
+													$elementTwo->setAttribute("name", $subcat);
+													$elementTwo->setAttribute($subcat_subcat, $subcat_subcat_value);
+												}
+												else {
+													$subelement = $xml->createElement("recorded");
+													$subelement->setAttribute("name", $subcat_subcat);
+													$subelement->setAttribute("total", $subcat_subcat_value);
+													$elementTwo->appendChild($subelement);
+												}
+											}
+											$element->appendChild($elementTwo);
+										}
+
+										else {
+											$subelement = $xml->createElement("recorded");
+											$subelement->setAttribute("name", $subcat);
+											$subelement->setAttribute("total", $subcat_value);
+											$element->appendChild($subelement);
+										}
 									}
 								}
 							}
