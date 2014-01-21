@@ -13,7 +13,7 @@
       <xs:sequence>
         <xs:choice maxOccurs="unbounded">
           <xs:element ref="category"/>
-          <xs:element ref="recorded"/>
+          <xs:element ref="crime"/>
         </xs:choice>
         <xs:element maxOccurs="unbounded" ref="area"/>
       </xs:sequence>
@@ -25,7 +25,7 @@
     <xs:complexType>
       <xs:choice maxOccurs="unbounded">
         <xs:element ref="category"/>
-        <xs:element ref="recorded"/>
+        <xs:element ref="crime"/>
       </xs:choice>
       <xs:attribute name="id" use="required" type="xs:string"/>
       <xs:attribute name="total" use="required" type="xs:int"/>
@@ -35,7 +35,7 @@
     <xs:complexType>
       <xs:choice maxOccurs="unbounded">
         <xs:element ref="category"/>
-        <xs:element ref="recorded"/>
+        <xs:element ref="crime"/>
       </xs:choice>
       <xs:attribute name="id" use="required" type="xs:string"/>
       <xs:attribute name="total" use="required" type="xs:int"/>
@@ -45,13 +45,13 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" ref="category"/>
-        <xs:element maxOccurs="unbounded" ref="recorded"/>
+        <xs:element maxOccurs="unbounded" ref="crime"/>
       </xs:sequence>
       <xs:attribute name="name" use="required" type="xs:string"/>
       <xs:attribute name="total" use="required" type="xs:int"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="recorded">
+  <xs:element name="crime">
     <xs:complexType>
       <xs:attribute name="name" use="required" type="xs:string"/>
       <xs:attribute name="total" use="required" type="xs:int"/>
