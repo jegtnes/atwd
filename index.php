@@ -116,7 +116,7 @@ function twoColCsvToXml($filename) {
 													$elementTwo->setAttribute($subcat_subcat, $subcat_subcat_value);
 												}
 												else {
-													$subelement = $xml->createElement("recorded");
+													$subelement = $xml->createElement("crime");
 													$subelement->setAttribute("name", $subcat_subcat);
 													$subelement->setAttribute("total", $subcat_subcat_value);
 													$elementTwo->appendChild($subelement);
@@ -126,7 +126,7 @@ function twoColCsvToXml($filename) {
 										}
 
 										else {
-											$subelement = $xml->createElement("recorded");
+											$subelement = $xml->createElement("crime");
 											$subelement->setAttribute("name", $subcat);
 											$subelement->setAttribute("total", $subcat_value);
 											$element->appendChild($subelement);
@@ -136,7 +136,7 @@ function twoColCsvToXml($filename) {
 							}
 							// If not, proceed with single elements as normal
 							else {
-								$element = $xml->createElement("recorded");
+								$element = $xml->createElement("crime");
 								$element->setAttribute("name", $crime_name);
 								$element->setAttribute("total", $crime_value);
 							}
@@ -186,7 +186,7 @@ function twoColCsvToXml($filename) {
 														$elementTwo->setAttribute($subcat_subcat, $subcat_subcat_value);
 													}
 													else {
-														$subelement = $xml->createElement("recorded");
+														$subelement = $xml->createElement("crime");
 														$subelement->setAttribute("name", $subcat_subcat);
 														$subelement->setAttribute("total", $subcat_subcat_value);
 														$elementTwo->appendChild($subelement);
@@ -196,7 +196,7 @@ function twoColCsvToXml($filename) {
 											}
 
 											else {
-												$subelement = $xml->createElement("recorded");
+												$subelement = $xml->createElement("crime");
 												$subelement->setAttribute("name", $subcat);
 												$subelement->setAttribute("total", $subcat_value);
 												$element->appendChild($subelement);
@@ -206,7 +206,7 @@ function twoColCsvToXml($filename) {
 								}
 								// If not, proceed with single elements as normal
 								else {
-									$element = $xml->createElement("recorded");
+									$element = $xml->createElement("crime");
 									$element->setAttribute("name", $crime_name);
 									$element->setAttribute("total", $crime_value);
 								}
@@ -246,7 +246,7 @@ function twoColCsvToXml($filename) {
 													$elementTwo->setAttribute($subcat_subcat, $subcat_subcat_value);
 												}
 												else {
-													$subelement = $xml->createElement("recorded");
+													$subelement = $xml->createElement("crime");
 													$subelement->setAttribute("name", $subcat_subcat);
 													$subelement->setAttribute("total", $subcat_subcat_value);
 													$elementTwo->appendChild($subelement);
@@ -258,7 +258,7 @@ function twoColCsvToXml($filename) {
 										}
 
 										else {
-											$subelement = $xml->createElement("recorded");
+											$subelement = $xml->createElement("crime");
 											$subelement->setAttribute("name", $subcat);
 											$subelement->setAttribute("total", $subcat_value);
 											$element->appendChild($subelement);
@@ -268,7 +268,7 @@ function twoColCsvToXml($filename) {
 							}
 							// If not, proceed with single elements as normal
 							else {
-								$element = $xml->createElement("recorded");
+								$element = $xml->createElement("crime");
 								$element->setAttribute("name", $crime_name);
 								$element->setAttribute("total", $crime_value);
 							}
