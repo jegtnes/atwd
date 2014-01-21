@@ -23,6 +23,11 @@ function twoColCsvToXml($filename) {
 
 	$root = $xml->createElement('crimes');
 	$root = $xml->appendChild($root);
+
+	//kudos to VolkerK at StackOverflow for helping me figure this out:
+	// http://stackoverflow.com/questions/2236931/php-dom-xml-create-multiple-namespace-attributes
+	$root->setAttributeNS('http://www.w3.org/2000/xmlns/' ,'xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
+	$root->setAttributeNS('http://www.w3.org/2001/XMLSchema-instance' ,'noNamespaceSchemaLocation', 'crime_schema.xsd');
 	$fileHandle = fopen($filename, 'r');
 
 	if ($fileHandle) {
