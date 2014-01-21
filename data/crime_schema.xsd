@@ -1,3 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="crimes">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="region" />
+        <xs:element maxOccurs="unbounded" ref="national"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="region">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element ref="category"/>
+          <xs:element ref="recorded"/>
+        </xs:choice>
+        <xs:element maxOccurs="unbounded" ref="area"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:string"/>
+      <xs:attribute name="total" use="required" type="xs:int"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="area">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="category"/>
+        <xs:element ref="recorded"/>
+      </xs:choice>
+      <xs:attribute name="id" use="required"/>
+      <xs:attribute name="total" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="national">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="category"/>
+        <xs:element ref="recorded"/>
+      </xs:choice>
+      <xs:attribute name="id" use="required"/>
+      <xs:attribute name="total" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="category">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="category"/>
+        <xs:element maxOccurs="unbounded" ref="recorded"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required"/>
+      <xs:attribute name="total" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="recorded">
+    <xs:complexType>
+      <xs:attribute name="name" use="required"/>
+      <xs:attribute name="total" use="required"/>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
