@@ -27,8 +27,8 @@
         <xs:element ref="category"/>
         <xs:element ref="recorded"/>
       </xs:choice>
-      <xs:attribute name="id" use="required"/>
-      <xs:attribute name="total" use="required"/>
+      <xs:attribute name="id" use="required" type="xs:string"/>
+      <xs:attribute name="total" use="required" type="xs:int"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="national">
@@ -37,8 +37,8 @@
         <xs:element ref="category"/>
         <xs:element ref="recorded"/>
       </xs:choice>
-      <xs:attribute name="id" use="required"/>
-      <xs:attribute name="total" use="required"/>
+      <xs:attribute name="id" use="required" type="xs:string"/>
+      <xs:attribute name="total" use="required" type="xs:int"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="category">
@@ -47,14 +47,14 @@
         <xs:element minOccurs="0" ref="category"/>
         <xs:element maxOccurs="unbounded" ref="recorded"/>
       </xs:sequence>
-      <xs:attribute name="name" use="required"/>
-      <xs:attribute name="total" use="required"/>
+      <xs:attribute name="name" use="required" type="xs:string"/>
+      <xs:attribute name="total" use="required" type="xs:int"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="recorded">
     <xs:complexType>
-      <xs:attribute name="name" use="required"/>
-      <xs:attribute name="total" use="required"/>
+      <xs:attribute name="name" use="required" type="xs:string"/>
+      <xs:attribute name="total" use="required" type="xs:int"/>
     </xs:complexType>
   </xs:element>
 </xs:schema>
