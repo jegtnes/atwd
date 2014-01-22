@@ -13,4 +13,23 @@ function splitQueryString($queryString) {
 	}
 	return $queryArray;
 }
+
+function parseApiRequest($url) {
+	$params = explode('/', $url);
+
+	// the first parameter will be the initial /, remove it
+	array_shift($params);
+
+	$return = [];
+	$count = 0;
+	foreach($params as $param) {
+		$count++;
+		if ($count >2) {
+			$return[] = $param;
+
+		}
+	}
+
+	return $return;
+}
 ?>
