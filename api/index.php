@@ -1,10 +1,5 @@
 <?php
-$queryString = explode('&', $_SERVER['QUERY_STRING']);
-$qs = [];
-foreach($queryString as $query) {
-	$strings = explode('=', $query);
-	$qs[$strings[0]] = $strings[1];
-}
+require ("../library/utilities.php");
 
-print_r($qs);
+print_r(splitQueryString($_SERVER['QUERY_STRING']));
 ?>
