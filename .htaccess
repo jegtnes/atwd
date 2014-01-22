@@ -1,4 +1,8 @@
 Options +FollowSymlinks
-
 RewriteEngine On
-RewriteRule ^/crimes api/index.php
+
+# Strip the trailing slash, if we're not in a directory
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [L,R=301]
+RewriteRule crimes api/index.php [L]
