@@ -20,14 +20,37 @@ function parseApiRequest($url) {
 	// the first parameter will be the initial /, remove it
 	array_shift($params);
 
+	// check whether we've got the right year. TODO: implement proper XML error
+	if ($params[1] != '2013-6') return false;
+
 	$return = [];
 	$count = 0;
-	foreach($params as $param) {
-		$count++;
-		if ($count >2) {
-			$return[] = $param;
 
+	foreach($params as $param) {
+
+		if ($param === end($params)) {
+			if ($param === 'xml') $return['requestFormat'] = 'xml';
+			else if ($param === 'json') $return['requestFormat'] = 'json';
+			else {
+				$return['requestFormat'] = false;
+			}
 		}
+		switch ($count) {
+			case 2:
+				if ($param === 'put' || $param === 'post' || $param === 'delete') {
+					echo "verb";
+				}
+
+				else {
+					// check for region
+				}
+				break;
+
+			default:
+				# code...
+				break;
+		}
+		$count++;
 	}
 
 	return $return;
