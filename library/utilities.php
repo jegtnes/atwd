@@ -37,12 +37,20 @@ function parseApiRequest($url) {
 		}
 		switch ($count) {
 			case 2:
-				if ($param === 'put' || $param === 'post' || $param === 'delete') {
-					echo "verb";
+				if ($param === 'put') {
+					$return['parameter'] = 'put';
+				}
+
+				else if ($param === 'post') {
+					$return['parameter'] = 'post';
+				}
+
+				else if ($param === 'delete') {
+					$return['parameter'] = 'delete';
 				}
 
 				else {
-					// check for region
+					$return['parameter'] = 'get';
 				}
 				break;
 
