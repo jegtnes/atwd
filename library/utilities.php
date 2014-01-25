@@ -52,6 +52,13 @@ function parseApiRequest($url) {
 
 	else if ($params[0] === 'put' || $params[0] === 'post' || $params[0] === 'delete') {
 		$return['verb'] = $params[0];
+
+		if ($params[0] === 'put') {
+			$put = explode(':', $params[1]);
+			$return['region'] = $put[0];
+			$return['update_amount'] = $put[1];
+			$return['file_type'] = $params[2];
+		}
 	}
 
 	else {
