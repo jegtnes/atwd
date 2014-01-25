@@ -17,24 +17,21 @@ function splitQueryString($queryString) {
 function parseApiRequest($url) {
 	$params = explode('/', $url);
 
-	// the first parameter will be the initial /, remove it
-	array_shift($params);
-
 	// check whether we've got the right year. TODO: implement proper XML error
-	if ($params[1] != '2013-6') return false;
+	if ($params[2] != '2013-6') return false;
+
+	// Let's remove irrelevant parameters. First is the intial /, second
+	// is 'crimes', which is just the API call URL, third is the year,
+	// 2013-6. If this isn't the case we're returning false above anyhow,
+	// so from this point on the structure should be reasonably correct.
+	else $params = array_slice($params, 3);
 
 	$return = [];
 	$count = 0;
 
 	foreach($params as $param) {
+		echo $param;
 
-		if ($param === end($params)) {
-			if ($param === 'xml') $return['requestFormat'] = 'xml';
-			else if ($param === 'json') $return['requestFormat'] = 'json';
-			else {
-				$return['requestFormat'] = false;
-			}
-		}
 		/*
 		if first equals file type, show totals
 		else if first equals verb, region is after
