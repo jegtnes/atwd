@@ -28,22 +28,6 @@ function parseApiRequest($url) {
 
 	$return = [];
 
-	/*
-	if first equals file type, show totals
-	elseif first equals verb, region is after
-		if put, :XXXXX is after region, but same parameter
-		else if post, region is alone, and specific numbers come after in a param
-		else if delete, file type is after region, and that's it
-	else it is GET region
-	/*
-
-	*/
-	// atwd/crimes/6-2013/xml
-	// atwd/crimes/6-2013/south_west/xml
-	// atwd/crimes/6-2013/put/british_transport_police:51970/xml
-	// atwd/crimes/6-2013/post/south_west/wessex/hom:4-vwi:15-vwoi:25/xml
-	// atwd/crimes/6-2013/delete/wessex/xml
-
 	if ($params[0] === 'xml' || $params[0] === 'json') {
 		$return['response_format'] = $params[0];
 		$return['region'] = 'england_and_wales';
