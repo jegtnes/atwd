@@ -18,11 +18,11 @@ function parseApiRequest($url) {
 	$params = explode('/', $url);
 
 	// check whether we've got the right year. TODO: implement proper XML error
-	if ($params[2] != '2013-6') return false;
+	if ($params[2] != '6-2013') return false;
 
 	// Let's remove irrelevant parameters. First is the intial /, second
 	// is 'crimes', which is just the API call URL, third is the year,
-	// 2013-6. If this isn't the case we're returning false above anyhow,
+	// 6-2013. If this isn't the case we're returning false above anyhow,
 	// so from this point on the structure should be reasonably correct.
 	else $params = array_slice($params, 3);
 
