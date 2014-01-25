@@ -29,55 +29,52 @@ function parseApiRequest($url) {
 	$return = [];
 	$count = 0;
 
-	foreach($params as $param) {
+	if ($params[0] === 'xml' || $params[0] === 'json') {
+		$return['file_type'] = $params[0];
+	}
 
-		if ($param === 'xml' || $param === 'json') {
-			$return['file_type'] = $param;
+	else if ($params[0] === 'put' || $params[0] === 'post' || $params[0] === 'delete') {
+		$return['verb'] = $params[0];
+	}
+
+	else {
+		$return['region'] = $params[0];
+		$return['verb'] = 'get';
+		$return['file_type'] = $params[1];
+	}
+
+	/*
+	if first equals file type, show totals
+	elseif first equals verb, region is after
+		if put, :XXXXX is after region, but same parameter
+		else if post, region is alone, and specific numbers come after in a param
+		else if delete, file type is after region, and that's it
+	else it is GET region
+	/*
+
+	*/
+	// atwd/crimes/6-2013/xml
+	// atwd/crimes/6-2013/south_west/xml
+	// atwd/crimes/6-2013/put/british_transport_police:51970/xml
+	// atwd/crimes/6-2013/post/south_west/wessex/hom:4-vwi:15-vwoi:25/xml
+	// atwd/crimes/6-2013/delete/wessex/xml
+
+	if ($count === 2) {
+		if ($param === 'put') {
+			$return['parameter'] = 'put';
 		}
 
-		else if ($param === 'put' || $param === 'post' || $param === 'delete') {
-			$return['verb'] = $param;
+		else if ($param === 'post') {
+			$return['parameter'] = 'post';
+		}
+
+		else if ($param === 'delete') {
+			$return['parameter'] = 'delete';
 		}
 
 		else {
-			$return['verb'] = 'get';
+			$return['parameter'] = 'get';
 		}
-
-		/*
-		if first equals file type, show totals
-		else if first equals verb, region is after
-		     if put, :XXXXX is after region, but same parameter
-		     else if post, region is alone, and specific numbers come after in a param
-		     else if delete, file type is after region, and that's it
-		else it is GET region
-		/*
-
-		*/
-		// atwd/crimes/6-2013/xml
-		// atwd/crimes/6-2013/south_west/xml
-		// atwd/crimes/6-2013/put/british_transport_police:51970/xml
-		// atwd/crimes/6-2013/post/south_west/wessex/hom:4-vwi:15-vwoi:25/xml
-		// atwd/crimes/6-2013/delete/wessex/xml
-
-		if ($count === 2) {
-			if ($param === 'put') {
-				$return['parameter'] = 'put';
-			}
-
-			else if ($param === 'post') {
-				$return['parameter'] = 'post';
-			}
-
-			else if ($param === 'delete') {
-				$return['parameter'] = 'delete';
-			}
-
-			else {
-				$return['parameter'] = 'get';
-			}
-
-		}
-		$count++;
 	}
 
 	return $return;
