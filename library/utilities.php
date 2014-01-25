@@ -27,21 +27,6 @@ function parseApiRequest($url) {
 	else $params = array_slice($params, 3);
 
 	$return = [];
-	$count = 0;
-
-	if ($params[0] === 'xml' || $params[0] === 'json') {
-		$return['file_type'] = $params[0];
-	}
-
-	else if ($params[0] === 'put' || $params[0] === 'post' || $params[0] === 'delete') {
-		$return['verb'] = $params[0];
-	}
-
-	else {
-		$return['region'] = $params[0];
-		$return['verb'] = 'get';
-		$return['file_type'] = $params[1];
-	}
 
 	/*
 	if first equals file type, show totals
@@ -59,22 +44,20 @@ function parseApiRequest($url) {
 	// atwd/crimes/6-2013/post/south_west/wessex/hom:4-vwi:15-vwoi:25/xml
 	// atwd/crimes/6-2013/delete/wessex/xml
 
-	if ($count === 2) {
-		if ($param === 'put') {
-			$return['parameter'] = 'put';
-		}
+	if ($params[0] === 'xml' || $params[0] === 'json') {
+		$return['file_type'] = $params[0];
+		$return['region'] = 'england_and_wales';
+		$return['verb'] = 'get';
+	}
 
-		else if ($param === 'post') {
-			$return['parameter'] = 'post';
-		}
+	else if ($params[0] === 'put' || $params[0] === 'post' || $params[0] === 'delete') {
+		$return['verb'] = $params[0];
+	}
 
-		else if ($param === 'delete') {
-			$return['parameter'] = 'delete';
-		}
-
-		else {
-			$return['parameter'] = 'get';
-		}
+	else {
+		$return['region'] = $params[0];
+		$return['verb'] = 'get';
+		$return['file_type'] = $params[1];
 	}
 
 	return $return;
