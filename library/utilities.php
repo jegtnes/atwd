@@ -30,7 +30,18 @@ function parseApiRequest($url) {
 	$count = 0;
 
 	foreach($params as $param) {
-		echo $param;
+
+		if ($param === 'xml' || $param === 'json') {
+			$return['file_type'] = $param;
+		}
+
+		else if ($param === 'put' || $param === 'post' || $param === 'delete') {
+			$return['verb'] = $param;
+		}
+
+		else {
+			$return['verb'] = 'get';
+		}
 
 		/*
 		if first equals file type, show totals
