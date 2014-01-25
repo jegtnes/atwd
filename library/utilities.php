@@ -70,6 +70,11 @@ function parseApiRequest($url) {
 			}
 			$return['file_type'] = $params[4];
 		}
+
+		else if ($params[0] === 'delete') {
+			$return['region'] = $params[1];
+			$return['file_type'] = $params[2];
+		}
 	}
 
 	else {
