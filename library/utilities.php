@@ -45,7 +45,7 @@ function parseApiRequest($url) {
 	// atwd/crimes/6-2013/delete/wessex/xml
 
 	if ($params[0] === 'xml' || $params[0] === 'json') {
-		$return['file_type'] = $params[0];
+		$return['response_format'] = $params[0];
 		$return['region'] = 'england_and_wales';
 		$return['verb'] = 'get';
 	}
@@ -57,7 +57,7 @@ function parseApiRequest($url) {
 			$put = explode(':', $params[1]);
 			$return['region'] = $put[0];
 			$return['update_amount'] = $put[1];
-			$return['file_type'] = $params[2];
+			$return['response_format'] = $params[2];
 		}
 
 		else if ($params[0] === 'post') {
@@ -68,19 +68,19 @@ function parseApiRequest($url) {
 				$split = explode(":", $value);
 				$return['crime_values'][$split[0]] = $split[1];
 			}
-			$return['file_type'] = $params[4];
+			$return['response_format'] = $params[4];
 		}
 
 		else if ($params[0] === 'delete') {
 			$return['region'] = $params[1];
-			$return['file_type'] = $params[2];
+			$return['response_format'] = $params[2];
 		}
 	}
 
 	else {
 		$return['region'] = $params[0];
 		$return['verb'] = 'get';
-		$return['file_type'] = $params[1];
+		$return['response_format'] = $params[1];
 	}
 
 	return $return;
