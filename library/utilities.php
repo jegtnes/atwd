@@ -59,6 +59,17 @@ function parseApiRequest($url) {
 			$return['update_amount'] = $put[1];
 			$return['file_type'] = $params[2];
 		}
+
+		else if ($params[0] === 'post') {
+			$return['region'] = $params[1];
+			$return['area'] = $params[2];
+			$values = explode('-', $params[3]);
+			foreach($values as $value) {
+				$split = explode(":", $value);
+				$return['crime_values'][$split[0]] = $split[1];
+			}
+			$return['file_type'] = $params[4];
+		}
 	}
 
 	else {
