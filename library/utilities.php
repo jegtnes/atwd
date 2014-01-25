@@ -35,28 +35,39 @@ function parseApiRequest($url) {
 				$return['requestFormat'] = false;
 			}
 		}
-		switch ($count) {
-			case 2:
-				if ($param === 'put') {
-					$return['parameter'] = 'put';
-				}
+		/*
+		if first equals file type, show totals
+		else if first equals verb, region is after
+		     if put, :XXXXX is after region, but same parameter
+		     else if post, region is alone, and specific numbers come after in a param
+		     else if delete, file type is after region, and that's it
+		else it is GET region
+		/*
 
-				else if ($param === 'post') {
-					$return['parameter'] = 'post';
-				}
+		*/
+		// atwd/crimes/6-2013/xml
+		// atwd/crimes/6-2013/south_west/xml
+		// atwd/crimes/6-2013/put/british_transport_police:51970/xml
+		// atwd/crimes/6-2013/post/south_west/wessex/hom:4-vwi:15-vwoi:25/xml
+		// atwd/crimes/6-2013/delete/wessex/xml
 
-				else if ($param === 'delete') {
-					$return['parameter'] = 'delete';
-				}
+		if ($count === 2) {
+			if ($param === 'put') {
+				$return['parameter'] = 'put';
+			}
 
-				else {
-					$return['parameter'] = 'get';
-				}
-				break;
+			else if ($param === 'post') {
+				$return['parameter'] = 'post';
+			}
 
-			default:
-				# code...
-				break;
+			else if ($param === 'delete') {
+				$return['parameter'] = 'delete';
+			}
+
+			else {
+				$return['parameter'] = 'get';
+			}
+
 		}
 		$count++;
 	}
