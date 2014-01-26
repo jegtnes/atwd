@@ -2,15 +2,21 @@
 header('Content-Type: text/xml');
 require ("../library/utilities.php");
 
+function createBaseCrimeXml($sourceData, $year) {
+	$xml = new SimpleXMLElement("<response></response>");
+	$xml->addAttribute('timestamp', time());
+	$response = $xml->addChild('crimes');
+	$response->addAttribute('year', $year);
+	return $response;
+}
+
 if (file_exists(DATA_SOURCE)) {
+
 	$sourceData = simplexml_load_file(DATA_SOURCE);
 
 	$request = parseApiRequest($_SERVER['REQUEST_URI']);
 
-	$responseXml = new SimpleXMLElement("<response></response>");
-	$responseXml->addAttribute('timestamp', time());
-	$crimes = $responseXml->addChild('crimes');
-	$crimes->addAttribute('year', $request['year']);
+	$crimes = createBaseCrimeXml(DATA_SOURCE, $request['year']);
 
 	foreach ($sourceData->region as $x) {
 		$element = $crimes->addChild('region');
@@ -28,6 +34,6 @@ if (file_exists(DATA_SOURCE)) {
 		$element = $crimes->addChild(lcfirst($x['id']));
 		$element->addAttribute('total', $x['total']);
 	}
-	echo $responseXml->asXML();
+	echo $crimes->asXML();
 }
 ?>
