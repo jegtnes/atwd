@@ -19,16 +19,21 @@ function splitQueryString($queryString) {
 function parseApiRequest($url) {
 	$params = explode('/', $url);
 
+	$return = [];
+
 	// check whether we've got the right year. TODO: implement proper XML error
-	if ($params[2] != '6-2013') return false;
+	if ($params[2] == '6-2013')  {
+		$return['year'] = $params[2];
+	}
+	else return false;
 
 	// Let's remove irrelevant parameters. First is the intial /, second
 	// is 'crimes', which is just the API call URL, third is the year,
 	// 6-2013. If this isn't the case we're returning false above anyhow,
 	// so from this point on the structure should be reasonably correct.
-	else $params = array_slice($params, 3);
+	$params = array_slice($params, 3);
 
-	$return = [];
+
 
 	if ($params[0] === 'xml' || $params[0] === 'json') {
 		$return['response_format'] = $params[0];
