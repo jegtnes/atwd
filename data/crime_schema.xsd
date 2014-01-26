@@ -3,8 +3,9 @@
   <xs:element name="crimes">
     <xs:complexType mixed="true">
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="region" />
-        <xs:element maxOccurs="unbounded" ref="national"/>
+        <xs:element minOccurs="9" maxOccurs="9" ref="region" />
+        <xs:element minOccurs="2" maxOccurs="2" ref="country" />
+        <xs:element minOccurs="2" maxOccurs="2" ref="national"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -26,6 +27,17 @@
       <xs:choice maxOccurs="unbounded">
         <xs:element ref="category"/>
         <xs:element ref="crime"/>
+      </xs:choice>
+      <xs:attribute name="id" use="required" type="xs:string"/>
+      <xs:attribute name="total" use="required" type="xs:int"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="country">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="category"/>
+        <xs:element ref="crime"/>
+        <xs:element ref="area"/>
       </xs:choice>
       <xs:attribute name="id" use="required" type="xs:string"/>
       <xs:attribute name="total" use="required" type="xs:int"/>
