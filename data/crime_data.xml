@@ -1248,7 +1248,33 @@
       <crime name="fraud" total="776"/>
     </area>
   </region>
-  <region id="Wales" total="173614">
+  <country id="England" total="3344716">
+    <category name="violence_against_the_person" total="560890">
+      <crime name="homicide" total="498"/>
+      <crime name="violence_with_injury" total="289344"/>
+      <crime name="violence_without_injury" total="271048"/>
+    </category>
+    <crime name="sexual_offences" total="52235"/>
+    <crime name="robbery" total="61126"/>
+    <category name="theft_offences" total="1739191">
+      <category name="burglary" total="434619">
+        <crime name="domestic_burglary" total="216111"/>
+        <crime name="nondomestic_burglary" total="218508"/>
+      </category>
+      <crime name="vehicle_offences" total="364843"/>
+      <crime name="theft_from_the_person" total="98134"/>
+      <crime name="bicycle_theft" total="88504"/>
+      <crime name="shoplifting" total="289493"/>
+      <crime name="all_other_theft_offences" total="463598"/>
+    </category>
+    <crime name="criminal_damage_and_arson" total="489316"/>
+    <crime name="drug_offences" total="190249"/>
+    <crime name="possession_of_weapons_offences" total="18602"/>
+    <crime name="public_order_offences" total="116175"/>
+    <crime name="misceanellous_crimes_against_society" total="39819"/>
+    <crime name="fraud" total="77113"/>
+  </country>
+  <country id="Wales" total="173614">
     <category name="violence_against_the_person" total="31232">
       <crime name="homicide" total="31"/>
       <crime name="violence_with_injury" total="18187"/>
@@ -1377,7 +1403,7 @@
       <crime name="misceanellous_crimes_against_society" total="944"/>
       <crime name="fraud" total="1443"/>
     </area>
-  </region>
+  </country>
   <national id="British Transport Police" total="51970">
     <category name="violence_against_the_person" total="6151">
       <crime name="homicide" total="3"/>

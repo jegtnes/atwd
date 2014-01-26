@@ -82,8 +82,13 @@ function twoColCsvToXml($filename) {
 
 					// If we're dealing with a region (Wales is considered one)
 					// so is 'Action Fraud1' (badly formatted) and BTP.
-					if (stristr($name, 'region') || $name == 'WALES') {
-						$region = $xml->createElement("region");
+					if (stristr($name, 'region') || $name === 'WALES' || $name === 'ENGLAND') {
+						if ($name === 'WALES' || $name === 'ENGLAND') {
+							$region = $xml->createElement("country");
+						}
+						else {
+							$region = $xml->createElement("region");
+						}
 						//remove Region from name, or '1' from Action Fraud
 						$region_id = preg_replace('/( Region)|1/', '', ucwords(strtolower($name)));
 
@@ -148,10 +153,12 @@ function twoColCsvToXml($filename) {
 						 * once we reach a region, add children to the region
 						 * and unset the areas, to let areas from the
 						 * next region be allocated to the array */
-						foreach ($areas as $area) {
-							$region->appendChild($area);
+						if (!empty($areas)) {
+							foreach ($areas as $area) {
+								$region->appendChild($area);
+							}
+							unset($areas);
 						}
-						unset($areas);
 					}
 
 					// dealing with Nationals
@@ -218,7 +225,7 @@ function twoColCsvToXml($filename) {
 					}
 
 					// Will cover all areas. Needs to exclude England as that gets added
-					else if ($name != 'ENGLAND') {
+					else  {
 						$areas[$name] = $xml->createElement("area");
 						$areas[$name]->setAttribute('id', $name);
 						$areas[$name]->setAttribute('total', $total);
