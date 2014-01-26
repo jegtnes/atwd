@@ -1,5 +1,7 @@
 <?php
 
+define('DATA_SOURCE', dirname(__DIR__) . '/data/crime_data.xml');
+
 /* Function to split a query string into an associative array
  * e.g. ?var1=true&var2=false&var3=xml returns:
  * [var1 => true, var2 => false, var3 => xml]
