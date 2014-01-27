@@ -45,10 +45,18 @@ function returnAllCrime($sourceData, $json = false) {
 	return $data;
 }
 
-function returnCrimeByRegion($region, $sourceData, $json = false) {
+function returnCrimeByRegion($regionName, $sourceData, $json = false) {
 	$crimeXml = new DOMDocument;
 	$crimeXml->load($sourceData);
 	$data = $crimeXml->createDocumentFragment();
+	$xPath = new DOMXPath($crimeXml);
+
+	// turns underscored param to what's stored in the ID and we need to find
+	// i.e. south_west to South West
+	$regionName = ucwords(str_replace('_', ' ', $regionName));
+
+	$region = $xPath->query("//region[@id='$regionName']")->item(0);
+	$data->appendChild($region);
 	return $data;
 }
 
@@ -58,7 +66,7 @@ if (file_exists(DATA_SOURCE)) {
 	$crimes = createBaseCrimeXml($request['year']);
 
 	// $crime = returnAllCrime(DATA_SOURCE);
-	$crime = returnCrimeByRegion('south_west', DATA_SOURCE);
+	$crime = returnCrimeByRegion($request['region'], DATA_SOURCE);
 	$crime = $crimes->importNode($crime, true);
 	$crimes->documentElement->firstChild->appendChild($crime);
 
