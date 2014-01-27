@@ -5,7 +5,7 @@ ini_set('auto_detect_line_endings', true);
 
 // Cleans up the unclean CSV values, removing the comma
 function clean_value($val) {
-	return preg_replace('/,/', '', $val);
+	return str_replace(",", "", $val);
 }
 
 function twoColCsvToXml($filename) {
@@ -166,7 +166,7 @@ function twoColCsvToXml($filename) {
 						$national = $xml->createElement("national");
 
 						// Remove 1 from Action Fraud 1
-						$national_id = preg_replace('/1/', '', $name);
+						$national_id = str_replace('1', '', $name);
 						$national->setAttribute('id', $national_id);
 
 						$national->setAttribute('total', $total);
