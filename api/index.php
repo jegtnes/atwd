@@ -1,4 +1,5 @@
 <?php
+
 header('Content-Type: text/xml');
 require ("../library/utilities.php");
 
@@ -6,10 +7,11 @@ function createBaseCrimeXml($year) {
 	$xml = new DOMDocument('1.0', 'utf-8');
 	$root = $xml->createElement('response');
 	$root->setAttribute('timestamp', time());
+	$root = $xml->appendChild($root);
 
 	$response = $xml->createElement('crimes');
-	$response = $xml->appendChild($response);
 	$response->setAttribute('year', $year);
+	$response = $root->appendChild($response);
 	return $xml;
 }
 
@@ -50,7 +52,7 @@ if (file_exists(DATA_SOURCE)) {
 
 	$crime = returnAllCrime(DATA_SOURCE);
 	$crime = $crimes->importNode($crime, true);
-	$crimes->documentElement->appendChild($crime);
+	$crimes->documentElement->firstChild->appendChild($crime);
 
 	echo $crimes->saveXML();
 }
