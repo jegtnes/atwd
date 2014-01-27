@@ -2,11 +2,10 @@ Options +FollowSymlinks
 RewriteEngine On
 
 # Because we need two different rewritebases depending on whether we're local
-# or on "production", i.e. in uni, the production rewrite is here.
-# The local rewrite is in local.htaccess, and is set by the Apache vhost config
-# As that can be set locally, the uni one can't.
+# or on "production", i.e. in uni, the local rewrite is here.
+# The production rewrite is in .htaccess
 # Local vhost config in: /etc/apache2/extra/httpd-vhosts.conf
-RewriteBase /~as2-jegtnes/atwd
+RewriteBase /
 
 # Strip the trailing slash, if we're not in a directory
 RewriteCond %{REQUEST_FILENAME} !-d
