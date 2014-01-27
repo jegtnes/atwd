@@ -3,11 +3,14 @@ header('Content-Type: text/xml');
 require ("../library/utilities.php");
 
 function createBaseCrimeXml($year) {
-	$xml = new SimpleXMLElement("<response></response>");
-	$xml->addAttribute('timestamp', time());
-	$response = $xml->addChild('crimes');
-	$response->addAttribute('year', $year);
-	return $response;
+	$xml = new DOMDocument('1.0', 'utf-8');
+	$root = $xml->createElement('response');
+	$root->setAttribute('timestamp', time());
+
+	$response = $xml->createElement('crimes');
+	$response = $xml->appendChild($response);
+	$response->setAttribute('year', $year);
+	return $xml;
 }
 
 if (file_exists(DATA_SOURCE)) {
@@ -17,23 +20,8 @@ if (file_exists(DATA_SOURCE)) {
 	$request = parseApiRequest($_SERVER['REQUEST_URI']);
 
 	$crimes = createBaseCrimeXml($request['year']);
+	echo $crimes->saveXML();
 
-	foreach ($sourceData->region as $x) {
-		$element = $crimes->addChild('region');
-		$element->addAttribute('id', $x['id']);
-		$element->addAttribute('total', $x['total']);
-	}
-
-	foreach ($sourceData->national as $x) {
-		$element = $crimes->addChild('national');
-		$element->addAttribute('id', $x['id']);
-		$element->addAttribute('total', $x['total']);
-	}
-
-	foreach ($sourceData->country as $x) {
-		$element = $crimes->addChild(lcfirst($x['id']));
-		$element->addAttribute('total', $x['total']);
-	}
-	echo $crimes->asXML();
+	// echo $crimes->saveXML();
 }
 ?>
