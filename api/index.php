@@ -45,12 +45,20 @@ function returnAllCrime($sourceData, $json = false) {
 	return $data;
 }
 
+function returnCrimeByRegion($region, $sourceData, $json = false) {
+	$crimeXml = new DOMDocument;
+	$crimeXml->load($sourceData);
+	$data = $crimeXml->createDocumentFragment();
+	return $data;
+}
+
 if (file_exists(DATA_SOURCE)) {
 
 	$request = parseApiRequest($_SERVER['REQUEST_URI']);
 	$crimes = createBaseCrimeXml($request['year']);
 
-	$crime = returnAllCrime(DATA_SOURCE);
+	// $crime = returnAllCrime(DATA_SOURCE);
+	$crime = returnCrimeByRegion('south_west', DATA_SOURCE);
 	$crime = $crimes->importNode($crime, true);
 	$crimes->documentElement->firstChild->appendChild($crime);
 
