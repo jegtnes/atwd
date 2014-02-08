@@ -56,7 +56,21 @@ function returnCrimeByRegion($regionName, $sourceData, $json = false) {
 	$regionName = ucwords(str_replace('_', ' ', $regionName));
 
 	$region = $xPath->query("//region[@id='$regionName']")->item(0);
-	$data->appendChild($region);
+	$areas = $xPath->query("//region[@id='$regionName']/area");
+
+	while ($region->hasChildNodes()){
+		$region->removeChild($region->childNodes->item(0));
+	}
+
+	$regionData = $data->appendChild($region);
+
+	foreach ($areas as $area) {
+		while ($area->hasChildNodes()){
+			$area->removeChild($area->childNodes->item(0));
+			$regionData->appendChild($area);
+		}
+	}
+
 	return $data;
 }
 
