@@ -55,15 +55,23 @@ function returnCrimeByRegion($regionName, $sourceData, $json = false) {
 	// i.e. south_west to South West
 	$regionName = ucwords(str_replace('_', ' ', $regionName));
 
-	$region = $xPath->query("//region[@id='$regionName']")->item(0);
+	// as we're looking for nationals as well as regions, local-name() is needed here.
+	// kudos to Jens Erat @ StackOverflow http://stackoverflow.com/a/20122323/1430657
+	$region = $xPath->query("/crimes/*[local-name() = 'region' or local-name() = 'national'][@id='$regionName']")->item(0);
+
+	// nationals don't have regions, so this fails gracefully by\
+	// not selecting anything if on a national
 	$areas = $xPath->query("//region[@id='$regionName']/area");
 
+	// remove all children (more granularity than we're looking for)
+	// bit inefficient, investigate shallow DOM copies
 	while ($region->hasChildNodes()){
 		$region->removeChild($region->childNodes->item(0));
 	}
 
 	$regionData = $data->appendChild($region);
 
+	// same as above. this is a bit dirty
 	foreach ($areas as $area) {
 		while ($area->hasChildNodes()){
 			$area->removeChild($area->childNodes->item(0));
