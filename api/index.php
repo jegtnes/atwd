@@ -1,6 +1,5 @@
 <?php
 
-header('Content-Type: text/xml');
 require ("../library/utilities.php");
 
 function createBaseCrimeXml($year) {
@@ -93,13 +92,14 @@ function returnCrimeByRegion($regionName, $sourceData, $json = false) {
 }
 
 if (file_exists(DATA_SOURCE)) {
-
 	$request = parseApiRequest($_SERVER['REQUEST_URI']);
-	$crimes = createBaseCrimeXml($request['year']);
 
+	$crimes = createBaseCrimeXml($request['year']);
 	$crime = returnCrimeByRegion($request['region'], DATA_SOURCE);
 	$crime = $crimes->importNode($crime, true);
 	$crimes->documentElement->firstChild->appendChild($crime);
+
+	header('Content-Type: text/xml');
 	echo $crimes->saveXML();
 }
 ?>
