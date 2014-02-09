@@ -63,13 +63,13 @@ function returnCrimeByRegion($regionName, $sourceData, $json = false) {
 	// not selecting anything if on a national
 	$areas = $xPath->query("//region[@id='$regionName']/area");
 
-	// remove all children (more granularity than we're looking for)
-	// bit inefficient, investigate shallow DOM copies
-	while ($region->hasChildNodes()){
-		$region->removeChild($region->childNodes->item(0));
-	}
+	$regionId = $region->attributes->getNamedItem("id")->nodeValue;
+	$regionTotal = $region->attributes->getNamedItem("total")->nodeValue;
 
-	$regionData = $data->appendChild($region);
+	$regionElement = $crimeXml->createElement('region');
+	$regionElement->setAttribute('id', $regionId);
+	$regionElement->setAttribute('total', $regionTotal);
+	$data->appendChild($regionElement);
 
 	// same as above. this is a bit dirty
 	foreach ($areas as $area) {
