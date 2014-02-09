@@ -69,13 +69,19 @@ function returnCrimeByRegion($regionName, $sourceData, $json = false) {
 	$regionElement = $crimeXml->createElement('region');
 	$regionElement->setAttribute('id', $regionId);
 	$regionElement->setAttribute('total', $regionTotal);
-	$data->appendChild($regionElement);
+	$regionElement = $data->appendChild($regionElement);
 
-	// same as above. this is a bit dirty
 	foreach ($areas as $area) {
+		$areaId = $area->attributes->getNamedItem("id")->nodeValue;
+		$areaTotal = $area->attributes->getNamedItem("total")->nodeValue;
+		$areaElement = $crimeXml->createElement('area');
+		$areaElement->setAttribute('id', $areaId);
+		$areaElement->setAttribute('total', $areaTotal);
+		$areaElement = $data->appendChild($areaElement);
+
 		while ($area->hasChildNodes()){
 			$area->removeChild($area->childNodes->item(0));
-			$regionData->appendChild($area);
+			$regionElement->appendChild($areaElement);
 		}
 	}
 
