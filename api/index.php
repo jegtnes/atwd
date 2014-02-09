@@ -14,7 +14,7 @@ function createBaseCrimeXml($year) {
 	return $xml;
 }
 
-function returnAllCrime($sourceData, $json = false) {
+function returnAllCrime($sourceData, $dataType = 'xml') {
 	$crimeXml = new DOMDocument;
 	$crimeXml->load($sourceData);
 	$data = $crimeXml->createDocumentFragment();
@@ -44,9 +44,9 @@ function returnAllCrime($sourceData, $json = false) {
 	return $data;
 }
 
-function returnCrimeByRegion($regionName, $sourceData, $json = false) {
+function returnCrimeByRegion($regionName, $sourceData, $dataType = 'xml') {
 	if ($regionName === "england_and_wales") {
-		return returnAllCrime($sourceData, $json);
+		return returnAllCrime($sourceData, $dataType);
 	}
 	else {
 		$crimeXml = new DOMDocument;
