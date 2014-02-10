@@ -110,6 +110,10 @@ function updateCrimeByRegion($regionName, $updateAmount, $sourceData, $dataType 
 	$regionElement = $data->appendChild($regionElement);
 
 	$data->appendChild($regionElement);
+
+	$region->setAttribute('total', $newTotal);
+	$crimeXml->save($sourceData);
+
 	return $data;
 }
 
