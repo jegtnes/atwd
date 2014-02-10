@@ -106,7 +106,8 @@ function updateCrimeByRegion($regionName, $updateAmount, $sourceData, $dataType 
 
 	$regionElement = $crimeXml->createElement('region');
 	$regionElement->setAttribute('id', $regionId);
-	$regionElement->setAttribute('total', $originalTotal);
+	$regionElement->setAttribute('total', $newTotal);
+	$regionElement->setAttribute('previous', $originalTotal);
 	$regionElement = $data->appendChild($regionElement);
 
 	$data->appendChild($regionElement);
