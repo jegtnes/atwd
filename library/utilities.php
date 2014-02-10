@@ -76,8 +76,6 @@ function parseApiRequest($url) {
 	// so from this point on the structure should be reasonably correct.
 	$params = array_slice($params, 3);
 
-
-
 	if ($params[0] === 'xml' || $params[0] === 'json') {
 		$return['response_format'] = $params[0];
 		$return['region'] = 'england_and_wales';
