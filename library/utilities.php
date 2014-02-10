@@ -33,6 +33,32 @@ function array_to_object($d) {
     return is_array($d) ? (object) array_map(__METHOD__, $d) : $d;
 }
 
+/* json_encode from XML results in XML element attributes turned into an array
+ * called @attributes. If you merely want these attributes applied to the parent
+ * as attribute-value pairs instead, this function will accomplish exactly that.
+ * Only works with pure arrays, so make sure you convert it to an array first. */
+function extractJsonAttributes($json_array = array()) {
+	$data = [];
+
+	foreach ($json_array as $key => $value) {
+
+		if ($key === '@attributes') {
+			foreach ($value as $objKey => $objVal) {
+				$data[$objKey] = $objVal;
+			}
+		}
+
+		else if (is_array($value)) {
+			$data[$key] = extractJsonAttributes($value);
+			unset($json_array[$key]);
+		}
+		else {
+			$data[$key] = $value;
+		}
+	}
+	return $data;
+}
+
 function parseApiRequest($url) {
 	$params = explode('/', $url);
 
