@@ -100,7 +100,16 @@ function updateCrimeByRegion($regionName, $updateAmount, $sourceData, $dataType 
 
 	$region = $xPath->query("//national[@id='$regionName']")->item(0);
 
-	$data->appendChild($region);
+	$regionId = $region->attributes->getNamedItem("id")->nodeValue;
+	$originalTotal = $region->attributes->getNamedItem("total")->nodeValue;
+	$newTotal = $updateAmount;
+
+	$regionElement = $crimeXml->createElement('region');
+	$regionElement->setAttribute('id', $regionId);
+	$regionElement->setAttribute('total', $originalTotal);
+	$regionElement = $data->appendChild($regionElement);
+
+	$data->appendChild($regionElement);
 	return $data;
 }
 
