@@ -42,16 +42,19 @@ function extractJsonAttributes($json_array = array()) {
 
 	foreach ($json_array as $key => $value) {
 
+		// where the magic happens. Take things one level up
+		// going towards the base case of having no @attributes
 		if ($key === '@attributes') {
-			foreach ($value as $objKey => $objVal) {
-				$data[$objKey] = $objVal;
+			foreach ($value as $attributeKey => $attributeValue) {
+				$data[$attributeKey] = $attributeValue;
 			}
 		}
 
+		// recursion! go one level deeper to keep checking for attributes
 		else if (is_array($value)) {
 			$data[$key] = extractJsonAttributes($value);
-			unset($json_array[$key]);
 		}
+
 		else {
 			$data[$key] = $value;
 		}
