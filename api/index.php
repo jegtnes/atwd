@@ -104,7 +104,9 @@ if (file_exists(DATA_SOURCE)) {
 		$xml = simplexml_load_string($crimes->saveXML());
 		$json = json_encode($xml, JSON_PRETTY_PRINT);
 		$json_array = object_to_array(json_decode($json));
-		$assignment_compliant_json_array = extractJsonAttributes($json_array);
+
+		// going one level deeper: wrap the entire thing in a response array because the spec said so
+		$assignment_compliant_json_array['response'] = extractJsonAttributes($json_array);
 		echo json_encode($assignment_compliant_json_array, JSON_PRETTY_PRINT);
 	}
 
