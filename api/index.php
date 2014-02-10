@@ -99,7 +99,18 @@ if (file_exists(DATA_SOURCE)) {
 	$crime = $crimes->importNode($crime, true);
 	$crimes->documentElement->firstChild->appendChild($crime);
 
-	header('Content-Type: text/xml');
-	echo $crimes->saveXML();
+	if ($request['response_format'] === 'json') {
+		header('Content-Type: application/json');
+		$xml = simplexml_load_string($crimes->saveXML());
+		$json = json_encode($xml, JSON_PRETTY_PRINT);
+		$json_array = object_to_array(json_decode($json));
+		$assignment_compliant_json_array = extractJsonAttributes($json_array);
+		echo json_encode($assignment_compliant_json_array, JSON_PRETTY_PRINT);
+	}
+
+	elseif ($request['response_format'] === 'xml') {
+		header('Content-Type: text/xml');
+		echo $crimes->saveXML();
+	}
 }
 ?>
