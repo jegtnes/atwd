@@ -91,11 +91,25 @@ function returnCrimeByRegion($regionName, $sourceData, $dataType = 'xml') {
 	}
 }
 
+function updateCrimeByRegion($regionName, $updateAmount, $sourceData, $dataType = 'xml') {
+	$crimeXml = new DOMDocument;
+	$crimeXml->load($sourceData);
+	$data = $crimeXml->createDocumentFragment();
+	$xPath = new DOMXPath($crimeXml);
+	$regionName = ucwords(str_replace('_', ' ', $regionName));
+
+	$region = $xPath->query("//national[@id='$regionName']")->item(0);
+
+	$data->appendChild($region);
+	return $data;
+}
+
 if (file_exists(DATA_SOURCE)) {
 	$request = parseApiRequest($_SERVER['REQUEST_URI']);
 
 	$crimes = createBaseCrimeXml($request['year']);
-	$crime = returnCrimeByRegion($request['region'], DATA_SOURCE);
+	$crime = updateCrimeByRegion($request['region'], $request['update_amount'], DATA_SOURCE);
+	// $crime = returnCrimeByRegion($request['region'], DATA_SOURCE);
 	$crime = $crimes->importNode($crime, true);
 	$crimes->documentElement->firstChild->appendChild($crime);
 
