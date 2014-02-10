@@ -16,6 +16,23 @@ function splitQueryString($queryString) {
 	return $queryArray;
 }
 
+/* Function to turn mixed data containing arrays and objects to array.
+ * Found on https://coderwall.com/p/8mmicq
+ */
+function object_to_array($d) {
+    if (is_object($d))
+        $d = get_object_vars($d);
+
+    return is_array($d) ? array_map(__METHOD__, $d) : $d;
+}
+
+/* Function to turn mixed data containing arrays and objects to array.
+ * Found on https://coderwall.com/p/8mmicq
+ */
+function array_to_object($d) {
+    return is_array($d) ? (object) array_map(__METHOD__, $d) : $d;
+}
+
 function parseApiRequest($url) {
 	$params = explode('/', $url);
 
