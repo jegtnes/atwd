@@ -2,7 +2,8 @@
 /css/*
 /bower_components/*
 /node_modules/*
+/vendor/*
 
 ~*.xlsx
-
 *.sublime-workspace
+
