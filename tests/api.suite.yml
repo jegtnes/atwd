@@ -1,3 +1,8 @@
 class_name: ApiGuy
 modules:
-    enabled: [ApiHelper]
+    enabled: [PhpBrowser, REST, ApiHelper]
+    config:
+      PhpBrowser:
+          url: http://atwd.dev/
+      REST:
+          url: http://atwd.dev/crimes/2013-6/
