@@ -5,4 +5,4 @@ modules:
       PhpBrowser:
           url: http://atwd.dev/
       REST:
-          url: http://atwd.dev/crimes/2013-6/
+          url: http://atwd.dev/crimes/6-2013/
