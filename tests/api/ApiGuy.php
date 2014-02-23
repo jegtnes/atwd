@@ -2914,5 +2914,24 @@ class ApiGuy extends \Codeception\AbstractGuy
         }
         return new Maybe();
     }
+
+ 
+    /**
+     * This method is generated.
+     * Documentation taken from corresponding module.
+     * ----------------------------------------------
+     *
+     *
+     * @see Codeception\Module\ApiHelper::printAVariable()
+     * @return \Codeception\Maybe
+     */
+    public function printAVariable($var) {
+        $this->scenario->addStep(new \Codeception\Step\Action('printAVariable', func_get_args()));
+        if ($this->scenario->running()) {
+            $result = $this->scenario->runStep();
+            return new Maybe($result);
+        }
+        return new Maybe();
+    }
 }
 
