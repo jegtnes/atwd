@@ -119,11 +119,31 @@ function updateCrimeByRegion($regionName, $updateAmount, $sourceData, $dataType 
 }
 
 if (file_exists(DATA_SOURCE)) {
-	$request = parseApiRequest($_SERVER['REQUEST_URI']);
 
+	$request = parseApiRequest($_SERVER['REQUEST_URI']);
 	$crimes = createBaseCrimeXml($request['year']);
-	$crime = updateCrimeByRegion($request['region'], $request['update_amount'], DATA_SOURCE);
-	// $crime = returnCrimeByRegion($request['region'], DATA_SOURCE);
+
+	switch ($request['verb']) {
+		case 'put':
+			$crime = updateCrimeByRegion($request['region'], $request['update_amount'], DATA_SOURCE);
+			break;
+
+		case 'post':
+			# code...
+			break;
+
+		case 'delete':
+			# code...
+			break;
+
+		case 'get':
+			$crime = returnCrimeByRegion($request['region'], DATA_SOURCE);
+			break;
+
+		default:
+			break;
+	}
+
 	$crime = $crimes->importNode($crime, true);
 	$crimes->documentElement->firstChild->appendChild($crime);
 
