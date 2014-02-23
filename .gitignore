@@ -3,6 +3,7 @@
 /bower_components/*
 /node_modules/*
 /vendor/*
+/tests/_log
 
 ~*.xlsx
 *.sublime-workspace
