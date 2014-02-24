@@ -122,8 +122,16 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 	$crimeXml = new DOMDocument;
 	$crimeXml->load($sourceData);
 	$data = $crimeXml->createDocumentFragment();
+	$xPath = new DOMXPath($crimeXml);
 	$regionElement = $data->appendChild($crimeXml->createElement('region'));
 	$regionName = ucwords(str_replace('_', ' ', $regionName));
+
+	$region = $xPath->query("//region[@id='$regionName']")->item(0);
+	$regionId = $region->attributes->getNamedItem("id")->nodeValue;
+	$regionTotal = $region->attributes->getNamedItem("total")->nodeValue;
+	$regionElement->setAttribute('id', $regionId);
+	$regionElement->setAttribute('total', $regionTotal);
+	$regionElement = $data->appendChild($regionElement);
 	return $data;
 }
 
