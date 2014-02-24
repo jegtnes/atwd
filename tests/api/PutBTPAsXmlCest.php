@@ -7,17 +7,9 @@ class PutBTPAsXmlCest
 	public $randomNumber;
 	public $previous;
 
-    public function _before()
-    {
-    	$this->randomNumber = rand(1,999999);
-    }
-
-    public function _after()
-    {
-    }
-
-    public function testOriginal(ApiGuy $I) {
-    	$timestamp = time();
+	public function testOriginal(ApiGuy $I) {
+		$timestamp = time();
+		$this->randomNumber = rand(1,999999);
 		$I->wantTo('PUT update the total amount of BTP and receive an XML result');
 		$I->sendGET('put/british_transport_police:' . $this->randomNumber . '/xml');
 		$I->seeResponseCodeIs(200);
