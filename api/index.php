@@ -155,8 +155,10 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 	$englandElement = $data->appendChild($crimeXml->createElement('england'));
 	$englandElement->setAttribute('total', $englandTotal + $areaTotal);
 	$walesTotal = $xPath->query("//country[@id='Wales']")->item(0)->attributes->getNamedItem("total")->nodeValue;
+	$actionfraudTotal = $xPath->query("//national[@id='Action Fraud']")->item(0)->attributes->getNamedItem("total")->nodeValue;
+	$btpTotal = $xPath->query("//national[@id='British Transport Police']")->item(0)->attributes->getNamedItem("total")->nodeValue;
 	$englandAndWalesElement = $data->appendChild($crimeXml->createElement('england_wales'));
-	$englandAndWalesElement->setAttribute('total', $englandTotal + $walesTotal + $areaTotal);
+	$englandAndWalesElement->setAttribute('total', $englandTotal + $walesTotal + $actionfraudTotal + $btpTotal + $areaTotal);
 
 	return $data;
 }
