@@ -16,7 +16,6 @@ class PostWessexAsXmlCest
 		unset($this->timestamp);
 	}
 
-    // tests
     public function postWessexAsXml(ApiGuy $I) {
     	$violenceWithoutInjury = rand(1,100);
     	$violenceWithInjury = rand(1,$violenceWithoutInjury);
