@@ -36,15 +36,19 @@ class PutBTPAsJsonCest
 		if ($amounts) $this->previous = $amounts[1];
 	}
 
-	// public function testResetValue(ApiGuy $I) {
-	// 	$timestamp = time();
-	// 	$I->wantTo('PUT update the total amount of BTP back to the original value and receive an XML result');
-	// 	$I->sendGET('put/british_transport_police:' . $this->previous . '/xml');
-	// 	$I->seeResponseCodeIs(200);
-	// 	$I->seeResponseIsXml();
-	// 	$I->seeResponseContains('<region id="British Transport Police" total="' . $this->previous . '" previous="' . $this->randomNumber . '"/>');
-	// 	unset($this->randomNumber);
-	// 	unset($this->previous);
-	// }
+	public function testResetValue(ApiGuy $I) {
+		$timestamp = time();
+		$I->wantTo('PUT update the total amount of BTP back to the original value and receive a JSON result');
+		$I->sendGET('put/british_transport_police:' . $this->previous . '/json');
+		$I->seeResponseCodeIs(200);
+		$I->seeResponseIsJson();
+		$I->seeResponseContainsJson(array('timestamp' => "$timestamp"));
+		$I->seeResponseContains('"region": {');
+		$I->seeResponseContains('"id": "British Transport Police",');
+		$I->seeResponseContains('"total": "' . $this->previous . '",');
+		$I->seeResponseContains('"previous": "' . $this->randomNumber . '"');
+		unset($this->randomNumber);
+		unset($this->previous);
+	}
 
 }
