@@ -132,14 +132,12 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 	$regionElement = $data->appendChild($crimeXml->createElement('region'));
 	$regionElement->setAttribute('id', $regionId);
 	$regionElement->setAttribute('total', $regionTotal);
-	$regionElement = $data->appendChild($regionElement);
 
 	$areaName = ucwords(str_replace('_', ' ', $areaName));
 	$areaTotal = $violenceWithoutInjury + $violenceWithInjury + $homicide;
 	$areaElement = $regionElement->appendChild($crimeXml->createElement('area'));
 	$areaElement->setAttribute('id', $areaName);
 	$areaElement->setAttribute('total', $areaTotal);
-	$areaElement = $data->appendChild($regionElement);
 
 	return $data;
 }
