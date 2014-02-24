@@ -27,8 +27,8 @@ class PutBTPAsJsonCest
 		$I->seeResponseIsJson();
 		$I->seeResponseContainsJson(array('timestamp' => "$timestamp"));
 		$I->seeResponseContains('"region": {');
-		$I->seeResponseContains('"id": "British Transport Police",');
-		$I->seeResponseContains('"total": "' . $this->randomNumber . '",');
+		$I->seeResponseContainsJson(array('id' => "British Transport Police"));
+		$I->seeResponseContainsJson(array('total' => "$this->randomNumber"));
 		$response = (string)($I->grabResponse());
 
 		preg_match("/\"previous\": ?\"([0-9]*)\"/", $response, $amounts);
@@ -44,9 +44,9 @@ class PutBTPAsJsonCest
 		$I->seeResponseIsJson();
 		$I->seeResponseContainsJson(array('timestamp' => "$timestamp"));
 		$I->seeResponseContains('"region": {');
-		$I->seeResponseContains('"id": "British Transport Police",');
-		$I->seeResponseContains('"total": "' . $this->previous . '",');
-		$I->seeResponseContains('"previous": "' . $this->randomNumber . '"');
+		$I->seeResponseContainsJson(array('id' => "British Transport Police"));
+		$I->seeResponseContainsJson(array('total' => "$this->previous"));
+		$I->seeResponseContainsJson(array('previous' => "$this->randomNumber"));
 		unset($this->randomNumber);
 		unset($this->previous);
 	}
