@@ -139,6 +139,18 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 	$areaElement->setAttribute('id', $areaName);
 	$areaElement->setAttribute('total', $areaTotal);
 
+	$homicideElement = $areaElement->appendChild($crimeXml->createElement('recorded'));
+	$homicideElement->setAttribute('id', "Homicide");
+	$homicideElement->setAttribute('total', $homicide);
+
+	$violenceWithInjuryElement = $areaElement->appendChild($crimeXml->createElement('recorded'));
+	$violenceWithInjuryElement->setAttribute('id', "Violence with injury");
+	$violenceWithInjuryElement->setAttribute('total', $violenceWithInjury);
+
+	$violenceWithoutInjuryElement = $areaElement->appendChild($crimeXml->createElement('recorded'));
+	$violenceWithoutInjuryElement->setAttribute('id', "Violence without injury");
+	$violenceWithoutInjuryElement->setAttribute('total', $violenceWithoutInjury);
+
 	return $data;
 }
 
