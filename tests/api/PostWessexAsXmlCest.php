@@ -4,13 +4,17 @@ use \ApiGuy;
 class PostWessexAsXmlCest
 {
 
-    public function _before()
-    {
-    }
+	public $timestamp;
 
-    public function _after()
-    {
-    }
+    public function _before()
+	{
+		$this->timestamp = time();
+	}
+
+	public function _after()
+	{
+		unset($this->timestamp);
+	}
 
     // tests
     public function postWessexAsXml(ApiGuy $I) {
@@ -21,5 +25,6 @@ class PostWessexAsXmlCest
     	$I->sendGET('post/south_west/wessex/hom:4-vwi:15-vwoi:25/xml');
     	$I->seeResponseCodeIs(200);
     	$I->seeResponseIsXml();
+    	$I->seeResponseContains('<response timestamp="' . $this->timestamp . '">');
     }
 }
