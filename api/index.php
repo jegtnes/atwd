@@ -118,6 +118,15 @@ function updateCrimeByRegion($regionName, $updateAmount, $sourceData) {
 	return $data;
 }
 
+function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $violenceWithInjury, $homicide, $sourceData) {
+	$crimeXml = new DOMDocument;
+	$crimeXml->load($sourceData);
+	$data = $crimeXml->createDocumentFragment();
+	$regionElement = $data->appendChild($crimeXml->createElement('region'));
+	$regionName = ucwords(str_replace('_', ' ', $regionName));
+	return $data;
+}
+
 if (file_exists(DATA_SOURCE)) {
 
 	$request = parseApiRequest($_SERVER['REQUEST_URI']);
@@ -129,7 +138,7 @@ if (file_exists(DATA_SOURCE)) {
 			break;
 
 		case 'post':
-			# code...
+			$crime = createNewAreaInRegion($request['area'], $request['region'], $request['crime_values']['vwoi'], $request['crime_values']['vwi'], $request['crime_values']['hom'], DATA_SOURCE);
 			break;
 
 		case 'delete':
