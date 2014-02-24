@@ -18,7 +18,7 @@ class PostWessexAsXmlCest
     	$violenceWithInjury = rand(1,$violenceWithoutInjury);
     	$homicide = rand(1,$violenceWithInjury);
     	$I->wantTo('Create a new area in the South West called Wessex and see a response as XML');
-    	$I->sendGET('south_west/wessex/hom:4-vwi:15-vwoi:25/xml');
+    	$I->sendGET('post/south_west/wessex/hom:4-vwi:15-vwoi:25/xml');
     	$I->seeResponseCodeIs(200);
     	$I->seeResponseIsXml();
     }
