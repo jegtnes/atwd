@@ -139,6 +139,9 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 	$areaElement->setAttribute('id', $areaName);
 	$areaElement->setAttribute('total', $areaTotal);
 
+	// Needed to keep the original Area fragment in the outputted result
+	$areaClone = $areaElement->cloneNode(true);
+
 	$homicideElement = $areaElement->appendChild($crimeXml->createElement('recorded'));
 	$homicideElement->setAttribute('id', "Homicide");
 	$homicideElement->setAttribute('total', $homicide);
@@ -160,6 +163,8 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 	$englandAndWalesElement = $data->appendChild($crimeXml->createElement('england_wales'));
 	$englandAndWalesElement->setAttribute('total', $englandTotal + $walesTotal + $actionfraudTotal + $btpTotal + $areaTotal);
 
+	$region->appendChild($areaClone);
+	$crimeXml->save($sourceData);
 	return $data;
 }
 
