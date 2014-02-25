@@ -139,9 +139,6 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 	$areaElement->setAttribute('id', $areaName);
 	$areaElement->setAttribute('total', $areaTotal);
 
-	// Needed to keep the original Area fragment in the outputted result
-	$areaClone = $areaElement->cloneNode(true);
-
 	$homicideElement = $areaElement->appendChild($crimeXml->createElement('recorded'));
 	$homicideElement->setAttribute('id', "Homicide");
 	$homicideElement->setAttribute('total', $homicide);
@@ -153,6 +150,10 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 	$violenceWithoutInjuryElement = $areaElement->appendChild($crimeXml->createElement('recorded'));
 	$violenceWithoutInjuryElement->setAttribute('id', "Violence without injury");
 	$violenceWithoutInjuryElement->setAttribute('total', $violenceWithoutInjury);
+
+	// Needed to keep the original Area fragment in the outputted result
+	// TODO: Delete original area, if it exists
+	$areaClone = $areaElement->cloneNode(true);
 
 	$englandTotal = $xPath->query("//country[@id='England']")->item(0)->attributes->getNamedItem("total")->nodeValue;
 	$englandElement = $data->appendChild($crimeXml->createElement('england'));
