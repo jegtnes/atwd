@@ -127,11 +127,9 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 	$regionName = ucwords(str_replace('_', ' ', $regionName));
 	$region = $xPath->query("//region[@id='$regionName']")->item(0);
 	$regionId = $region->attributes->getNamedItem("id")->nodeValue;
-	$regionTotal = $region->attributes->getNamedItem("total")->nodeValue;
 
 	$regionElement = $data->appendChild($crimeXml->createElement('region'));
 	$regionElement->setAttribute('id', $regionId);
-	$regionElement->setAttribute('total', $regionTotal);
 
 	$areaName = ucwords(str_replace('_', ' ', $areaName));
 	$areaTotal = $violenceWithoutInjury + $violenceWithInjury + $homicide;
@@ -160,13 +158,18 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 	$englandAndWalesElement = $data->appendChild($crimeXml->createElement('england_wales'));
 	$englandAndWalesElement->setAttribute('total', $englandTotal + $walesTotal + $actionfraudTotal + $btpTotal + $areaTotal);
 
+	// To update this in the XML, remove any existing areas with this name
+	$area = $xPath->query("//area[@id='$areaName']")->item(0);
+	$area->parentNode->removeChild($area);
+	//Used to calculate the new totals for region & country
+	$previousAreaTotal = $area->attributes->getNamedItem("total")->nodeValue;
+
+	$regionTotal = $region->attributes->getNamedItem("total")->nodeValue - $previousAreaTotal + $areaTotal;
+	$regionElement->setAttribute('total', $regionTotal);
+	$region->attributes->getNamedItem("total")->nodeValue = $regionTotal;
+
 	// Needed to keep the original Area fragment in the output result
 	$areaClone = $areaElement->cloneNode(true);
-
-	// To update this in the XML, remove any existing areas with this name
-	foreach ($xPath->query("//area[@id='$areaName']") as $area) {
-		$area->parentNode->removeChild($area);
-	}
 
 	//and append to the region, and save
 	$region->appendChild($areaClone);
