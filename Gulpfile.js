@@ -1,13 +1,13 @@
-var sassFiles     = ['.bower_components/foundation/scss/normalize.scss'
-                    ,'.bower_components/foundation/scss/foundation.scss'
-                    ,'./scss/*.scss'
-                    ,'.bower_components/foundation/scss'],
+var sassFiles     = ['./bower_components/foundation/scss/normalize.scss'
+                    ,'./bower_components/foundation/scss/foundation.scss'
+                    ,'./scss/*.scss'],
     sassCompile   = './assets/css',
     jsFiles       = ['./bower_components/jquery/dist/jquery.js'
                     ,'./bower_components/foundation/js/foundation.js'
                     ,'./js/**/*.js'],
-    jsHeadFiles = './bower_components/modernizr/modernizr.js',
-    jsCompile     = './assets/js';
+    jsHeadFiles   = './bower_components/modernizr/modernizr.js',
+    jsCompile     = './assets/js',
+    phpFiles      = './*.php';
 
 var gulp          = require('gulp'),
     gutil         = require('gulp-util'),
@@ -24,8 +24,14 @@ var gulp          = require('gulp'),
     lr            = require('tiny-lr'),
     server        = lr();
 
+gulp.task('php', function(){
+    gulp.src(phpFiles)
+    .pipe(livereload(server));
+});
+
 gulp.task('styles', function () {
     gulp.src(sassFiles)
+        .pipe(concat('app.css'))
         .pipe(sass({ style: 'expanded' }))
         .pipe(autoprefixer('last 2 version'))
         .pipe(gulp.dest(sassCompile))
@@ -59,6 +65,7 @@ gulp.task('watch', function() {
         if (err) {
           return console.log(err);
         }
+        gulp.watch(phpFiles, ['php']);
         gulp.watch(sassFiles, ['styles']);
         gulp.watch(jsFiles, ['scripts']);
         gulp.watch(jsHeadFiles, ['headScripts']);
