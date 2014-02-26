@@ -24,7 +24,9 @@
 			<h1>Data Visualisation</h1>
 			<form action="">
 				<label for="region">Select region</label>
-				<select name="region" id="region"></select>
+				<select name="region" id="region">
+					<option value=""></option>
+				</select>
 			</form>
 		</div>
 	</div>
