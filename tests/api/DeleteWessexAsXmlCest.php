@@ -22,7 +22,6 @@ class DeleteWessexAsXmlCest
 		$I->seeResponseCodeIs(200);
 		$I->seeResponseIsXml();
 		$I->seeResponseContains('<response timestamp="' . $this->timestamp . '">');
-		$I->seeResponseContains('<region id="South West" total=');
 		$I->seeResponseContains('<area id="Wessex" deleted="');
 		$I->seeResponseContains('<deleted id="Homicide" total="');
 		$I->seeResponseContains('<deleted id="Violence with injury" total="');
