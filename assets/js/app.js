@@ -13145,3 +13145,6 @@ return jQuery;
   };
 }(jQuery, this, this.document));
 
+$(document).ready(function() {
+	console.log($('#region'));
+});
