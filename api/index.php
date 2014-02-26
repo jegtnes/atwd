@@ -149,7 +149,8 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 	$violenceWithoutInjuryElement->setAttribute('id', "Violence without injury");
 	$violenceWithoutInjuryElement->setAttribute('total', $violenceWithoutInjury);
 
-	$englandTotal = $xPath->query("//country[@id='England']")->item(0)->attributes->getNamedItem("total")->nodeValue;
+	$england = $xPath->query("//country[@id='England']")->item(0);
+	$englandTotal = $england->attributes->getNamedItem("total")->nodeValue;
 	$englandElement = $data->appendChild($crimeXml->createElement('england'));
 	$englandElement->setAttribute('total', $englandTotal + $areaTotal);
 	$walesTotal = $xPath->query("//country[@id='Wales']")->item(0)->attributes->getNamedItem("total")->nodeValue;
@@ -159,13 +160,17 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 	$englandAndWalesElement->setAttribute('total', $englandTotal + $walesTotal + $actionfraudTotal + $btpTotal + $areaTotal);
 
 	// To update this in the XML, remove any existing areas with this name
-	$area = $xPath->query("//area[@id='$areaName']")->item(0);
-	$area->parentNode->removeChild($area);
+	if ($xPath->query("//area[@id='$areaName']")->item(0)) {
+		$area = $xPath->query("//area[@id='$areaName']")->item(0);
+		$area->parentNode->removeChild($area);
+	}
+
 	//Used to calculate the new totals for region & country
-	$previousAreaTotal = $area->attributes->getNamedItem("total")->nodeValue;
+	$previousAreaTotal = isset($area) ? $area->attributes->getNamedItem("total")->nodeValue : 0;
 
 	$regionTotal = $region->attributes->getNamedItem("total")->nodeValue - $previousAreaTotal + $areaTotal;
 	$regionElement->setAttribute('total', $regionTotal);
+	$england->setAttribute('total', $englandTotal - $previousAreaTotal + $areaTotal);
 	$region->attributes->getNamedItem("total")->nodeValue = $regionTotal;
 
 	// Needed to keep the original Area fragment in the output result
