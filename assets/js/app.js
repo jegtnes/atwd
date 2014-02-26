@@ -14591,6 +14591,34 @@ $(document).ready(function() {
 	select.on('change', function() {
 		$.getJSON("crimes/6-2013/" + $(this).val() + "/json", function(data) {
 
+			var chartLabels = [],
+				chartData = [];
+
+			console.log(data.response.crimes.region);
+
+			$.each(data.response.crimes.region.area, function(key, value) {
+				chartLabels.push(value.id);
+				chartData.push(value.total);
+			});
+
+			console.log(chartLabels);
+			console.log(chartData);
+
+			// on completion, replace the canvases in order to clear the data
+			$('#bar').replaceWith('<canvas id="bar" width="600" height="400"></canvas>');
+			// $('#pie').replaceWith('<canvas id="pie" width="600" height="400"></canvas>');
+			var barCanvasContext = $('#bar').get(0).getContext("2d");
+			var barData = {
+				labels : chartLabels,
+				datasets : [
+					{
+						fillColor : "rgba(220,220,220,0.5)",
+						strokeColor : "rgba(220,220,220,1)",
+						data : chartData
+					},
+				]
+			};
+			new Chart(barCanvasContext).Bar(barData,{});
 		});
 	});
 });

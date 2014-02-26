@@ -28,6 +28,9 @@
 					<option value=""></option>
 				</select>
 			</form>
+
+			<canvas id="bar" width="600" height="400"></canvas>
+			<canvas id="pie" width="600" height="400"></canvas>
 		</div>
 	</div>
 	<script src="assets/js/app.js"></script>
