@@ -4,6 +4,7 @@ var sassFiles     = ['./bower_components/foundation/scss/normalize.scss'
     sassCompile   = './assets/css',
     jsFiles       = ['./bower_components/jquery/dist/jquery.js'
                     ,'./bower_components/foundation/js/foundation.js'
+                    ,'./bower_components/Chart.js/Chart.js'
                     ,'./js/**/*.js'],
     jsHeadFiles   = './bower_components/modernizr/modernizr.js',
     jsCompile     = './assets/js',
