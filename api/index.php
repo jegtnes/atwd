@@ -182,6 +182,41 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 	return $data;
 }
 
+function deleteArea($areaName, $sourceData) {
+	$crimeXml = new DOMDocument;
+	$crimeXml->load($sourceData);
+	$data = $crimeXml->createDocumentFragment();
+	$areaName = ucwords(str_replace('_', ' ', $areaName));
+	$xPath = new DOMXPath($crimeXml);
+	$area = $xPath->query("//area[@id='$areaName']")->item(0);
+
+	$areaTotal = $area->attributes->getNamedItem("total")->nodeValue;
+	$homicide = $xPath->query("//area[@id='$areaName']/recorded[@id='Homicide']")->item(0);
+	$homicideTotal = $homicide->attributes->getNamedItem("total")->nodeValue;
+	$violenceWithInjury = $xPath->query("//area[@id='$areaName']/recorded[@id='Violence with injury']")->item(0);
+	$violenceWithInjuryTotal = $violenceWithInjury->attributes->getNamedItem("total")->nodeValue;
+	$violenceWithoutInjury = $xPath->query("//area[@id='$areaName']/recorded[@id='Violence without injury']")->item(0);
+	$violenceWithoutInjuryTotal = $violenceWithoutInjury->attributes->getNamedItem("total")->nodeValue;
+
+	$areaElement = $data->appendChild($crimeXml->createElement('area'));
+	$areaElement->setAttribute('id', $areaName);
+	$areaElement->setAttribute('deleted', $areaTotal);
+
+	$homicideElement = $areaElement->appendChild($crimeXml->createElement('deleted'));
+	$homicideElement->setAttribute('id', "Homicide");
+	$homicideElement->setAttribute('total', $homicideTotal);
+
+	$violenceWithInjuryElement = $areaElement->appendChild($crimeXml->createElement('deleted'));
+	$violenceWithInjuryElement->setAttribute('id', "Violence with injury");
+	$violenceWithInjuryElement->setAttribute('total', $violenceWithInjuryTotal);
+
+	$violenceWithoutInjuryElement = $areaElement->appendChild($crimeXml->createElement('deleted'));
+	$violenceWithoutInjuryElement->setAttribute('id', "Violence without injury");
+	$violenceWithoutInjuryElement->setAttribute('total', $violenceWithoutInjuryTotal);
+
+	return $data;
+}
+
 if (file_exists(DATA_SOURCE)) {
 
 	$request = parseApiRequest($_SERVER['REQUEST_URI']);
@@ -197,7 +232,7 @@ if (file_exists(DATA_SOURCE)) {
 			break;
 
 		case 'delete':
-			# code...
+			$crime = deleteArea($request['area'], DATA_SOURCE);
 			break;
 
 		case 'get':
