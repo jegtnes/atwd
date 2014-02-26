@@ -13149,7 +13149,7 @@ $(document).ready(function() {
 	var select = $('#region');
 	$.getJSON("crimes/6-2013/json", function(data) {
 		function appendRegionToList(value, elem) {
-			id = value.replace(/\s/i, "_").toLowerCase();
+			id = value.replace(/\s/ig	, "_").toLowerCase();
 			elem.append($("<option></option").attr("value", id).text(value));
 		}
 
@@ -13162,6 +13162,8 @@ $(document).ready(function() {
 	});
 
 	select.on('change', function() {
-		console.log($(this).val());
+		$.getJSON("crimes/6-2013/" + $(this).val() + "/json", function(data) {
+
+		});
 	});
 });
