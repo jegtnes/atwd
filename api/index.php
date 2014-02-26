@@ -149,16 +149,6 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 	$violenceWithoutInjuryElement->setAttribute('id', "Violence without injury");
 	$violenceWithoutInjuryElement->setAttribute('total', $violenceWithoutInjury);
 
-	$england = $xPath->query("//country[@id='England']")->item(0);
-	$englandTotal = $england->attributes->getNamedItem("total")->nodeValue;
-	$englandElement = $data->appendChild($crimeXml->createElement('england'));
-	$englandElement->setAttribute('total', $englandTotal + $areaTotal);
-	$walesTotal = $xPath->query("//country[@id='Wales']")->item(0)->attributes->getNamedItem("total")->nodeValue;
-	$actionfraudTotal = $xPath->query("//national[@id='Action Fraud']")->item(0)->attributes->getNamedItem("total")->nodeValue;
-	$btpTotal = $xPath->query("//national[@id='British Transport Police']")->item(0)->attributes->getNamedItem("total")->nodeValue;
-	$englandAndWalesElement = $data->appendChild($crimeXml->createElement('england_wales'));
-	$englandAndWalesElement->setAttribute('total', $englandTotal + $walesTotal + $actionfraudTotal + $btpTotal + $areaTotal);
-
 	// To update this in the XML, remove any existing areas with this name
 	if ($xPath->query("//area[@id='$areaName']")->item(0)) {
 		$area = $xPath->query("//area[@id='$areaName']")->item(0);
@@ -167,6 +157,16 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 
 	//Used to calculate the new totals for region & country
 	$previousAreaTotal = isset($area) ? $area->attributes->getNamedItem("total")->nodeValue : 0;
+
+	$england = $xPath->query("//country[@id='England']")->item(0);
+	$englandTotal = $england->attributes->getNamedItem("total")->nodeValue;
+	$englandElement = $data->appendChild($crimeXml->createElement('england'));
+	$englandElement->setAttribute('total', $englandTotal + $areaTotal - $previousAreaTotal);
+	$walesTotal = $xPath->query("//country[@id='Wales']")->item(0)->attributes->getNamedItem("total")->nodeValue;
+	$actionfraudTotal = $xPath->query("//national[@id='Action Fraud']")->item(0)->attributes->getNamedItem("total")->nodeValue;
+	$btpTotal = $xPath->query("//national[@id='British Transport Police']")->item(0)->attributes->getNamedItem("total")->nodeValue;
+	$englandAndWalesElement = $data->appendChild($crimeXml->createElement('england_wales'));
+	$englandAndWalesElement->setAttribute('total', $englandTotal + $walesTotal + $actionfraudTotal + $btpTotal + $areaTotal - $previousAreaTotal);
 
 	$regionTotal = $region->attributes->getNamedItem("total")->nodeValue - $previousAreaTotal + $areaTotal;
 	$regionElement->setAttribute('total', $regionTotal);
