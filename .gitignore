@@ -1,5 +1,5 @@
 *.DS_Store
-/css/*
+/assets/**/*.min.*
 /bower_components/*
 /node_modules/*
 /vendor/*
@@ -7,4 +7,3 @@
 
 ~*.xlsx
 *.sublime-workspace
-
