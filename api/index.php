@@ -198,6 +198,8 @@ function deleteArea($areaName, $sourceData) {
 	$violenceWithoutInjury = $xPath->query("//area[@id='$areaName']/recorded[@id='Violence without injury']")->item(0);
 	$violenceWithoutInjuryTotal = $violenceWithoutInjury->attributes->getNamedItem("total")->nodeValue;
 
+	$area->parentNode->removeChild($area);
+
 	$areaElement = $data->appendChild($crimeXml->createElement('area'));
 	$areaElement->setAttribute('id', $areaName);
 	$areaElement->setAttribute('deleted', $areaTotal);
@@ -223,6 +225,8 @@ function deleteArea($areaName, $sourceData) {
 	$btpTotal = $xPath->query("//national[@id='British Transport Police']")->item(0)->attributes->getNamedItem("total")->nodeValue;
 	$englandAndWalesElement = $data->appendChild($crimeXml->createElement('england_wales'));
 	$englandAndWalesElement->setAttribute('total', ($englandTotal + $walesTotal + $actionfraudTotal + $btpTotal) - $areaTotal);
+
+	$crimeXml->save($sourceData);
 
 	return $data;
 }
