@@ -13160,4 +13160,8 @@ $(document).ready(function() {
 			appendRegionToList(value.id, select);
 		});
 	});
+
+	select.on('change', function() {
+		console.log($(this).val());
+	});
 });
