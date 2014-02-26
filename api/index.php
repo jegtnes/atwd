@@ -214,6 +214,16 @@ function deleteArea($areaName, $sourceData) {
 	$violenceWithoutInjuryElement->setAttribute('id', "Violence without injury");
 	$violenceWithoutInjuryElement->setAttribute('total', $violenceWithoutInjuryTotal);
 
+	$england = $xPath->query("//country[@id='England']")->item(0);
+	$englandTotal = $england->attributes->getNamedItem("total")->nodeValue;
+	$englandElement = $data->appendChild($crimeXml->createElement('england'));
+	$englandElement->setAttribute('total', $englandTotal - $areaTotal);
+	$walesTotal = $xPath->query("//country[@id='Wales']")->item(0)->attributes->getNamedItem("total")->nodeValue;
+	$actionfraudTotal = $xPath->query("//national[@id='Action Fraud']")->item(0)->attributes->getNamedItem("total")->nodeValue;
+	$btpTotal = $xPath->query("//national[@id='British Transport Police']")->item(0)->attributes->getNamedItem("total")->nodeValue;
+	$englandAndWalesElement = $data->appendChild($crimeXml->createElement('england_wales'));
+	$englandAndWalesElement->setAttribute('total', ($englandTotal + $walesTotal + $actionfraudTotal + $btpTotal) - $areaTotal);
+
 	return $data;
 }
 

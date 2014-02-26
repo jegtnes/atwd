@@ -107,7 +107,7 @@ function parseApiRequest($url) {
 		}
 
 		else if ($params[0] === 'delete') {
-			$return['region'] = $params[1];
+			$return['area'] = $params[1];
 			$return['response_format'] = $params[2];
 		}
 	}
