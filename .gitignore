@@ -1,5 +1,4 @@
 *.DS_Store
-/assets/**/*.min.*
 /bower_components/*
 /node_modules/*
 /vendor/*
