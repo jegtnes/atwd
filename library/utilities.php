@@ -77,12 +77,12 @@ function parseApiRequest($url) {
 			$return['year'] = $params[4];
 		}
 		else return false;
-		
+
 		$params = array_slice($params, 5);
 	}
-	
+
 	else {
-		$return['year'] = $params[4];
+		$return['year'] = $params[2];
 		$params = array_slice($params, 3);
 	}
 
