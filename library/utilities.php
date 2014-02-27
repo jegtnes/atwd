@@ -132,4 +132,19 @@ function parseApiRequest($url) {
 
 	return $return;
 }
+
+function generateXmlError($errorCode, $errorMessage) {
+	$xml = new DOMDocument('1.0', 'utf-8');
+	$root = $xml->createElement('response');
+	$root->setAttribute('timestamp', time());
+	$root = $xml->appendChild($root);
+	$error = $xml->createElement('error');
+	$error->setAttribute('code', $errorCode);
+	$error->setAttribute('desc', $errorMessage);
+	$root->appendChild($error);
+
+	http_response_code($errorCode);
+	header('Content-Type: text/xml');
+	die($xml->saveXML());
+}
 ?>
