@@ -76,13 +76,18 @@ function parseApiRequest($url) {
 		if ($params[4] == '6-2013')  {
 			$return['year'] = $params[4];
 		}
-		else return false;
+		else generateXmlError(601, "Invalid date range '$params[4]'. Try '6-2013'");
 
 		$params = array_slice($params, 5);
 	}
 
 	else {
-		$return['year'] = $params[2];
+		if ($params[2] == '6-2013') {
+			$return['year'] = $params[2];
+		}
+		else {
+			generateXmlError(601, "Invalid date range '$params[2]'. Try '6-2013'");
+		}
 		$params = array_slice($params, 3);
 	}
 
@@ -147,4 +152,3 @@ function generateXmlError($errorCode, $errorMessage) {
 	header('Content-Type: text/xml');
 	die($xml->saveXML());
 }
-?>
