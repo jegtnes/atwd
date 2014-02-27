@@ -66,7 +66,7 @@ function parseApiRequest($url) {
 	$params = explode('/', $url);
 
 	$return = [];
-	
+
 	// Let's remove irrelevant parameters. First is the intial /, second
 	// is 'crimes', which is just the API call URL, third is the year,
 	// 6-2013. If this isn't the case we're returning false above anyhow,
@@ -86,6 +86,7 @@ function parseApiRequest($url) {
 		$params = array_slice($params, 3);
 	}
 
+	//If we have specified no parameters, set up for all crime
 	if ($params[0] === 'xml' || $params[0] === 'json') {
 		$return['response_format'] = $params[0];
 		$return['region'] = 'england_and_wales';
@@ -93,9 +94,11 @@ function parseApiRequest($url) {
 	}
 
 	else if ($params[0] === 'put' || $params[0] === 'post' || $params[0] === 'delete') {
+		//if the first parameter is an actrion verb, it's not GET
 		$return['verb'] = $params[0];
 
 		if ($params[0] === 'put') {
+			// Save values by splitting at the :
 			$put = explode(':', $params[1]);
 			$return['region'] = $put[0];
 			$return['update_amount'] = $put[1];
@@ -120,6 +123,8 @@ function parseApiRequest($url) {
 	}
 
 	else {
+		// if no action verb, and first parameter isn't xml/json
+		// we're looking for a specific region
 		$return['region'] = $params[0];
 		$return['verb'] = 'get';
 		$return['response_format'] = $params[1];
