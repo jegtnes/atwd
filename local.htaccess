@@ -11,4 +11,8 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)/$ $1 [L,R=301]
 
+DirectoryIndex report.html
+RewriteRule index.html report.html [L]
+RewriteRule crimes/doc/index.html report.html [L]
+RewriteRule crimes/doc/ report.html [L]
 RewriteRule crimes api/index.php [L]
