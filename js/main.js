@@ -23,10 +23,14 @@ $(document).ready(function() {
 
 			$.each(data.response.crimes.region.area, function(key, value) {
 				chartLabels.push(value.id);
-				chartData.push(parseInt(value.total, 10));
-
 				randomColor = generateRandomRgbColor();
 				labelColor = isTooBright(randomColor) === true ? 'black' : 'white';
+				chartData.push({
+					value: parseInt(value.total, 10),
+					fillColor: randomColor,
+					strokeColor: "rgba(0,0,0,0)"
+				});
+				console.log(chartData);
 				pieData.push({
 					value: parseInt(value.total, 10),
 					color: randomColor,
@@ -45,7 +49,7 @@ $(document).ready(function() {
 					{
 						fillColor : "rgba(220,220,220,0.5)",
 						strokeColor : "rgba(220,220,220,1)",
-						data : chartData
+						data: chartData
 					},
 				]
 			};

@@ -14510,15 +14510,21 @@ window.Chart = function(context, options){
 		function drawBars(animPc){
 			ctx.lineWidth = config.barStrokeWidth;
 			for (var i=0; i<data.datasets.length; i++){
-					ctx.fillStyle = data.datasets[i].fillColor;
-					ctx.strokeStyle = data.datasets[i].strokeColor;
 				for (var j=0; j<data.datasets[i].data.length; j++){
 					var barOffset = yAxisPosX + config.barValueSpacing + valueHop*j + barWidth*i + config.barDatasetSpacing*i + config.barStrokeWidth*i;
 
+					var barData = data.datasets[i].data[j];
+					var barValue = typeof barData.value !== 'undefined' ? barData.value : barData;
+					var barFillColor = typeof barData.fillColor !== 'undefined' ? barData.fillColor : data.datasets[i].fillColor;
+					var barStrokeColor = typeof barData.strokeColor !== 'undefined' ? barData.strokeColor : data.datasets[i].strokeColor;
+
+					ctx.strokeStyle = barStrokeColor;
+					ctx.fillStyle = barFillColor;
 					ctx.beginPath();
 					ctx.moveTo(barOffset, xAxisPosY);
-					ctx.lineTo(barOffset, xAxisPosY - animPc*calculateOffset(data.datasets[i].data[j],calculatedScale,scaleHop)+(config.barStrokeWidth/2));
-					ctx.lineTo(barOffset + barWidth, xAxisPosY - animPc*calculateOffset(data.datasets[i].data[j],calculatedScale,scaleHop)+(config.barStrokeWidth/2));
+
+					ctx.lineTo(barOffset, xAxisPosY - animPc*calculateOffset(barValue,calculatedScale,scaleHop)+(config.barStrokeWidth/2));
+					ctx.lineTo(barOffset + barWidth, xAxisPosY - animPc*calculateOffset(barValue,calculatedScale,scaleHop)+(config.barStrokeWidth/2));
 					ctx.lineTo(barOffset + barWidth, xAxisPosY);
 					if(config.barShowStroke){
 						ctx.stroke();
@@ -14673,8 +14679,10 @@ window.Chart = function(context, options){
 			var lowerValue = Number.MAX_VALUE;
 			for (var i=0; i<data.datasets.length; i++){
 				for (var j=0; j<data.datasets[i].data.length; j++){
-					if ( data.datasets[i].data[j] > upperValue) { upperValue = data.datasets[i].data[j] };
-					if ( data.datasets[i].data[j] < lowerValue) { lowerValue = data.datasets[i].data[j] };
+					var barData = data.datasets[i].data[j];
+					var barValue = typeof barData.value !== 'undefined' ? barData.value : barData;
+					if ( barValue > upperValue) { upperValue = barValue };
+					if ( barValue < lowerValue) { lowerValue = barValue };
 				}
 			};
 
@@ -14687,8 +14695,6 @@ window.Chart = function(context, options){
 				maxSteps : maxSteps,
 				minSteps : minSteps
 			};
-
-
 		}
 	}
 
@@ -14941,10 +14947,14 @@ $(document).ready(function() {
 
 			$.each(data.response.crimes.region.area, function(key, value) {
 				chartLabels.push(value.id);
-				chartData.push(parseInt(value.total, 10));
-
 				randomColor = generateRandomRgbColor();
 				labelColor = isTooBright(randomColor) === true ? 'black' : 'white';
+				chartData.push({
+					value: parseInt(value.total, 10),
+					fillColor: randomColor,
+					strokeColor: "rgba(0,0,0,0)"
+				});
+				console.log(chartData);
 				pieData.push({
 					value: parseInt(value.total, 10),
 					color: randomColor,
@@ -14963,7 +14973,7 @@ $(document).ready(function() {
 					{
 						fillColor : "rgba(220,220,220,0.5)",
 						strokeColor : "rgba(220,220,220,1)",
-						data : chartData
+						data: chartData
 					},
 				]
 			};
