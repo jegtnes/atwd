@@ -13,6 +13,10 @@ function returnCrimeByRegion($regionName, $sourceData) {
 	// kudos to Jens Erat @ StackOverflow http://stackoverflow.com/a/20122323/1430657
 	$region = $xPath->query("/crimes/*[local-name() = 'region' or local-name() = 'national'][@id='$regionName']")->item(0);
 
+	if (!$region) {
+		generateXmlError(404, "Region not found.");
+	}
+
 	// nationals don't have regions, so this fails gracefully by
 	// not selecting anything if on a national
 	$areas = $xPath->query("//region[@id='$regionName']/area");
