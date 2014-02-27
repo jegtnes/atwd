@@ -7,6 +7,10 @@ function deleteArea($areaName, $sourceData) {
 	$xPath = new DOMXPath($crimeXml);
 	$area = $xPath->query("//area[@id='$areaName']")->item(0);
 
+	if (!$area) {
+		generateXmlError(404, "Area not found.");
+	}
+
 	$areaTotal = $area->attributes->getNamedItem("total")->nodeValue;
 	$homicide = $xPath->query("//area[@id='$areaName']/recorded[@id='Homicide']")->item(0);
 	$homicideTotal = $homicide->attributes->getNamedItem("total")->nodeValue;

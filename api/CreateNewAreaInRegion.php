@@ -7,6 +7,11 @@ function createNewAreaInRegion($areaName, $regionName, $violenceWithoutInjury, $
 
 	$regionName = ucwords(str_replace('_', ' ', $regionName));
 	$region = $xPath->query("//region[@id='$regionName']")->item(0);
+
+	if (!$region) {
+		generateXmlError(404, "Region not found.");
+	}
+
 	$regionId = $region->attributes->getNamedItem("id")->nodeValue;
 
 	$regionElement = $data->appendChild($crimeXml->createElement('region'));
