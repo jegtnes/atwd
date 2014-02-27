@@ -17,20 +17,25 @@ $(document).ready(function() {
 	select.on('change', function() {
 		$.getJSON("crimes/6-2013/" + $(this).val() + "/json", function(data) {
 
+			// Two separate arrays are needed for bar data: chartData and chartValues
+			// this is so we are able to apply colours and find the
+			// highest value in array for custom scale
+
 			var chartLabels = [],
 				chartData = [],
+				chartValues = [],
 				pieData = [];
 
 			$.each(data.response.crimes.region.area, function(key, value) {
 				chartLabels.push(value.id);
 				randomColor = generateRandomRgbColor();
 				labelColor = isTooBright(randomColor) === true ? 'black' : 'white';
+				chartValues.push(parseInt(value.total, 10));
 				chartData.push({
 					value: parseInt(value.total, 10),
 					fillColor: randomColor,
 					strokeColor: "rgba(0,0,0,0)"
 				});
-				console.log(chartData);
 				pieData.push({
 					value: parseInt(value.total, 10),
 					color: randomColor,
@@ -53,7 +58,14 @@ $(document).ready(function() {
 					},
 				]
 			};
-			new Chart(barCanvasContext).Bar(barData,{});
+
+			var chartMax = highestArrayValue(chartValues);
+			new Chart(barCanvasContext).Bar(barData,{
+				scaleOverride: true,
+				scaleSteps: 20,
+				scaleStepWidth: Math.round(chartMax / 20) + 100,
+				scaleStartValue: 0
+			});
 
 			var pieCanvasContext = $('#pie').get(0).getContext("2d");
 			new Chart(pieCanvasContext).Pie(pieData,{});
@@ -67,6 +79,14 @@ function generateRandomRgbColor() {
 	randomBlue = Math.round(Math.random() * 255);
 	randomGreen = Math.round(Math.random() * 255);
 	return "rgb(" + randomRed + ", " + randomBlue + ", " + randomGreen + ")";
+}
+
+//http://stackoverflow.com/a/18003907/1430657
+function highestArrayValue(arr) {
+	var max = arr.reduce(function(previous,current){
+		return previous > current ? previous:current;
+	});
+	return max;
 }
 
 // A function that returns true if the color is too bright to have a white label
