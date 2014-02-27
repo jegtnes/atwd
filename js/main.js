@@ -18,11 +18,21 @@ $(document).ready(function() {
 		$.getJSON("crimes/6-2013/" + $(this).val() + "/json", function(data) {
 
 			var chartLabels = [],
-				chartData = [];
+				chartData = [],
+				pieData = [];
 
 			$.each(data.response.crimes.region.area, function(key, value) {
 				chartLabels.push(value.id);
 				chartData.push(parseInt(value.total, 10));
+
+				randomColor = generateRandomRgbColor();
+				labelColor = isTooBright(randomColor) === true ? 'black' : 'white';
+				pieData.push({
+					value: parseInt(value.total, 10),
+					color: randomColor,
+					label: value.id,
+					labelColor: labelColor
+				});
 			});
 
 			// on completion, replace the canvases in order to clear the data
@@ -42,15 +52,35 @@ $(document).ready(function() {
 			new Chart(barCanvasContext).Bar(barData,{});
 
 			var pieCanvasContext = $('#pie').get(0).getContext("2d");
-
-			var pieData = [];
-			$.each(chartData, function(key, value) {
-				// http://www.paulirish.com/2009/random-hex-color-code-snippets/
-				randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
-				pieData.push({value: parseInt(value, 10), color: randomColor});
-			});
-
 			new Chart(pieCanvasContext).Pie(pieData,{});
 		});
 	});
 });
+
+// Returns a random RGB color represented as a string
+function generateRandomRgbColor() {
+	randomRed = Math.round(Math.random() * 255);
+	randomBlue = Math.round(Math.random() * 255);
+	randomGreen = Math.round(Math.random() * 255);
+	return "rgb(" + randomRed + ", " + randomBlue + ", " + randomGreen + ")";
+}
+
+// A function that returns true if the color is too bright to have a white label
+// If a black label is preferable, returns false
+// All credits go to:
+// http://javascriptrules.com/2009/08/05/css-color-brightness-contrast-using-javascript/
+function isTooBright(color) {
+	var re = /rgb\((\d+), (\d+), (\d+)\)/;
+	rgb = re.exec(color);
+	var r = parseInt(rgb[1], 10),
+		g = parseInt(rgb[2], 10),
+		b = parseInt(rgb[3], 10);
+
+	var brightness = (r*299 + g*587 + b*114) / 1000;
+	if (brightness > 125) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
