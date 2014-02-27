@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<title>Datavis.</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/assets/css/app.min.css">
+	<script src="/assets/js/app-head.min.js"></script>
+</head>
+<body>
+	<div class="contain-to-grid">
+		<nav class="top-bar" data-topbar>
+			<ul class="title-area">
+				<li class="name">
+					<h1><a href="#">Advanced Topics in Web Development</a></h1>
+				</li>
+			</ul>
+			<section class=	"top-bar-section">
+				<ul class="right">
+				</ul>
+			</section>
+		</nav>
+	</div>
+	<div class="row">
+		<div class="columns">
+			<h1>ATWD Report</h1>
+			<p>While I consider myself an overall decent web developer, this assignment presented a few challenges, which I have attempted to rise to, in some areas more successful than others.</p>
+			<p>Initially, converting the provided Excel spreadsheet into a semantic, well-formed XML file provided a considerable challenge. The data was in a two-column format, which has no native spreadsheet parsing solution available in PHP, so the result from <code>fgetcsv()</code> needed further processing. It also contained a large amount of empty and excess rows, junk information, and subcategories not marked as sub columns when visual information is stripped out upon conversion from XSLX to CSV.</p>
+			<p>Using the first column in a row as a secondary header, and manually adding the rows’ numbers containing useful information into an associative array with the relevant value in it solved this problem. The rows containing irrelevant or no data are skipped.</p>
+			<p>The solution works in the end, and is entirely capable of processing the data provided it stays in the exact same format. Any change, however minor, in the format, is likely to require some form of re-writing. This is not ideal for obvious reasons. Overall, despite this part of the assignment counting for only 12% of the marks, it took closer to one third of the total time spent on the assignment. If the data had been cleaner, more effort could have been spent elsewhere.</p>
+			<p>Additionally, generating and updating the XML for both the first and second part of the assignment proved more difficult. While SimpleXML is a really elegant way to trawl XML documents and <em>get</em> data, modifying complex data was impossible, considering you couldn’t add a document fragment into another document using SimpleXML, amongst others. To work around this, I put my head down and made it work with the DOMDocument API. While it’s more verbose and much less elegant, it is a lot more powerful, and supports adding a DocumentFragment into an existing document (perfect for the POST requirement).</p>
+			<p>Having to work with DOMDocument was frustrating at times, but it was powerful and flexible enough for it to be worth it in the end. However, I think it may have been better to store the XML data differently instead of in one monolithic XML file, and dynamically calculating the total values instead of storing it in the XML would have saved a few headaches.</p>
+			<p>Few problems were encountered with the front-end charting. Once the API worked with JSON, this was a breeze, especially as Chart.js is easy to get started with. However, I encountered a few minor issues, namely the fact that the pie chart did not support labels, and the bar chart did not support a differently coloured bar for each area (it would be ideal to share the same colours of the bar chart and the pie chart for consistency).</p>
+			<p>Fortunately, thanks to the open source community, two people had forked the Chart.js project and integrated these fixes themselves (see <a href="https://github.com/nnnick/Chart.js/pull/226/files">Feature: multicolor bar charts</a> and <a href="https://github.com/nnnick/Chart.js/pull/35">Adding basic labels to Pie chart</a>). These two forks were migrated into a local version of Chart.js and solved these problems.</p>
+		</div>
+	</div>
+	<script src="/assets/js/app.js"></script>
+</body>
+</html>
