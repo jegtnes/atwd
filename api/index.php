@@ -1,7 +1,6 @@
 <?php
 
 require ("../library/utilities.php");
-require ("Request.php");
 require ("GetAll.php");
 require ("GetAreaByRegion.php");
 require ("CreateNewAreaInRegion.php");
