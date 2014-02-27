@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
 <head>
-	<title>Datavis.</title>
+	<title>ATWD | Alexander Jegtnes | 10029052</title>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" href="assets/css/app.min.css">
 	<script src="assets/js/app-head.min.js"></script>
 </head>
@@ -15,6 +16,7 @@
 			</ul>
 			<section class=	"top-bar-section">
 				<ul class="right">
+					<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes">Alexander Jegtnes | 10029052</a></li>
 				</ul>
 			</section>
 		</nav>
