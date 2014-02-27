@@ -20,19 +20,14 @@ $(document).ready(function() {
 			var chartLabels = [],
 				chartData = [];
 
-			console.log(data.response.crimes.region);
-
 			$.each(data.response.crimes.region.area, function(key, value) {
 				chartLabels.push(value.id);
-				chartData.push(value.total);
+				chartData.push(parseInt(value.total, 10));
 			});
 
-			console.log(chartLabels);
-			console.log(chartData);
-
 			// on completion, replace the canvases in order to clear the data
-			$('#bar').replaceWith('<canvas id="bar" width="600" height="400"></canvas>');
-			$('#pie').replaceWith('<canvas id="pie" width="600" height="400"></canvas>');
+			$('#bar').replaceWith('<canvas id="bar" width="900" height="450"></canvas>');
+			$('#pie').replaceWith('<canvas id="pie" width="900" height="450"></canvas>');
 			var barCanvasContext = $('#bar').get(0).getContext("2d");
 			var barData = {
 				labels : chartLabels,
@@ -54,8 +49,6 @@ $(document).ready(function() {
 				randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
 				pieData.push({value: parseInt(value, 10), color: randomColor});
 			});
-
-			console.log(pieData);
 
 			new Chart(pieCanvasContext).Pie(pieData,{});
 		});

@@ -29,8 +29,8 @@
 				</select>
 			</form>
 
-			<canvas id="bar" width="600" height="400"></canvas>
-			<canvas id="pie" width="600" height="400"></canvas>
+			<canvas id="bar" width="900" height="450"></canvas>
+			<canvas id="pie" width="900" height="450"></canvas>
 		</div>
 	</div>
 	<script src="assets/js/app.js"></script>
