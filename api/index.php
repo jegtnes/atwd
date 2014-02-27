@@ -1,11 +1,11 @@
 <?php
 
 require ("utilities.php");
-require ("GetAll.php");
-require ("GetAreaByRegion.php");
-require ("CreateNewAreaInRegion.php");
-require ("UpdateCrimeByRegion.php");
-require ("DeleteArea.php");
+require ("getAll.php");
+require ("getAreaByRegion.php");
+require ("createNewAreaInRegion.php");
+require ("updateCrimeByRegion.php");
+require ("deleteArea.php");
 
 function createBaseCrimeXml($year) {
 	$xml = new DOMDocument('1.0', 'utf-8');
