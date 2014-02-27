@@ -28,26 +28,26 @@
 			<hr>
 			<h2>Assignment URIs</h2>
 			<ul>
-				<li>Data visualisation: <a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/datavisualisation.html">http://cems.uwe.ac.uk/~as2-jegtnes/datavisualisation.html</a></li>
-				<li>RESTful service: <a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/crimes/6-2013/xml">http://cems.uwe.ac.uk/~as2-jegtnes/crimes/6-2013/xml</a> and at every other endpoint specified in the assignment brief</li>
+				<li>Data visualisation: <a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/datavisualisation.html">http://cems.uwe.ac.uk/~as2-jegtnes/datavisualisation.html</a></li>
+				<li>RESTful service: <a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/crimes/6-2013/xml">http://cems.uwe.ac.uk/~as2-jegtnes/crimes/6-2013/xml</a> and at every other endpoint specified in the assignment brief</li>
 			</ul>
 			<hr>
 			<h2>Source Code</h2>
 			<hr>
 			<h3>API</h3>
 			<ul>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/api/index.phps">index.php</a>—parsing and routing the requests</li>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/api/utilities.phps">utilities.php</a>—various original and 3rd-party utility functions and tools</li>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/api/createNewAreaInRegion.phps">createNewAreaInRegion.phps</a>—POST</li>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/api/deleteArea.phps">deleteArea.phps</a>—DELETE</li>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/api/getAll.phps">getAll.phps</a>—GET</li>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/api/getAreaByRegion.phps">getAreaByRegion.phps</a>—GET</li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/api/index.phps">index.php</a>—parsing and routing the requests</li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/api/utilities.phps">utilities.php</a>—various original and 3rd-party utility functions and tools</li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/api/createNewAreaInRegion.phps">createNewAreaInRegion.phps</a>—POST</li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/api/deleteArea.phps">deleteArea.phps</a>—DELETE</li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/api/getAll.phps">getAll.phps</a>—GET</li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/api/getAreaByRegion.phps">getAreaByRegion.phps</a>—GET</li>
 			</ul>
 			<hr>
 			<h3>Data parsing</h3>
 			<ul>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/data/index.phps">index.phps</a>—Data conversion script</li>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/data/crime_data.xml">crime_data.xml</a>—raw XML data</li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/data/index.phps">index.phps</a>—Data conversion script</li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/data/crime_data.xml">crime_data.xml</a>—raw XML data</li>
 			</ul>
 			<hr>
 			<h3>Assets</h3>
@@ -55,23 +55,23 @@
 			<p>These are linked to in the <a href="datavisualisation.html">HTML page for the data visualisation</a>. My original, unminified assets are below:</p>
 			<h4>Unminified assets</h4>
 				<ul>
-					<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/js/main.js">Main.js</a>—all of the JavaScript to generate Chart.js charts based on AJAX requests to my own API</li>
-					<li>No custom CSS was used, only Zurb Foundation's was utilised. This can be found here: <a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/assets/css/app.css">app.css</a></li>
+					<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/js/main.js">Main.js</a>—all of the JavaScript to generate Chart.js charts based on AJAX requests to my own API</li>
+					<li>No custom CSS was used, only Zurb Foundation's was utilised. This can be found here: <a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/assets/css/app.css">app.css</a></li>
 				</ul>
 			<h3>Tests</h3>
 			<p><a href="http://codeception.com/">Codeception</a> was utilised for regression testing of the API. Most methods are in there, but not all of them.</p>
 			<p>Only files that I created myself are linked here, Codeception's code and bootstrap files are not included, but can be found on <a href="https://github.com/Codeception/Codeception/">GitHub</a>.</p>
 			<p>A new API test suite was generated as described in the <a href="http://codeception.com/docs/10-WebServices">Documentation.</a></p>
 			<ul>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/tests/_helpers/ApiHelper.phps">ApiHelper.phps</a>—output debug functionality</li>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/tests/api/DeleteWessexAsXmlCest.phps">DeleteWessexAsXmlCest.phps</a></li>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/tests/api/GetAllCrimeAsJsonCept.phps">GetAllCrimeAsJsonCept.phps</a></li>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/tests/api/GetAllCrimeAsXmlCept.phps">GetAllCrimeAsXmlCept.phps</a></li>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/tests/api/GetRegionalCrimeAsJsonCept.phps">GetRegionalCrimeAsJsonCept.phps</a></li>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/tests/api/GetRegionalCrimeAsXmlCept.phps">GetRegionalCrimeAsXmlCept.phps</a></li>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/tests/api/PostWessexAsXmlCest.phps">PostWessexAsXmlCest.phps</a></li>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/tests/api/PutBTPAsJsonCest.phps">PutBTPAsJsonCest.phps</a></li>
-				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/awtwd/tests/api/PutBTPAsXmlCest.phps">PutBTPAsXmlCest.phps</a></li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/tests/_helpers/ApiHelper.phps">ApiHelper.phps</a>—output debug functionality</li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/tests/api/DeleteWessexAsXmlCest.phps">DeleteWessexAsXmlCest.phps</a></li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/tests/api/GetAllCrimeAsJsonCept.phps">GetAllCrimeAsJsonCept.phps</a></li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/tests/api/GetAllCrimeAsXmlCept.phps">GetAllCrimeAsXmlCept.phps</a></li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/tests/api/GetRegionalCrimeAsJsonCept.phps">GetRegionalCrimeAsJsonCept.phps</a></li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/tests/api/GetRegionalCrimeAsXmlCept.phps">GetRegionalCrimeAsXmlCept.phps</a></li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/tests/api/PostWessexAsXmlCest.phps">PostWessexAsXmlCest.phps</a></li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/tests/api/PutBTPAsJsonCest.phps">PutBTPAsJsonCest.phps</a></li>
+				<li><a href="http://cems.uwe.ac.uk/~as2-jegtnes/atwd/tests/api/PutBTPAsXmlCest.phps">PutBTPAsXmlCest.phps</a></li>
 			</ul>
 		</div>
 		<div class="large-8 columns">
