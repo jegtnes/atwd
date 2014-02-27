@@ -15005,7 +15005,9 @@ function generateRandomRgbColor() {
 	return "rgb(" + randomRed + ", " + randomBlue + ", " + randomGreen + ")";
 }
 
-//http://stackoverflow.com/a/18003907/1430657
+// A function that returns the highest numberical value in an array
+// All credits go to:
+// http://stackoverflow.com/a/18003907/1430657
 function highestArrayValue(arr) {
 	var max = arr.reduce(function(previous,current){
 		return previous > current ? previous:current;
