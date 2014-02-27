@@ -76,7 +76,7 @@ function parseApiRequest($url) {
 		if ($params[4] == '6-2013')  {
 			$return['year'] = $params[4];
 		}
-		else generateXmlError(601, "Invalid date range '$params[4]'. Try '6-2013'");
+		else generateXmlError(501, "URL pattern not recognised. Invalid date range '$params[4]'. Try '6-2013'");
 
 		$params = array_slice($params, 5);
 	}
@@ -86,7 +86,7 @@ function parseApiRequest($url) {
 			$return['year'] = $params[2];
 		}
 		else {
-			generateXmlError(601, "Invalid date range '$params[2]'. Try '6-2013'");
+			generateXmlError(501, "URL pattern not recognised. Invalid date range '$params[2]'. Try '6-2013'");
 		}
 		$params = array_slice($params, 3);
 	}
