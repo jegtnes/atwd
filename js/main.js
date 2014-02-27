@@ -9,9 +9,6 @@ $(document).ready(function() {
 		$.each(data.response.crimes.region, function(key, value) {
 			appendRegionToList(value.id, select);
 		});
-		$.each(data.response.crimes.national, function(key, value) {
-			appendRegionToList(value.id, select);
-		});
 	});
 
 	select.on('change', function() {
