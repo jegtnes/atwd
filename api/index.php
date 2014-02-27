@@ -48,7 +48,7 @@ if (file_exists(DATA_SOURCE)) {
 			break;
 
 		default:
-			break;
+			generateXmlError(501, "Service error.");
 	}
 
 	$crime = $crimes->importNode($crime, true);
