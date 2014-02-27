@@ -1092,7 +1092,7 @@
       <crime name="fraud" total="4235"/>
     </area>
   </region>
-  <region id="South West" total="284930">
+  <region id="South West" total="284990">
     <category name="violence_against_the_person" total="52119">
       <crime name="homicide" total="38"/>
       <crime name="violence_with_injury" total="28398"/>
@@ -1247,8 +1247,8 @@
       <crime name="misceanellous_crimes_against_society" total="248"/>
       <crime name="fraud" total="776"/>
     </area>
-  </region>
-  <country id="England" total="3344716">
+  <area id="Wessex" total="60"><recorded id="Homicide" total="6"/><recorded id="Violence with injury" total="11"/><recorded id="Violence without injury" total="43"/></area></region>
+  <country id="England" total="3344776">
     <category name="violence_against_the_person" total="560890">
       <crime name="homicide" total="498"/>
       <crime name="violence_with_injury" total="289344"/>
