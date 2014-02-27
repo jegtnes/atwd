@@ -8,6 +8,10 @@ function updateCrimeByRegion($regionName, $updateAmount, $sourceData) {
 
 	$region = $xPath->query("//national[@id='$regionName']")->item(0);
 
+	if (!$region) {
+		generateXmlError(404, "Region not found.");
+	}
+
 	$regionId = $region->attributes->getNamedItem("id")->nodeValue;
 	$originalTotal = $region->attributes->getNamedItem("total")->nodeValue;
 	$newTotal = $updateAmount;
